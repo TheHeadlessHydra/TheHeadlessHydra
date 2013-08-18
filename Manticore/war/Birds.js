@@ -1,3 +1,5 @@
+// Function that builds a bird
+
 var Bird = function () {
 
 	var scope = this;
