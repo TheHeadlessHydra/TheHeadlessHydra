@@ -6,6 +6,17 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
 			body {
+				
+				background-repeat:repeat;
+				background: -moz-linear-gradient(top,  rgba(170,142,0,1) 0%, rgba(170,142,0,0.99) 1%, rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(170,142,0,1)), color-stop(1%,rgba(170,142,0,0.99)), color-stop(100%,rgba(255,255,255,0))), url('images/TilingGlass.png'); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa8e00', endColorstr='#00ffffff',GradientType=0 ), url('images/TilingGlass.png'); /* IE6-9 */
+
+				
 				color: #808080;
 				font-family:Monospace;
 				font-size:13px;
@@ -31,6 +42,7 @@
 		<script type="text/javascript" src="Birds.js"></script>
 		<script type="text/javascript" src="stats.min.js"></script>
 
+
         <!-- This script contains all the classes to run a boids simulation -->
 		<script>
 
@@ -44,7 +56,7 @@
 				_height = 500, 
 				_depth = 200, 
 				_goal, 
-				_neighborhoodRadius = 100,
+				_neighborhoodRadius = 150,
 				_maxSpeed = 4, 
 				_maxSteerForce = 0.1, 
 				_avoidWalls = false;
@@ -365,15 +377,21 @@
 				boids = [];
 
 				// Create 200 birds with random positions
-				for ( var i = 0; i < 200; i ++ ) {
+				for ( var i = 0; i < 100; i ++ ) {
 
 					boid = boids[ i ] = new Boid();
-					boid.position.x = Math.random() * 400 - 200;
-					boid.position.y = Math.random() * 400 - 200;
-					boid.position.z = Math.random() * 400 - 200;
-					boid.velocity.x = Math.random() * 2 - 1;
-					boid.velocity.y = Math.random() * 2 - 1;
-					boid.velocity.z = Math.random() * 2 - 1;
+					boid.position.x = Math.random() * (200 - 1) + 1;
+					boid.position.y = -2 * Math.random() * (250 - 1) + 1 ;
+					boid.position.z = Math.random() * (200 - 1) + 1;
+					boid.velocity.x = Math.random() * (0.2 - 0.1) + 0.1;
+					boid.velocity.y = Math.random() * (0.02 - 0.01) + 0.01;
+					boid.velocity.z = Math.random() * (0.02 - 0.01) + 0.01;
+					//boid.position.x = Math.random() * 400 - 200;
+					//boid.position.y = Math.random() * 400 - 200;
+					//boid.position.z = Math.random() * 400 - 200;
+					//boid.velocity.x = Math.random() * 2 - 1;
+					//boid.velocity.y = Math.random() * 2 - 1;
+					//boid.velocity.z = Math.random() * 2 - 1;
 					boid.setAvoidWalls( true );
 					boid.setWorldSize( 500, 500, 400 );
 
