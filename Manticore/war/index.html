@@ -6,15 +6,14 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
 			body {
-				
+				background: -moz-linear-gradient(top,  rgba(252,255,245,0.15) 0%, rgba(252,255,245,0.24) 27%, rgba(209,219,189,0.29) 41%, rgba(145,169,157,0.38) 67%, rgba(62,96,111,0.46) 88%, rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,245,0.15)), color-stop(27%,rgba(252,255,245,0.24)), color-stop(41%,rgba(209,219,189,0.29)), color-stop(67%,rgba(145,169,157,0.38)), color-stop(88%,rgba(62,96,111,0.46)), color-stop(100%,rgba(25,52,65,0.5))), url('images/Background_Tilable.png'); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26fcfff5', endColorstr='#80193441',GradientType=0 ), url('images/Background_Tilable.png'); /* IE6-9 */		
 				background-repeat:repeat;
-				background: -moz-linear-gradient(top,  rgba(170,142,0,1) 0%, rgba(170,142,0,0.99) 1%, rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(170,142,0,1)), color-stop(1%,rgba(170,142,0,0.99)), color-stop(100%,rgba(255,255,255,0))), url('images/TilingGlass.png'); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* IE10+ */
-				background: linear-gradient(to bottom,  rgba(170,142,0,1) 0%,rgba(170,142,0,0.99) 1%,rgba(255,255,255,0) 100%), url('images/TilingGlass.png'); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa8e00', endColorstr='#00ffffff',GradientType=0 ), url('images/TilingGlass.png'); /* IE6-9 */
 
 				
 				color: #808080;
@@ -22,7 +21,6 @@
 				font-size:13px;
 				text-align:center;
 
-				background-color: #ffffff;
 				margin: 0px;
 				overflow: hidden;
 			}
@@ -38,9 +36,9 @@
 
 		<div id="container"></div>
 
-		<script type="text/javascript" src="three.min.js"></script>
-		<script type="text/javascript" src="Birds.js"></script>
-		<script type="text/javascript" src="stats.min.js"></script>
+		<script type="text/javascript" src="lib/three.min.js"></script>
+		<script type="text/javascript" src="scripts/Birds.js"></script>
+		<script type="text/javascript" src="lib/stats.min.js"></script>
 
 
         <!-- This script contains all the classes to run a boids simulation -->
@@ -349,6 +347,7 @@
 
 		</script>
 
+		<!-- This script contains all the classes to run a boids simulation -->
 		<script>
 
 			var SCREEN_WIDTH = window.innerWidth,
