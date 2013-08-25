@@ -5,20 +5,34 @@
  */
 
 
-var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight, SCREEN_WIDTH_HALF = SCREEN_WIDTH / 2, SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
+var 
+SCREEN_WIDTH = window.innerWidth, 
+SCREEN_HEIGHT = window.innerHeight, 
+SCREEN_WIDTH_HALF = SCREEN_WIDTH / 2, 
+SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
 
-var camera, scene, renderer, birds, bird, boid, boids, stats, clock = new THREE.Clock();
+var camera, scene, renderer, 
+birds, bird, boid, boids, 
+stats, 
+surface,
+clock = new THREE.Clock();
 
 init();
 animate();
 
 function init() {
 
-	camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1,
-			10000);
-	camera.position.z = 450;
-
-	scene = new THREE.Scene();
+	// used to render the birds
+	birdCamera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1,10000);
+	birdCamera.position.z = 450;
+	birdScene = new THREE.Scene();
+	
+	// used to render the HUD
+	HUDCamera = new THREE.OrthographicCamera( SCREEN_WIDTH / - 2, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, SCREEN_HEIGHT / - 2, 1, 1000 );
+	//HUDCamera = new THREE.PerspectiveCamera(75, 1, 1,10000);
+	HUDCamera.position.z = 450;
+	HUDScene = new THREE.Scene();
+	HUDScene.add( HUDCamera );
 
 	birds = [];
 	boids = [];
@@ -43,28 +57,23 @@ function init() {
 				}));
 		bird.phase = Math.floor(Math.random() * 62.83);
 		bird.position = boids[i].position;
-		scene.add(bird);
+		birdScene.add(bird);
 	}
 
 	// APPEARING TEXTURE
-	// Texture that has all pixels at u=0 and v set to white, all else set to
-	// black.
-	var transitionTexture = new THREE.ImageUtils.loadTexture(
-			'images/ShiftToWhite.png');
-	// noiseTexture.wrapS = noiseTexture.wrapT = THREE.RepeatWrapping; // NO
-	// REPEAT
+	// Texture that has all pixels at u=0 and v set to white, all else set to black.
+	var transitionTexture = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Soft_512.png');
+	// noiseTexture.wrapS = noiseTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
 
 	// Texture to transition in.
-	var growthTexture = new THREE.ImageUtils.loadTexture(
-			'images/Test_Growth2.png');
-	// lavaTexture.wrapS = lavaTexture.wrapT = THREE.RepeatWrapping; // NO
-	// REPEAT
+	var growthTexture = new THREE.ImageUtils.loadTexture('images/corner_test01.png');
+	// lavaTexture.wrapS = lavaTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
 
 	// Uniforms used to call the fragment shader
 	this.customUniforms = {
 			baseTexture: 		{ type: "t", value: growthTexture },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
-			baseSpeed: 			{ type: "f", value: 0.2 },
+			baseSpeed: 			{ type: "f", value: 0.5 },
 			time: 				{ type: "f", value: 0.0 },					// Start position
 			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
 			moveY:				{ type: "f", value: 0.0}					// Amount to move in Y
@@ -81,11 +90,14 @@ function init() {
 	customMaterial.transparent = true;
 
 	// apply the material to a surface
-	var flatGeometry = new THREE.PlaneGeometry(512, 128, 1, 1);
-	var surface = new THREE.Mesh(flatGeometry, customMaterial);
-	// surface.position.set(-60,50,150);
-	scene.add(surface);
+	var flatGeometry = new THREE.PlaneGeometry(256, 256, 1, 1);
+	surface = new THREE.Mesh(flatGeometry, customMaterial);
+	surface.material.side = THREE.DoubleSide;
 
+	// Add the surface to the HUD camera, and position it
+	HUDCamera.add(surface);
+	surface.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
+	
 	// RENDERER
 	renderer = new THREE.WebGLRenderer({
 		antialias : true
@@ -102,16 +114,28 @@ function init() {
 	stats.domElement.style.position = 'absolute';
 	stats.domElement.style.left = '0px';
 	stats.domElement.style.top = '0px';
-	document.getElementById('container').appendChild(stats.domElement);
+	//document.getElementById('container').appendChild(stats.domElement);
 
 	window.addEventListener('resize', onWindowResize, false);
 
 }
 
-// Match camera and renderer to new browser window size
+/* Match bird camera and renderer to new browser window size
+ * 
+ * Do NOT update the HUD angles, so that the HUD does not get displaced
+ * due to FOV
+ */
 function onWindowResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
+	birdCamera.aspect = window.innerWidth / window.innerHeight;
+	birdCamera.updateProjectionMatrix();
+	
+	HUDCamera.left = window.innerWidth / - 2;
+	HUDCamera.right = window.innerWidth / 2;
+	HUDCamera.top = window.innerHeight / 2;
+	HUDCamera.bottom = window.innerHeight / - 2;
+	surface.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
+	HUDCamera.updateProjectionMatrix();
+	
 	renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
@@ -136,10 +160,9 @@ function animate() {
 }
 
 function update() {
-	// increment the transition clock
+	// increment the transition clock - used by transitionShader
 	var delta = clock.getDelta();
 	customUniforms.time.value += 0.01;
-
 }
 
 function render() {
@@ -165,6 +188,7 @@ function render() {
 				.sin(bird.phase) * 5;
 	}
 
-	renderer.render(scene, camera);
+	renderer.render(birdScene, birdCamera);
+	renderer.render(HUDScene, HUDCamera);
 
 }
