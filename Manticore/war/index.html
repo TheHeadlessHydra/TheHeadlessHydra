@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>The Headless Hydra</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				background: -moz-linear-gradient(top,  rgba(252,255,245,0.15) 0%, rgba(252,255,245,0.24) 27%, rgba(209,219,189,0.29) 41%, rgba(145,169,157,0.38) 67%, rgba(62,96,111,0.46) 88%, rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,245,0.15)), color-stop(27%,rgba(252,255,245,0.24)), color-stop(41%,rgba(209,219,189,0.29)), color-stop(67%,rgba(145,169,157,0.38)), color-stop(88%,rgba(62,96,111,0.46)), color-stop(100%,rgba(25,52,65,0.5))), url('images/Background_Tilable.png'); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* IE10+ */
-				background: linear-gradient(to bottom,  rgba(252,255,245,0.15) 0%,rgba(252,255,245,0.24) 27%,rgba(209,219,189,0.29) 41%,rgba(145,169,157,0.38) 67%,rgba(62,96,111,0.46) 88%,rgba(25,52,65,0.5) 100%), url('images/Background_Tilable.png'); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26fcfff5', endColorstr='#80193441',GradientType=0 ), url('images/Background_Tilable.png'); /* IE6-9 */		
-				background-repeat:repeat;
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-				
-				color: #808080;
-				font-family:Monospace;
-				font-size:13px;
-				text-align:center;
+<!-- css describing the background look and style -->
+<link href="css/mainbg.css" rel="stylesheet" type="text/css"></link>
 
-				margin: 0px;
-				overflow: hidden;
-			}
+<title>The Headless Hydra</title>
 
-			#info {
-				position: absolute;
-				top: 0px; width: 100%;
-				padding: 5px;
-			}
-		</style>
-	</head>
-	<body>
+<style>
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 5px;
+}
+</style>
+</head>
 
-		<div id="container"></div>
+<body>
 
-		<script type="text/javascript" src="lib/three.min.js"></script>
-		<script type="text/javascript" src="scripts/Birds.js"></script>
-		<script type="text/javascript" src="lib/stats.min.js"></script>
-
-		<script id="fragmentShader" type="x-shader/x-vertex"> 
+	<div id="container"></div>
+	
+	<!-- SHADERS -->
+	<!-- Transition shader that will transition an image in from one direction to the other -->
+	<script id="transitionShader" type="x-shader/x-vertex"> 
 			uniform sampler2D baseTexture;
 			uniform sampler2D transitionTexture;
 			uniform float baseSpeed;
@@ -62,485 +47,28 @@
 				baseColor.a = baseColor.a * transitionColor.g;
 				gl_FragColor = baseColor;
 			}  
-		</script>
-
-		<script id="vertexShader" type="x-shader/x-vertex">
+	</script>
+	
+	<!-- Basic vertex shader -->
+	<script id="vertexShader" type="x-shader/x-vertex">
 			varying vec2 vUv;
 			void main() 
 			{ 
 			    vUv = uv;
 			    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 			}
-		</script>
-
-        <!-- This script contains all the classes to run a boids simulation -->
-		<script>
-
-			// Based on http://www.openprocessing.org/visuals/?visualID=6910
-
-			var Boid = function() {
-
-				var vector = new THREE.Vector3(),
-				_acceleration, 
-				_width = 500, 
-				_height = 500, 
-				_depth = 200, 
-				_goal, 
-				_neighborhoodRadius = 150,
-				_maxSpeed = 4, 
-				_maxSteerForce = 0.1, 
-				_avoidWalls = false;
-
-				this.position = new THREE.Vector3();
-				this.velocity = new THREE.Vector3();
-				_acceleration = new THREE.Vector3();
-
-				this.setGoal = function ( target ) {
-
-					_goal = target;
-
-				}
-
-				this.setAvoidWalls = function ( value ) {
-
-					_avoidWalls = value;
-
-				}
-
-				this.setWorldSize = function ( width, height, depth ) {
-
-					_width = width;
-					_height = height;
-					_depth = depth;
-
-				}
-
-				this.run = function ( boids ) {
-
-					// Add acceleration to the OPPOSITE direction of the walls the closer you get to the walls. 
-					if ( _avoidWalls ) {
-
-						vector.set( - _width, this.position.y, this.position.z );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-						vector.set( _width, this.position.y, this.position.z );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-						vector.set( this.position.x, - _height, this.position.z );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-						vector.set( this.position.x, _height, this.position.z );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-						vector.set( this.position.x, this.position.y, - _depth );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-						vector.set( this.position.x, this.position.y, _depth );
-						vector = this.avoid( vector );
-						vector.multiplyScalar( 5 );
-						_acceleration.add( vector );
-
-					}/* else {
-
-						this.checkBounds();
-
-					}
-					*/
-
-					if ( Math.random() > 0.5 ) {
-
-						this.flock( boids );
-
-					}
-
-					this.move();
-
-				}
-
-				this.flock = function ( boids ) {
-
-					if ( _goal ) {
-
-						_acceleration.add( this.reach( _goal, 0.005 ) );
-
-					}
-
-					_acceleration.add( this.alignment( boids ) );
-					_acceleration.add( this.cohesion( boids ) );
-					_acceleration.add( this.separation( boids ) );
-
-				}
-
-				// Add the accumulated acceleration to the velocity
-				// If it's above the max speed allowed, reduce it
-				// Add the velocity to the position (so, MOVE it)
-				// Reset acceleration to zero
-				this.move = function () {
-
-					this.velocity.add( _acceleration );
-
-					var l = this.velocity.length();
-
-					if ( l > _maxSpeed ) {
-
-						this.velocity.divideScalar( l / _maxSpeed );
-
-					}
-
-					this.position.add( this.velocity );
-					_acceleration.set( 0, 0, 0 );
-
-				}
-
-				this.checkBounds = function () {
-
-					if ( this.position.x >   _width ) this.position.x = - _width;
-					if ( this.position.x < - _width ) this.position.x =   _width;
-					if ( this.position.y >   _height ) this.position.y = - _height;
-					if ( this.position.y < - _height ) this.position.y =  _height;
-					if ( this.position.z >  _depth ) this.position.z = - _depth;
-					if ( this.position.z < - _depth ) this.position.z =  _depth;
-
-				}
-
-				// Avoid will return a vector that will be larger the close you are to target
-				this.avoid = function ( target ) {
-
-					var steer = new THREE.Vector3();
-
-					steer.copy( this.position );
-					steer.sub( target );
-
-					steer.multiplyScalar( 1 / this.position.distanceToSquared( target ) );
-
-					return steer;
-
-				}
-				
-				// Similiar to avoid, but repulse adds the amount to move by to the acceleration
-				this.repulse = function ( target ) {
-
-					var distance = this.position.distanceTo( target );
-
-					if ( distance < 150 ) {
-
-						var steer = new THREE.Vector3();
-
-						steer.subVectors( this.position, target );
-						steer.multiplyScalar( 0.5 / distance );
-
-						_acceleration.add( steer );
-
-					}
-
-				}
-
-				// Return vector that points to target from current position, multipled by amount 
-				this.reach = function ( target, amount ) {
-
-					var steer = new THREE.Vector3();
-
-					steer.subVectors( target, this.position );
-					steer.multiplyScalar( amount );
-
-					return steer;
-
-				}
-
-				// Keep boids in a pack.
-				// Return the average velocity of all boids in my neighbourhood. 
-				// Dampen if greater than max velocity. 
-				this.alignment = function ( boids ) {
-
-					var boid, velSum = new THREE.Vector3(),
-					count = 0;
-
-					for ( var i = 0, il = boids.length; i < il; i++ ) {
-
-						if ( Math.random() > 0.6 ) continue;
-
-						boid = boids[ i ];
-
-						distance = boid.position.distanceTo( this.position );
-
-						if ( distance > 0 && distance <= _neighborhoodRadius ) {
-
-							velSum.add( boid.velocity );
-							count++;
-
-						}
-
-					}
-
-					if ( count > 0 ) {
-
-						velSum.divideScalar( count );
-
-						var l = velSum.length();
-
-						if ( l > _maxSteerForce ) {
-
-							velSum.divideScalar( l / _maxSteerForce );
-
-						}
-
-					}
-
-					return velSum;
-
-				}
-
-				// Keep boids in a pack.
-				// Take average position of all boids in the neighbourhood.
-				// Steer current boid towards avrg position by subtracting avrg pos by current pos 
-				this.cohesion = function ( boids ) {
-
-					var boid, distance,
-					posSum = new THREE.Vector3(),
-					steer = new THREE.Vector3(),
-					count = 0;
-
-					for ( var i = 0, il = boids.length; i < il; i ++ ) {
-
-						if ( Math.random() > 0.6 ) continue;
-
-						boid = boids[ i ];
-						distance = boid.position.distanceTo( this.position );
-
-						if ( distance > 0 && distance <= _neighborhoodRadius ) {
-
-							posSum.add( boid.position );
-							count++;
-
-						}
-
-					}
-
-					if ( count > 0 ) {
-
-						posSum.divideScalar( count );
-
-					}
-
-					steer.subVectors( posSum, this.position );
-
-					var l = steer.length();
-
-					if ( l > _maxSteerForce ) {
-
-						steer.divideScalar( l / _maxSteerForce );
-
-					}
-
-					return steer;
-
-				}
-
-				// 
-				this.separation = function ( boids ) {
-
-					var boid, distance,
-					posSum = new THREE.Vector3(),
-					repulse = new THREE.Vector3();
-
-					for ( var i = 0, il = boids.length; i < il; i ++ ) {
-
-						if ( Math.random() > 0.6 ) continue;
-
-						boid = boids[ i ];
-						distance = boid.position.distanceTo( this.position );
-
-						if ( distance > 0 && distance <= _neighborhoodRadius ) {
-
-							repulse.subVectors( this.position, boid.position ); // boid to get to you
-							repulse.normalize();
-							repulse.divideScalar( distance );
-							posSum.add( repulse );
-
-						}
-
-					}
-
-					return posSum;
-
-				}
-
-			}
-
-		</script>
-
-		<!-- This script contains all the classes to run a boids simulation -->
-		<script>
-
-			var SCREEN_WIDTH = window.innerWidth,
-			SCREEN_HEIGHT = window.innerHeight,
-			SCREEN_WIDTH_HALF = SCREEN_WIDTH  / 2,
-			SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
-
-			var camera, scene, renderer, 
-			birds, bird,
-			boid, boids,
-			stats,
-			clock = new THREE.Clock();
-			
-			init();
-			animate();
-
-			function init() {
-
-				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
-				camera.position.z = 450;
-
-				scene = new THREE.Scene();
-
-				birds = [];
-				boids = [];
-				
-				// Create 200 birds with random positions
-				for ( var i = 0; i < 100; i ++ ) {
-
-					boid = boids[ i ] = new Boid();
-					boid.position.x = Math.random() * (200 - 1) + 1;
-					boid.position.y = -2 * Math.random() * (250 - 1) + 1 ;
-					boid.position.z = Math.random() * (200 - 1) + 1;
-					boid.velocity.x = Math.random() * (0.2 - 0.1) + 0.1;
-					boid.velocity.y = Math.random() * (0.02 - 0.01) + 0.01;
-					boid.velocity.z = Math.random() * (0.02 - 0.01) + 0.01;
-					boid.setAvoidWalls( true );
-					boid.setWorldSize( 500, 500, 400 );
-
-					bird = birds[ i ] = new THREE.Mesh( new Bird(), new THREE.MeshBasicMaterial( { color:Math.random() * 0xffffff, side: THREE.DoubleSide } ) );
-					bird.phase = Math.floor( Math.random() * 62.83 );
-					bird.position = boids[ i ].position;
-					scene.add( bird );
-				}
-				
-				// APPEARING TEXTURE
-				// Texture that has all pixels at u=0 and v set to white, all else set to black. 
-				var transitionTexture = new THREE.ImageUtils.loadTexture( 'images/ShiftToWhite.png' );
-				//noiseTexture.wrapS = noiseTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
-		
-				// Texture to transition in.
-				var growthTexture = new THREE.ImageUtils.loadTexture( 'images/Test_Growth2.png' );
-				//lavaTexture.wrapS = lavaTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
+	</script>
 	
-				// Uniforms used to call the fragment shader
-				this.customUniforms = {
-					baseTexture: 		{ type: "t", value: growthTexture },
-					transitionTexture: 	{ type: "t", value: transitionTexture },	
-					baseSpeed: 			{ type: "f", value: 0.2 },
-					time: 				{ type: "f", value: 0.0 },					// Start position
-					moveX:				{ type: "f", value: -1.0},					// Amount to move in X
-					moveY:				{ type: "f", value: 0.0}					// Amount to move in Y
-				};
+	<script type="text/javascript" src="lib/three.min.js"></script>
+	<script type="text/javascript" src="lib/stats.min.js"></script>
 	
-				// create custom material from the shader code above
-				//   that is within specially labeled script tags
-				var customMaterial = new THREE.ShaderMaterial( 
-				{
-				    uniforms: customUniforms,
-					vertexShader:   document.getElementById( 'vertexShader'   ).innerHTML,
-					fragmentShader: document.getElementById( 'fragmentShader' ).innerHTML
-				}   );
-				// IMPORTANT! Set the transparency or there will be no alpha manipulation!
-				customMaterial.transparent = true;
 
-				// apply the material to a surface
-				var flatGeometry = new THREE.PlaneGeometry( 512, 128,1,1 );
-   				var surface = new THREE.Mesh( flatGeometry, customMaterial );
-				//surface.position.set(-60,50,150);
-				scene.add( surface );
+	<!-- All script used to run a boids simulation -->
+	<script type="text/javascript" src="js/bird.js"></script>
+	<script type="text/javascript" src="js/boids.js"></script>
+	
+	<!-- This script contains all the classes to run a boids simulation -->
+	<script type="text/javascript" src="js/main.js"></script>
 
-				// RENDERER
-				renderer = new THREE.WebGLRenderer( { antialias: true } );
-				container.appendChild( renderer.domElement );
-				renderer.autoClear = false;
-				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
-
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.body.appendChild( renderer.domElement );
-
-				// The performance monitor for FPS
-				stats = new Stats();
-				stats.domElement.style.position = 'absolute';
-				stats.domElement.style.left = '0px';
-				stats.domElement.style.top = '0px';
-				document.getElementById( 'container' ).appendChild(stats.domElement);
-
-				window.addEventListener( 'resize', onWindowResize, false );
-
-			}
-
-			// Match camera and renderer to new browser window size
-			function onWindowResize() {
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-				renderer.setSize( window.innerWidth, window.innerHeight );
-			}
-
-			function onDocumentMouseMove( event ) {
-				var vector = new THREE.Vector3( event.clientX - SCREEN_WIDTH_HALF, - event.clientY + SCREEN_HEIGHT_HALF, 0 );
-				for ( var i = 0, il = boids.length; i < il; i++ ) {
-					boid = boids[ i ];
-					vector.z = boid.position.z;
-					boid.repulse( vector );
-				}
-
-			}
-
-			function animate() {
-
-				requestAnimationFrame( animate );
-
-				update();
-				render();
-				stats.update();
-			}
-			
-			function update() {
-				// increment the transition clock
-				var delta = clock.getDelta();
-				customUniforms.time.value += 0.01;
-				
-			}
-
-			function render() {
-				
-				for ( var i = 0, il = birds.length; i < il; i++ ) {
-
-					boid = boids[ i ];
-					boid.run( boids );
-
-					bird = birds[ i ];
-
-					// Fade the colours the farther they get from the camera
-					color = bird.material.color;
-					color.r = color.g = color.b = ( 500 - bird.position.z ) / 1000;
-
-					// move closer/farther from camera, as well as up/down
-					bird.rotation.y = Math.atan2( - boid.velocity.z, boid.velocity.x );
-					bird.rotation.z = Math.asin( boid.velocity.y / boid.velocity.length() );
-
-					// flap the wings (vertices 5,4 = end of the wing)
-					bird.phase = ( bird.phase + ( Math.max( 0, bird.rotation.z ) + 0.1 )  ) % 62.83;
-					bird.geometry.vertices[ 5 ].y = bird.geometry.vertices[ 4 ].y = Math.sin( bird.phase ) * 5;
-				}
-				
-				renderer.render( scene, camera );
-
-			}
-
-		</script>
-
-	</body>
+</body>
 </html>
