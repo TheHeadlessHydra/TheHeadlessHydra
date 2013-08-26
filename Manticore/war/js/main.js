@@ -14,7 +14,7 @@ SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
 var camera, scene, renderer, 
 birds, bird, boid, boids, 
 stats, 
-surface,
+surface_corner1, surface_corner2, surface_long1,
 clock = new THREE.Clock();
 
 init();
@@ -34,6 +34,10 @@ function init() {
 	HUDScene = new THREE.Scene();
 	HUDScene.add( HUDCamera );
 
+	/*						*
+	 * 			BOIDS		*
+	 * 						*
+	 */	
 	birds = [];
 	boids = [];
 
@@ -60,45 +64,97 @@ function init() {
 		birdScene.add(bird);
 	}
 
-	// APPEARING TEXTURE
+	
+	/*					HUD 					*
+	 * 											*
+	 * 		Creates items needed for the HUD	*
+	 */
 	// Texture that has all pixels at u=0 and v set to white, all else set to black.
 	var transitionTexture = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Soft_512.png');
-	// noiseTexture.wrapS = noiseTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
-
 	// Texture to transition in.
-	var growthTexture = new THREE.ImageUtils.loadTexture('images/corner_test01.png');
-	// lavaTexture.wrapS = lavaTexture.wrapT = THREE.RepeatWrapping; // NO REPEAT
-
+	var growthTexture01 = new THREE.ImageUtils.loadTexture('images/corner_test01.png');
 	// Uniforms used to call the fragment shader
-	this.customUniforms = {
-			baseTexture: 		{ type: "t", value: growthTexture },
+	this.growthUniform01 = {
+			baseTexture: 		{ type: "t", value: growthTexture01 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
 			baseSpeed: 			{ type: "f", value: 0.5 },
 			time: 				{ type: "f", value: 0.0 },					// Start position
 			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
-			moveY:				{ type: "f", value: 0.0}					// Amount to move in Y
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 1.0}
 		};
-
-	// create custom material from the shader code above
-	// that is within specially labeled script tags
-	var customMaterial = new THREE.ShaderMaterial({
-		uniforms : customUniforms,
+	// create custom material
+	var growth01Material = new THREE.ShaderMaterial({
+		uniforms : growthUniform01,
 		vertexShader : document.getElementById('vertexShader').innerHTML,
 		fragmentShader : document.getElementById('transitionShader').innerHTML
 	});
 	// IMPORTANT! Set the transparency or there will be no alpha manipulation!
-	customMaterial.transparent = true;
-
+	growth01Material.transparent = true;
 	// apply the material to a surface
 	var flatGeometry = new THREE.PlaneGeometry(256, 256, 1, 1);
-	surface = new THREE.Mesh(flatGeometry, customMaterial);
-	surface.material.side = THREE.DoubleSide;
-
+	surface_corner1 = new THREE.Mesh(flatGeometry, growth01Material);
+	// Make it double sided, so that if we want to mirror it, we can still see it
+	surface_corner1.material.side = THREE.DoubleSide;
 	// Add the surface to the HUD camera, and position it
-	HUDCamera.add(surface);
-	surface.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
+	HUDCamera.add(surface_corner1);
+	surface_corner1.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
 	
-	// RENDERER
+	// Texture 2
+	var growthTexture02 = new THREE.ImageUtils.loadTexture('images/corner_test02.png');
+	this.growthUniform02 = {
+			baseTexture: 		{ type: "t", value: growthTexture02 },
+			transitionTexture: 	{ type: "t", value: transitionTexture },	
+			baseSpeed: 			{ type: "f", value: 0.2 },
+			time: 				{ type: "f", value: 0.0 },					// Start position
+			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 1.0}
+		};
+	var growth02Material = new THREE.ShaderMaterial({
+		uniforms : growthUniform02,
+		vertexShader : document.getElementById('vertexShader').innerHTML,
+		fragmentShader : document.getElementById('transitionShader').innerHTML
+	});
+	growth02Material.transparent = true;
+	var flatGeometry2 = new THREE.PlaneGeometry(256, 256, 1, 1);
+	surface_corner2 = new THREE.Mesh(flatGeometry2, growth02Material);
+	surface_corner2.material.side = THREE.DoubleSide;
+	HUDCamera.add(surface_corner2);
+	HUDScene.add(surface_corner2);
+	surface_corner2.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
+	
+	// Texture 3
+	growthTexture03 = new THREE.ImageUtils.loadTexture('images/long_test01.png');
+	this.growthUniform03 = {
+			baseTexture: 		{ type: "t", value: growthTexture03 },
+			transitionTexture: 	{ type: "t", value: transitionTexture },	
+			baseSpeed: 			{ type: "f", value: 0.4 },
+			time: 				{ type: "f", value: 0.0 },					// Start position
+			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 0.8}
+		};
+	var growth03Material = new THREE.ShaderMaterial({
+		uniforms : growthUniform03,
+		vertexShader : document.getElementById('vertexShader').innerHTML,
+		fragmentShader : document.getElementById('transitionShader').innerHTML
+	});
+	growth03Material.transparent = true;
+	var flatGeometry3 = new THREE.PlaneGeometry(1024, 128, 1, 1);
+	surface_long1 = new THREE.Mesh(flatGeometry3, growth03Material);
+	surface_long1.material.side = THREE.DoubleSide;
+	HUDCamera.add(surface_long1);
+	HUDScene.add(surface_long1);
+	surface_long1.rotation.y=Math.PI;
+	surface_long1.position.set(200,-400,0);
+	
+	
+	
+	/*							*
+	 * 			RENDERER		*
+	 * 							*
+	 */
 	renderer = new THREE.WebGLRenderer({
 		antialias : true
 	});
@@ -133,8 +189,11 @@ function onWindowResize() {
 	HUDCamera.right = window.innerWidth / 2;
 	HUDCamera.top = window.innerHeight / 2;
 	HUDCamera.bottom = window.innerHeight / - 2;
-	surface.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
 	HUDCamera.updateProjectionMatrix();
+	
+	surface_corner1.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
+	surface_corner2.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
+	surface_long1.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
 	
 	renderer.setSize(window.innerWidth, window.innerHeight);
 }
@@ -162,7 +221,9 @@ function animate() {
 function update() {
 	// increment the transition clock - used by transitionShader
 	var delta = clock.getDelta();
-	customUniforms.time.value += 0.01;
+	growthUniform01.time.value += 0.01;
+	growthUniform02.time.value += 0.01;
+	growthUniform03.time.value += 0.01;
 }
 
 function render() {

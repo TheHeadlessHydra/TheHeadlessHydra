@@ -53,6 +53,7 @@
 			uniform float time;
 			uniform float moveX;
 			uniform float moveY;
+			uniform float alphaMult;
 
 			varying vec2 vUv;
 			void main() 
@@ -66,7 +67,7 @@
 
 				float alpha = baseColor.a * transitionColor.g;
 				// Make areas transparent that should not be shown yet
-				baseColor.a = alpha;
+				baseColor.a = alpha*alphaMult;
 				gl_FragColor = baseColor;
 			}  
 	</script>
