@@ -1,4 +1,4 @@
-/*
+/**
  * The main JS that runs the core functionality of the website.
  * 
  * It creates the scene, camera, renderer, birds, and border transitions.
@@ -14,7 +14,7 @@ SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
 var camera, scene, renderer, 
 birds, bird, boid, boids, 
 stats, 
-surface_corner1, surface_corner2, surface_long1,
+surface_corner1, surface_corner2, surface_long1, surface_cracks1,
 clock = new THREE.Clock();
 
 init();
@@ -30,11 +30,11 @@ function init() {
 	// used to render the HUD
 	HUDCamera = new THREE.OrthographicCamera( SCREEN_WIDTH / - 2, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, SCREEN_HEIGHT / - 2, 1, 1000 );
 	//HUDCamera = new THREE.PerspectiveCamera(75, 1, 1,10000);
-	HUDCamera.position.z = 450;
+	HUDCamera.position.z = 0;
 	HUDScene = new THREE.Scene();
 	HUDScene.add( HUDCamera );
 
-	/*						*
+	/**						*
 	 * 			BOIDS		*
 	 * 						*
 	 */	
@@ -65,10 +65,11 @@ function init() {
 	}
 
 	
-	/*					HUD 					*
+	/**					HUD 					*
 	 * 											*
 	 * 		Creates items needed for the HUD	*
 	 */
+	
 	// Texture that has all pixels at u=0 and v set to white, all else set to black.
 	var transitionTexture = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Soft_512.png');
 	// Texture to transition in.
@@ -98,7 +99,7 @@ function init() {
 	surface_corner1.material.side = THREE.DoubleSide;
 	// Add the surface to the HUD camera, and position it
 	HUDCamera.add(surface_corner1);
-	surface_corner1.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
+	surface_corner1.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-1.0);
 	
 	// Texture 2
 	var growthTexture02 = new THREE.ImageUtils.loadTexture('images/corner_test02.png');
@@ -122,10 +123,10 @@ function init() {
 	surface_corner2.material.side = THREE.DoubleSide;
 	HUDCamera.add(surface_corner2);
 	HUDScene.add(surface_corner2);
-	surface_corner2.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-500);
+	surface_corner2.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-2.0);
 	
 	// Texture 3
-	growthTexture03 = new THREE.ImageUtils.loadTexture('images/long_test01.png');
+	var growthTexture03 = new THREE.ImageUtils.loadTexture('images/long_test01.png');
 	this.growthUniform03 = {
 			baseTexture: 		{ type: "t", value: growthTexture03 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
@@ -133,7 +134,7 @@ function init() {
 			time: 				{ type: "f", value: 0.0 },					// Start position
 			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
 			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
-			alphaMult:			{ type: "f", value: 0.8}
+			alphaMult:			{ type: "f", value: 1.0}
 		};
 	var growth03Material = new THREE.ShaderMaterial({
 		uniforms : growthUniform03,
@@ -147,11 +148,36 @@ function init() {
 	HUDCamera.add(surface_long1);
 	HUDScene.add(surface_long1);
 	surface_long1.rotation.y=Math.PI;
-	surface_long1.position.set(200,-400,0);
+	surface_long1.position.set(SCREEN_WIDTH_HALF-180,-SCREEN_HEIGHT_HALF,-3.0);
+	
+	// Texture 4
+	var growthTexture04 = new THREE.ImageUtils.loadTexture('images/SideCracks.png');
+	var transitionTexture02 = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Softer_512.png');
+	this.growthUniform04 = {
+			baseTexture: 		{ type: "t", value: growthTexture04 },
+			transitionTexture: 	{ type: "t", value: transitionTexture02 },	
+			baseSpeed: 			{ type: "f", value: 0.4 },
+			time: 				{ type: "f", value: 0.0 },					// Start position
+			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 0.7}
+		};
+	var growth04Material = new THREE.ShaderMaterial({
+		uniforms : growthUniform04,
+		vertexShader : document.getElementById('vertexShader').innerHTML,
+		fragmentShader : document.getElementById('transitionShader').innerHTML
+	});
+	growth04Material.transparent = true;
+	var flatGeometry4 = new THREE.PlaneGeometry(SCREEN_HEIGHT/2, SCREEN_HEIGHT, 1, 1);
+	surface_cracks1 = new THREE.Mesh(flatGeometry4, growth04Material);
+	surface_cracks1.material.side = THREE.DoubleSide;
+	HUDCamera.add(surface_cracks1);
+	HUDScene.add(surface_cracks1);
+	//resize4PointPlane(surface_cracks1,-SCREEN_WIDTH_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF);
+	resize4PointPlane(surface_cracks1,-SCREEN_WIDTH_HALF,-SCREEN_HEIGHT_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF,-4.0);
 	
 	
-	
-	/*							*
+	/**							*
 	 * 			RENDERER		*
 	 * 							*
 	 */
@@ -176,12 +202,14 @@ function init() {
 
 }
 
-/* Match bird camera and renderer to new browser window size
- * 
- * Do NOT update the HUD angles, so that the HUD does not get displaced
- * due to FOV
- */
+
 function onWindowResize() {
+	/** Match bird camera and renderer to new browser window size
+	 * 
+	 * Do NOT update the HUD angles, so that the HUD does not get displaced
+	 * due to FOV
+	 */
+	
 	birdCamera.aspect = window.innerWidth / window.innerHeight;
 	birdCamera.updateProjectionMatrix();
 	
@@ -191,11 +219,48 @@ function onWindowResize() {
 	HUDCamera.bottom = window.innerHeight / - 2;
 	HUDCamera.updateProjectionMatrix();
 	
-	surface_corner1.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
-	surface_corner2.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
-	surface_long1.position.set(-window.innerWidth / 2+120,-window.innerHeight/2+120,-500);
+	
+	surface_corner1.position.set(-window.innerWidth/2+120,-window.innerHeight/2+120,-1.0);
+	surface_corner2.position.set(-window.innerWidth/2+120,-window.innerHeight/2+120,-2.0);
+	surface_long1.position.set(window.innerWidth/2-180,-window.innerHeight/2,-3.0);
+	resize4PointPlane(surface_cracks1,-(window.innerWidth/2),-(window.innerHeight/2),window.innerHeight,window.innerHeight/2,-4.0);
 	
 	renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+
+function resize4PointPlane(mesh, posX, posY, height, width, depth) {
+	/**	Used to resize a 4 pointed mesh that has the following vertices order:
+	 * 
+	 * 				0------1
+	 * 				|	   |
+	 * 				|      |
+	 * 				2------3
+	 * 
+	 * @param mesh:		Mesh to resize
+	 * @param posX:		Bottom left X position to place		
+	 * @param posY:		Bottom left Y position to place
+	 * @param height:	Height to resize plane
+	 * @param width:	Width to resize plane
+	 * @param depth:	Depth in Z to place
+	 */
+	
+	mesh.geometry.vertices[0].y=posY+height;
+	mesh.geometry.vertices[1].y=posY+height;
+	mesh.geometry.vertices[2].y=posY;
+	mesh.geometry.vertices[3].y=posY;
+	
+	mesh.geometry.vertices[0].x=posX;
+	mesh.geometry.vertices[1].x=posX+width;
+	mesh.geometry.vertices[2].x=posX;
+	mesh.geometry.vertices[3].x=posX+width;
+	
+	mesh.geometry.vertices[0].z=depth;
+	mesh.geometry.vertices[1].z=depth;
+	mesh.geometry.vertices[2].z=depth;
+	mesh.geometry.vertices[3].z=depth;
+	
+	mesh.geometry.verticesNeedUpdate = true;
 }
 
 function onDocumentMouseMove(event) {
@@ -224,6 +289,23 @@ function update() {
 	growthUniform01.time.value += 0.01;
 	growthUniform02.time.value += 0.01;
 	growthUniform03.time.value += 0.01;
+	growthUniform04.time.value += 0.01;
+}
+
+
+function setHUDRenderOrder(){
+	/**
+	 * Set the render order for the objects manually! If rendered in an incorrect order,
+	 * there will be major transparency issues.
+	 * The ones farthest back must have the highest renderDepth ID!
+	 * Camera calculates it based on distance from camera, but it is counting the x/y axis as well.
+	 * This causes incorrect order in rendering since its an orthogonal camera. 
+	 * We want it to only count the Z axis, which it is not, so it must be set manually. 
+	 */
+	surface_corner1.renderDepth=0;
+	surface_corner2.renderDepth=1;
+	surface_long1.renderDepth=2;
+	surface_cracks1.renderDepth=3;
 }
 
 function render() {
@@ -249,6 +331,9 @@ function render() {
 				.sin(bird.phase) * 5;
 	}
 
+	// Make sure the HUD has the proper depth rendering order before rendering
+	setHUDRenderOrder();
+	
 	renderer.render(birdScene, birdCamera);
 	renderer.render(HUDScene, HUDCamera);
 
