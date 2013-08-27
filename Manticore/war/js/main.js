@@ -14,7 +14,7 @@ SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
 var camera, scene, renderer, 
 birds, bird, boid, boids, 
 stats, 
-surface_corner1, surface_corner2, surface_long1, surface_cracks1,
+surface_corner1, surface_corner2, botRightGeo1, botRightGeo2, surface_cracks1, surface_cracks2,
 clock = new THREE.Clock();
 
 init();
@@ -69,6 +69,7 @@ function init() {
 	 * 											*
 	 * 		Creates items needed for the HUD	*
 	 */
+	// Bottom left texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	
 	// Texture that has all pixels at u=0 and v set to white, all else set to black.
 	var transitionTexture = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Soft_512.png');
@@ -101,7 +102,7 @@ function init() {
 	HUDCamera.add(surface_corner1);
 	surface_corner1.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-1.0);
 	
-	// Texture 2
+	// Bottom left texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	var growthTexture02 = new THREE.ImageUtils.loadTexture('images/corner_test02.png');
 	this.growthUniform02 = {
 			baseTexture: 		{ type: "t", value: growthTexture02 },
@@ -125,10 +126,10 @@ function init() {
 	HUDScene.add(surface_corner2);
 	surface_corner2.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-2.0);
 	
-	// Texture 3
-	var growthTexture03 = new THREE.ImageUtils.loadTexture('images/long_test01.png');
-	this.growthUniform03 = {
-			baseTexture: 		{ type: "t", value: growthTexture03 },
+	// Bottom right texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	var botRightTex1 = new THREE.ImageUtils.loadTexture('images/corner_test03.png');
+	this.botRightUniform1 = {
+			baseTexture: 		{ type: "t", value: botRightTex1 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
 			baseSpeed: 			{ type: "f", value: 0.4 },
 			time: 				{ type: "f", value: 0.0 },					// Start position
@@ -136,45 +137,96 @@ function init() {
 			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
 			alphaMult:			{ type: "f", value: 1.0}
 		};
-	var growth03Material = new THREE.ShaderMaterial({
-		uniforms : growthUniform03,
+	var botRightMaterial01 = new THREE.ShaderMaterial({
+		uniforms : botRightUniform1,
 		vertexShader : document.getElementById('vertexShader').innerHTML,
 		fragmentShader : document.getElementById('transitionShader').innerHTML
 	});
-	growth03Material.transparent = true;
-	var flatGeometry3 = new THREE.PlaneGeometry(1024, 128, 1, 1);
-	surface_long1 = new THREE.Mesh(flatGeometry3, growth03Material);
-	surface_long1.material.side = THREE.DoubleSide;
-	HUDCamera.add(surface_long1);
-	HUDScene.add(surface_long1);
-	surface_long1.rotation.y=Math.PI;
-	surface_long1.position.set(SCREEN_WIDTH_HALF-180,-SCREEN_HEIGHT_HALF,-3.0);
+	botRightMaterial01.transparent = true;
+	var botGeometry1 = new THREE.PlaneGeometry(800, 200, 1, 1);
+	botRightGeo1 = new THREE.Mesh(botGeometry1, botRightMaterial01);
+	botRightGeo1.material.side = THREE.DoubleSide;
+	HUDCamera.add(botRightGeo1);
+	HUDScene.add(botRightGeo1);
+	botRightGeo1.rotation.y=Math.PI;
+	botRightGeo1.position.set(SCREEN_WIDTH_HALF-400,-SCREEN_HEIGHT_HALF+100,-4.0);
 	
-	// Texture 4
-	var growthTexture04 = new THREE.ImageUtils.loadTexture('images/SideCracks.png');
+	// Bottom right texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	var botRightTex2 = new THREE.ImageUtils.loadTexture('images/corner_test04.png');
+	this.botRightUniform2 = {
+			baseTexture: 		{ type: "t", value: botRightTex2 },
+			transitionTexture: 	{ type: "t", value: transitionTexture },	
+			baseSpeed: 			{ type: "f", value: 0.2 },
+			time: 				{ type: "f", value: 0.0 },					// Start position
+			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 1.0}
+		};
+	var botRightMaterial02 = new THREE.ShaderMaterial({
+		uniforms : botRightUniform2,
+		vertexShader : document.getElementById('vertexShader').innerHTML,
+		fragmentShader : document.getElementById('transitionShader').innerHTML
+	});
+	botRightMaterial02.transparent = true;
+	var botGeometry2 = new THREE.PlaneGeometry(800, 200, 1, 1);
+	botRightGeo2 = new THREE.Mesh(botGeometry2, botRightMaterial02);
+	botRightGeo2.material.side = THREE.DoubleSide;
+	HUDCamera.add(botRightGeo2);
+	HUDScene.add(botRightGeo2);
+	botRightGeo2.rotation.y=Math.PI;
+	botRightGeo2.position.set(SCREEN_WIDTH_HALF-400,-SCREEN_HEIGHT_HALF+100,-4.0);
+	
+	
+	
+	// Cracked texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	var crackTexture01 = new THREE.ImageUtils.loadTexture('images/SideCracks.png');
 	var transitionTexture02 = new THREE.ImageUtils.loadTexture('images/ShiftToWhite_Softer_512.png');
-	this.growthUniform04 = {
-			baseTexture: 		{ type: "t", value: growthTexture04 },
+	this.crackUniform01 = {
+			baseTexture: 		{ type: "t", value: crackTexture01 },
 			transitionTexture: 	{ type: "t", value: transitionTexture02 },	
-			baseSpeed: 			{ type: "f", value: 0.4 },
+			baseSpeed: 			{ type: "f", value: 0.1 },
 			time: 				{ type: "f", value: 0.0 },					// Start position
 			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
 			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
 			alphaMult:			{ type: "f", value: 0.7}
 		};
-	var growth04Material = new THREE.ShaderMaterial({
-		uniforms : growthUniform04,
+	var crackMaterial01 = new THREE.ShaderMaterial({
+		uniforms : crackUniform01,
 		vertexShader : document.getElementById('vertexShader').innerHTML,
 		fragmentShader : document.getElementById('transitionShader').innerHTML
 	});
-	growth04Material.transparent = true;
-	var flatGeometry4 = new THREE.PlaneGeometry(SCREEN_HEIGHT/2, SCREEN_HEIGHT, 1, 1);
-	surface_cracks1 = new THREE.Mesh(flatGeometry4, growth04Material);
+	crackMaterial01.transparent = true;
+	var flatCrackGeometry1 = new THREE.PlaneGeometry(SCREEN_HEIGHT/2, SCREEN_HEIGHT, 1, 1);
+	surface_cracks1 = new THREE.Mesh(flatCrackGeometry1, crackMaterial01);
 	surface_cracks1.material.side = THREE.DoubleSide;
 	HUDCamera.add(surface_cracks1);
 	HUDScene.add(surface_cracks1);
-	//resize4PointPlane(surface_cracks1,-SCREEN_WIDTH_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF);
-	resize4PointPlane(surface_cracks1,-SCREEN_WIDTH_HALF,-SCREEN_HEIGHT_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF,-4.0);
+	resize4PointPlane(surface_cracks1,false,-SCREEN_WIDTH_HALF,-SCREEN_HEIGHT_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF,-5.0);
+	
+	// Cracked texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	var crackTexture02 = new THREE.ImageUtils.loadTexture('images/SideCracks2.png');
+	this.crackUniform02 = {
+			baseTexture: 		{ type: "t", value: crackTexture02 },
+			transitionTexture: 	{ type: "t", value: transitionTexture02 },	
+			baseSpeed: 			{ type: "f", value: 0.1 },
+			time: 				{ type: "f", value: 0.0 },					// Start position
+			moveX:				{ type: "f", value: -1.0},					// Amount to move in X
+			moveY:				{ type: "f", value: 0.0},					// Amount to move in Y
+			alphaMult:			{ type: "f", value: 0.7}
+		};
+	var crackMaterial02 = new THREE.ShaderMaterial({
+		uniforms : crackUniform02,
+		vertexShader : document.getElementById('vertexShader').innerHTML,
+		fragmentShader : document.getElementById('transitionShader').innerHTML
+	});
+	crackMaterial02.transparent = true;
+	var flatCrackGeometry2 = new THREE.PlaneGeometry(SCREEN_HEIGHT/2, SCREEN_HEIGHT, 1, 1);
+	surface_cracks2 = new THREE.Mesh(flatCrackGeometry2, crackMaterial02);
+	surface_cracks2.material.side = THREE.DoubleSide;
+	HUDCamera.add(surface_cracks2);
+	HUDScene.add(surface_cracks2);
+	resize4PointPlane(surface_cracks2,true,SCREEN_WIDTH_HALF,-SCREEN_HEIGHT_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF,-6.0);
+	
 	
 	
 	/**							*
@@ -206,8 +258,6 @@ function init() {
 function onWindowResize() {
 	/** Match bird camera and renderer to new browser window size
 	 * 
-	 * Do NOT update the HUD angles, so that the HUD does not get displaced
-	 * due to FOV
 	 */
 	
 	birdCamera.aspect = window.innerWidth / window.innerHeight;
@@ -222,20 +272,24 @@ function onWindowResize() {
 	
 	surface_corner1.position.set(-window.innerWidth/2+120,-window.innerHeight/2+120,-1.0);
 	surface_corner2.position.set(-window.innerWidth/2+120,-window.innerHeight/2+120,-2.0);
-	surface_long1.position.set(window.innerWidth/2-180,-window.innerHeight/2,-3.0);
-	resize4PointPlane(surface_cracks1,-(window.innerWidth/2),-(window.innerHeight/2),window.innerHeight,window.innerHeight/2,-4.0);
+	botRightGeo1.position.set(window.innerWidth/2-400,-window.innerHeight/2+100,-4.0);
+	botRightGeo2.position.set(window.innerWidth/2-400,-window.innerHeight/2+100,-4.0);
+	resize4PointPlane(surface_cracks1,false,-(window.innerWidth/2),-(window.innerHeight/2),window.innerHeight,window.innerHeight/2,-5.0);
+	resize4PointPlane(surface_cracks2,true,(window.innerWidth/2),-(window.innerHeight/2),window.innerHeight,window.innerHeight/2,-6.0);
 	
 	renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 
-function resize4PointPlane(mesh, posX, posY, height, width, depth) {
+function resize4PointPlane(mesh, isRotated, posX, posY, height, width, depth) {
 	/**	Used to resize a 4 pointed mesh that has the following vertices order:
 	 * 
-	 * 				0------1
-	 * 				|	   |
+	 * 				0------1                      
+	 * 				|	   |     
 	 * 				|      |
 	 * 				2------3
+	 * 
+	 *  If isRotated is true, it will flip the mesh horizontally
 	 * 
 	 * @param mesh:		Mesh to resize
 	 * @param posX:		Bottom left X position to place		
@@ -244,17 +298,22 @@ function resize4PointPlane(mesh, posX, posY, height, width, depth) {
 	 * @param width:	Width to resize plane
 	 * @param depth:	Depth in Z to place
 	 */
-	
 	mesh.geometry.vertices[0].y=posY+height;
 	mesh.geometry.vertices[1].y=posY+height;
 	mesh.geometry.vertices[2].y=posY;
 	mesh.geometry.vertices[3].y=posY;
-	
-	mesh.geometry.vertices[0].x=posX;
-	mesh.geometry.vertices[1].x=posX+width;
-	mesh.geometry.vertices[2].x=posX;
-	mesh.geometry.vertices[3].x=posX+width;
-	
+	if (!isRotated){
+		mesh.geometry.vertices[0].x=posX;
+		mesh.geometry.vertices[1].x=posX+width;
+		mesh.geometry.vertices[2].x=posX;
+		mesh.geometry.vertices[3].x=posX+width;
+	}
+	else{
+		mesh.geometry.vertices[0].x=posX;
+		mesh.geometry.vertices[1].x=posX-width;
+		mesh.geometry.vertices[2].x=posX;
+		mesh.geometry.vertices[3].x=posX-width;
+	}
 	mesh.geometry.vertices[0].z=depth;
 	mesh.geometry.vertices[1].z=depth;
 	mesh.geometry.vertices[2].z=depth;
@@ -288,8 +347,10 @@ function update() {
 	var delta = clock.getDelta();
 	growthUniform01.time.value += 0.01;
 	growthUniform02.time.value += 0.01;
-	growthUniform03.time.value += 0.01;
-	growthUniform04.time.value += 0.01;
+	botRightUniform1.time.value += 0.01;
+	botRightUniform2.time.value += 0.01;
+	crackUniform01.time.value += 0.01;
+	crackUniform02.time.value += 0.01;
 }
 
 
@@ -304,8 +365,10 @@ function setHUDRenderOrder(){
 	 */
 	surface_corner1.renderDepth=0;
 	surface_corner2.renderDepth=1;
-	surface_long1.renderDepth=2;
-	surface_cracks1.renderDepth=3;
+	botRightGeo1.renderDepth=2;
+	botRightGeo2.renderDepth=3;
+	surface_cracks1.renderDepth=4;
+	surface_cracks2.renderDepth=5;
 }
 
 function render() {
