@@ -1,0 +1,159 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, 
+kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, 
+menu, nav, section, summary, time, mark, audio, video{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+body{
+	color:#ccc;
+	font-family: 'Iceberg', serif;
+	background:#1e1e20;
+	background-size:100%;
+}
+#mainborder{
+	display:block;
+	clear:both;
+	position:relative;
+	margin:50px;
+	border:3px solid #374140;
+}
+
+#content_container{
+	width:800px;
+	margin:0px auto;
+	position:relative;
+	display:block;
+	clear:both; 
+	opacity:1;
+}
+#header{
+	margin-top:3%;
+	margin-bottom:3%;
+	margin-right:3%;
+	margin-left:3%;  
+}
+#text-3d{
+	width:214px;
+	display:block;
+	float:left;
+	margin-right:13px;
+	border-right:1px solid #374140;
+	padding-bottom:24px;
+	padding-left:10px;
+}
+
+.char1, .char2{
+	font-size:150px;
+	color:#dc3522;
+}
+
+/* Clearfix needed so that items that are floats inside a parent element resize
+   the parent elemnt to properly fit the child elements */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/* @override http://lostworldsfairs.com/moon/css/style.min.css */
+/*
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+nav ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#ff9;color:#000;text-decoration:none;}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title], dfn[title]{border-bottom:1px dotted;cursor:help;}
+table{border-collapse:collapse;border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+input, select{vertical-align:middle;}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+::-moz-selection{background:rgba(153,51,51,1);color:#fff;text-shadow:none;}
+::selection{background:rgba(153,51,51,1);color:#fff;text-shadow:none;}
+.ie7 img{-ms-interpolation-mode:bicubic;}
+#back_to{position:fixed;bottom:20px;right:20px;z-index:2000;}
+#back_to a{font:14px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;letter-spacing:3px;background:url(../img/sash.png) no-repeat left top;height:26px;width:194px;position:fixed;bottom: 70px;right:0px;z-index:44;color:#fff;text-decoration:none;text-indent:25px;padding-top:10px;text-transform:uppercase;}
+#back_to a:hover{color:#98d1f4;}
+#outerspace{padding:22px;position:relative;display:block;clear:both;min-width:940px;background:url(../img/spaceman.png) no-repeat 38% 92%;}
+#container{display:block;clear:both;position:relative;margin-bottom:22px;border:1px solid #2f434f;min-width:900px;}
+#content_container{width:800px;margin:0px auto;position:relative;display:block;clear:both;opacity:1;}
+#header{position:relative;}
+#main{margin-left:406px;border-left:1px solid rgba(152,209,244, .3);}
+#main_footer{border-top:1px solid rgba(152,209,244, .3);padding:24px 0px 61px 40px;text-align:center;}
+img{position:fixed;}
+#img_earth{position:fixed;top:0px;right:0px;z-index:1000;}
+#img_moon, #places{position:fixed; z-index:1020;
+}
+
+
+
+#txt_onward{color:#000;text-transform:uppercase;font:14px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;letter-spacing:4px;font-weight:normal;}
+#txt_onward .char8{color:#fff;font:40px/0 "coquette-1","coquette-2", sans-serif;margin-right:-15px;margin-left:-14px;top:15px; z-index: 0;}
+#txt_onward span{position:relative;}
+#txt_onward .char15{bottom:1px;}
+#txt_onward .char14{top:0px;}
+#txt_onward .char13{top:1px;}
+#txt_onward .char12{top:2px;}
+#txt_onward .char11{top:3px;}
+#txt_onward .char10{top:4px;}
+#txt_onward .char6{top:8px; z-index: 1;}
+#txt_onward .char5{top:9px;}
+#txt_onward .char4{top:10px;}
+#txt_onward .char3{top:11px;}
+#txt_onward .char2{top:12px;}
+#txt_onward .char1{top:13px;}
+
+#places{margin-left:325px;margin-top:0px;}
+#img_moon, #places, #wflogo{left:-33%;top:49%;}
+#img_earth{left:78%;}
+#places{z-index:2000;height:400px;width:550px;}
+#wflogo{color:rgba(153,51,51,1);position:fixed;text-align:center;width:68px;height:58px;top:92%;left:30px;background:#fff;border:3px solid #41aded;text-transform:uppercase;-webkit-border-radius:330px;-moz-border-radius:330px;border-radius:330px;margin-top:-49px;padding-top:10px;z-index:2000;}
+#orbit{width:12px;height:12px;position:fixed;top:92%;left:87px;z-index:2000;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background-color:#3fa9f5;margin-top:-43px;}
+#wflogo .char1, #wflogo .char2, #wflogo .char3{font-size:10px;letter-spacing:6px;color:rgba(195,70,70, 1);line-height:1.2;}
+#wflogo .char4, #wflogo .char5, #wflogo .char6, #wflogo .char7, #wflogo .char8, #wflogo .char9, #wflogo .char10, #wflogo .char11{font:16px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;font-weight:700;line-height:.6;}
+#wflogo .char16, #wflogo .char13, #wflogo .char14, #wflogo .char15{letter-spacing:5px;color:rgba(195,70,70, 1);}
+#wflogo .char3, #wflogo .char11, #wflogo .char16{letter-spacing:0;}
+#txt_year,#txt_lead,#txt_worldsfair, #txt_earth, #txt_moon{display:block;}
+#txt_date, #txt_lead{padding-top:58px;float:left;display:block;}
+#txt_date{width:214px;display:block;float:left;margin-right:13px;border-right:1px solid rgba(152,209,244, .3);padding-bottom:24px;padding-left:10px;}
+#txt_year{font-size:85px;line-height:70px;font-family:"klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;font-weight:700;letter-spacing:12px;}
+#txt_year .char1, #txt_year .char3{color:rgba(195,70,70, 1);}
+#txt_year .char2, #txt_year .char4{color:rgba(153,51,51,1);}
+#txt_year .char3{letter-spacing:13px;}
+#txt_atomdate{position:absolute;top:124px;color:#999;font:12px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;text-indent:6px;}
+#txt_lead{margin-left:8px;}
+#txt_worldsfair, #txt_earth{text-transform:uppercase;color:#999;font:32px "bryant-web-1","bryant-web-2", sans-serif;letter-spacing:22px;margin-right:-20px;}
+#txt_worldsfair{margin-bottom:6px;margin-top:1px;}
+#txt_moon{color:#f2f2f2;font:310px/220px "klavika-web-1","klavika-web-2", sans-serif;font-weight:700;text-transform:uppercase;clear:both;border-top:1px solid rgba(152,209,244, .3);border-bottom:1px solid rgba(152,209,244, .3);padding:20px 0px 3px;text-indent:-14px;}
+#txt_moon .char1{letter-spacing:-14px;}
+#txt_tagline{background:url(../img/tagbanner.png) no-repeat;width:172px;height:48px;position:absolute;top:238px;left:305px;margin:0px auto;padding-top:20px;padding-left:29px;}
+.dropcap{color:rgba(153,51,51,1);font: 85px "coquette-1","coquette-2", sans-serif;position:relative;left:-74px;top:-34px;float:left;margin-right:-73px;margin-bottom:-47px;}
+#txt_introp{position:relative;display:block;clear:both;font-size:25px;line-height:26px;padding-left:10px;margin-bottom:5px;font-weight:300;}
+#txt_mainpara{display:block;clear:both;font-size:14px;line-height:20px;background:url(../img/star.png) no-repeat right bottom;padding-bottom:20px;}
+#explain{padding:30px 0px 7px 82px;position:relative;}
+#txt_inthename{color:rgba(77,113,134,1);font-size:12px;text-transform:uppercase;letter-spacing:2px;line-height:16px;}
+#txt_prosperity{display:block;color:rgba(152,209,244,1);text-transform:uppercase;letter-spacing:2px;font:italic 16px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;}
+#main_footer{background:url(../img/handshake.png) no-repeat right 14px;min-height:30px;}
+.pinpoint{font:14px "klavika-web-condensed-1","klavika-web-condensed-2", sans-serif;display:inline;color:#333;background:url(../img/map_pin.png) no-repeat left top;padding-bottom:20px;padding-left:20px;position:absolute;}
+
+*/
