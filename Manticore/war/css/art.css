@@ -14,10 +14,15 @@ menu, nav, section, summary, time, mark, audio, video{
 }
 
 body{
-	color:#ccc;
-	font-family: 'Iceberg', serif;
-	background:#1e1e20;
-	background-size:100%;
+background: #1e1e20; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #1e1e20 0%, #2a2c2b 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1e1e20), color-stop(100%,#2a2c2b)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #1e1e20 0%,#2a2c2b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #1e1e20 0%,#2a2c2b 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #1e1e20 0%,#2a2c2b 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #1e1e20 0%,#2a2c2b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', endColorstr='#2a2c2b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 #mainborder{
 	display:block;
@@ -37,6 +42,11 @@ body{
 }
 #header{
 	margin-top:3%;
+	margin-right:3%;
+	margin-left:3%;
+	border-bottom:2px ridge #374140;
+}
+#header2{
 	margin-bottom:3%;
 	margin-right:3%;
 	margin-left:3%;  
@@ -46,16 +56,33 @@ body{
 	display:block;
 	float:left;
 	margin-right:13px;
-	border-right:1px solid #374140;
-	padding-bottom:24px;
+	border-right:2px ridge #374140;
 	padding-left:10px;
 }
-
-.char1, .char2{
+#text-art{
+	letter-spacing:10px;
+	width:463px;
+	display:block;
+	float:right;
+	margin-right:13px;
+	border-left:2px ridge #374140;
+	padding-left:50px;
+}
+.char0{
+	font-family: 'Josefin Sans', serif;
+	font-size:165px;
+	color:#dc3522;
+}
+.char1{
+	font-family: 'Josefin Sans', serif;
 	font-size:150px;
 	color:#dc3522;
 }
-
+.char2{
+	font-family: 'Lusitana', serif;
+	font-size:120px;
+	color:#d9cb9e;
+}
 /* Clearfix needed so that items that are floats inside a parent element resize
    the parent elemnt to properly fit the child elements */
 .clearfix:before,
