@@ -2,16 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
 <title>3D Art</title>
 
-<link href="css/art.css" rel="stylesheet" type="text/css"></link>
+<!-- main style -->
+<link rel="stylesheet" type="text/css" href="css/art.css"></link>
 
+<!-- Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lusitana">
 
+<!-- Slider CSS -->
+<link rel="stylesheet" type="text/css" href="css/slider/style.css" />
+<link rel="stylesheet" type="text/css" href="css/slider/elastislide.css" />
+
+<!-- Popup CSS --> 
+<link rel="stylesheet" href="css/popup.css" type="text/css" media="all" />
+
+<noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+		
+		
 </head>
 
 <body>
@@ -38,105 +72,71 @@
 		</div>
 	</div>
 	
-	<!-- 
-	<div id="container">
-		<div id="mainborder">
-		TEST<br>
-		TEST<br>
-		TEST<br>
-			<div id="content_container">
-				<header id="header" class="clearfix">
-					<time id="txt_atomdate">2040-06-21T12:00:00Z/2040-08-11T18:00:00Z</time>
-					<h1>
-						<span id="txt_date"><span id="txt_year"><span
-								class="char1">2</span><span class="char2">0</span><span
-								class="char3">4</span><span class="char4">0</span></span></span> <span
-							id="txt_lead"><span id="txt_worldsfair">A Worlds’
-								Fair</span> <span id="txt_earth">on the Earth’s</span></span> <span
-							id="txt_moon"><span class="char1">M</span><span
-							class="char2">o</span><span class="char3">o</span><span
-							class="char4">n</span></span>
-					</h1>
-					<p id="txt_tagline">
-						<span id="txt_onward"><span class="char1">O</span><span
-							class="char2">n</span><span class="char3">w</span><span
-							class="char4">a</span><span class="char5">r</span><span
-							class="char6">d</span><span class="char7"> </span><span
-							class="char8">&amp;</span><span class="char9"> </span><span
-							class="char10">U</span><span class="char11">p</span><span
-							class="char12">w</span><span class="char13">a</span><span
-							class="char14">r</span><span class="char15">d</span></span>
-					</p>
-				</header>
-				<article id="main">
-					<section id="explain">
-						<h2 id="txt_introp">
-							<span class="dropcap">W</span>e look from the Milky Way into the
-							universe beyond.
-						</h2>
-						<p id="txt_mainpara">
-							Life and time are enriched by science and technology. The pearl
-							of our night sky welcomes Earthlings to reflect on our past home
-							and prepare us for a future<br>of exploration, discovery,
-							and the marvels of space.
-						</p>
-					</section>
-					<footer id="main_footer" style="height: 155px;">
-						<p>
-							<span id="txt_inthename">In the Name of</span> <span
-								id="txt_prosperity">Friendship and Prosperity</span>
-						</p>
-					</footer>
-					<div class="push"></div>
-				</article>
-			</div>
-		</div>
-	</div>
-	 -->
 
-<!-- 
-<header id="header" class="clearfix">
-					<h1>
-						<span id="txt_date">
-							<span id="txt_year">
-								<span class="char1">2</span>
-								<span class="char2">0</span>
-								<span class="char3">4</span>
-								<span class="char4">0</span>
-							</span>
-						</span> 
-						<span id="txt_lead">
-							<span id="txt_worldsfair">A Worlds’ Fair</span> 
-							<span id="txt_earth">on the Earth’s</span>
-						</span> 
-						<span id="txt_moon">
-							<span class="char1">M</span>
-							<span class="char2">o</span>
-							<span class="char3">o</span>
-							<span class="char4">n</span>
-						</span>
-					</h1>
-					<p id="txt_tagline">
-						<span id="txt_onward">
-							<span class="char1">O</span>
-							<span class="char2">n</span>
-							<span class="char3">w</span>
-							<span class="char4">a</span>
-							<span class="char5">r</span>
-							<span class="char6">d</span>
-							<span class="char7"> </span>
-							<span class="char8">&amp;</span>
-							<span class="char9"> </span>
-							<span class="char10">U</span>
-							<span class="char11">p</span>
-							<span class="char12">w</span>
-							<span class="char13">a</span>
-							<span class="char14">r</span>
-							<span class="char15">d</span>
-						</span>
-					</p>
-				</header>
- -->
+
+<a href="#" class="topopup">Click Here Trigger</a>
+<div id="toPopup">  
+	<div class="close"></div>
+    <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+			<div class="content">
+				<h1>Image Gallery <span>Description of Image Gallery</span></h1>
+				<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Previous</span>
+								<span class="es-nav-next">Next</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+									<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+									<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
+									<li><a href="#"><img src="images/popup/closebox.png" data-large="images/popup/closebox.png" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+			</div><!-- content -->
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/slider/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="js/slider/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/slider/jquery.elastislide.js"></script>
+<script type="text/javascript" src="js/slider/gallery.js"></script>
+
+<!--
+<div id="toPopup">  
+	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>      
+	<div id="popup_content" class="slider-wrapper theme-dark">
+            <div id="slider" class="nivoSlider">
+                <img src="images/loading.gif" data-thumb="" alt="" data-transition="fade" />
+                <img src="images/two.png" data-thumb="" alt="" title="This is an example of a caption" data-transition="fade" />
+                <img src="images/three.png" data-thumb="" alt="" data-transition="fade" />
+                <img src="images/SideCracks.png" data-thumb="" alt="" title="#htmlcaption" data-transition="fade" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+    </div>
+</div>
+
+
+
+	<script type="text/javascript" src="lib/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+-->   
+<div class="loader"></div>
+<div id="backgroundPopup"></div>
+    <script type="text/javascript" src="js/popup.js"></script>
 
 </body>
 </html>

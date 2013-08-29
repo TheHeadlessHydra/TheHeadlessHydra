@@ -1,3 +1,13 @@
+/**   
+ *    CSS styles for the art.html page
+ */
+
+
+/**   
+ *    
+ *     Overwrites
+ *
+ */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
 blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, 
 kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, 
@@ -11,8 +21,8 @@ menu, nav, section, summary, time, mark, audio, video{
 	font-size:100%;
 	vertical-align:baseline;
 	background:transparent;
+	color:#ffffff;
 }
-
 body{
 background: #1e1e20; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #1e1e20 0%, #2a2c2b 100%); /* FF3.6+ */
@@ -22,8 +32,46 @@ background: -o-radial-gradient(center, ellipse cover,  #1e1e20 0%,#2a2c2b 100%);
 background: -ms-radial-gradient(center, ellipse cover,  #1e1e20 0%,#2a2c2b 100%); /* IE10+ */
 background: radial-gradient(ellipse at center,  #1e1e20 0%,#2a2c2b 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', endColorstr='#2a2c2b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
 }
+h1{
+	margin:5px;
+	font-size:24px;
+	text-align:center;
+	color:#fff;
+	font-family:"Pacifico", Georgia, "Times New Roman", serif;
+	text-shadow:1px 1px 1px #000;
+	padding-bottom:10px;
+	line-height:40px;
+}
+h1 span{
+	font-size:10px;
+	display:block;
+	letter-spacing:2px;
+	font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
+	color:#00c6e3;
+	line-height:14px;
+	padding-top:10px;
+	text-shadow:none;
+	text-transform:uppercase;
+}
+a{
+	color:#ddd;
+	text-decoration:none;
+}
+a:hover{
+	color:#00c6e3;
+}
+p.sub{
+	padding:25px 10px 10px 10px;
+	text-align:left;
+	color:#aaa;
+}
+
+/**   
+ *    
+ *     Customs ID's
+ *
+ */
 #mainborder{
 	display:block;
 	clear:both;
@@ -68,6 +116,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', end
 	border-left:2px ridge #374140;
 	padding-left:50px;
 }
+
+/**   
+ *    
+ *     Customs classes
+ *
+ */
 .char0{
 	font-family: 'Josefin Sans', serif;
 	font-size:165px;
@@ -83,8 +137,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', end
 	font-size:120px;
 	color:#d9cb9e;
 }
-/* Clearfix needed so that items that are floats inside a parent element resize
-   the parent elemnt to properly fit the child elements */
+
+/**   
+ *    
+ *     Slider css
+ *
+ */
+.clr{
+	clear:both;
+}
+.content{
+	margin:0px 25px 30px 25px;
+}
+
+/**   
+ *        
+ *    Clearfix needed so that items that are floats inside a parent element resize
+ *    the parent elemnt to properly fit the child elements
+ */
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -96,6 +167,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', end
 .clearfix {
     *zoom: 1;
 }
+
 
 /* @override http://lostworldsfairs.com/moon/css/style.min.css */
 /*
