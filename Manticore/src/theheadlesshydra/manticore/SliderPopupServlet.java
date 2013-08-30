@@ -1,20 +1,17 @@
 package theheadlesshydra.manticore;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
-public class TestServlet extends HttpServlet {
+public class SliderPopupServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Preprocess request: we actually don't need to do any business stuff, so just display JSP.
-        request.getRequestDispatcher("TestServlet.jsp").forward(request, response);
+        request.getRequestDispatcher("art.jsp").forward(request, response);
     }
 
     @Override
@@ -25,6 +22,13 @@ public class TestServlet extends HttpServlet {
         Map<String, String> messages = new HashMap<String, String>();
         request.setAttribute("messages", messages);
 
+        String voganth = request.getParameter("gallary");
+        response.setContentType("text/plain");
+        response.getWriter().println("It is: "+voganth);
+        messages.put("gallary", voganth);
+
+        request.setAttribute("gallary", voganth);
+		
         // Get and validate name.
         String name = request.getParameter("name");
         if (name == null || name.trim().isEmpty()) {
@@ -45,7 +49,8 @@ public class TestServlet extends HttpServlet {
         if (messages.isEmpty()) {
             messages.put("success", String.format("Hello, your name is %s and your age is %s!", name, age));
         }
-
-        request.getRequestDispatcher("TestServlet.jsp").forward(request, response);
+        
+        request.setAttribute("TEST", "TEST");
+        request.getRequestDispatcher("art.jsp").forward(request, response);
     }
 }
