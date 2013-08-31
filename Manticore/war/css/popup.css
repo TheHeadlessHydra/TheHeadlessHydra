@@ -31,7 +31,33 @@
     width: 800px;
     z-index: 2;
 }
-#Gallery1 {
+#toPopup1 {
+    /*
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 10px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    font-size: 14px;
+    */
+    
+    display: none;
+    left:20%;
+    top:7%;
+    position: absolute;
+    width: 800px;
+    z-index: 2;
+}
+#toPopup2 {
+    /*
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 10px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    font-size: 14px;
+    */
+    
     display: none;
     left:20%;
     top:7%;

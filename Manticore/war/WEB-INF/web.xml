@@ -7,11 +7,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
     <servlet>
         <servlet-name>ArtDisplay</servlet-name>
-        <servlet-class>theheadlesshydra.manticore.SliderDisplayServlet</servlet-class>
+        <servlet-class>theheadlesshydra.manticore.ArtDisplayServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ArtController</servlet-name>
-        <servlet-class>theheadlesshydra.manticore.SliderControllerServlet</servlet-class>
+        <servlet-class>theheadlesshydra.manticore.ArtControllerServlet</servlet-class>
     </servlet>
 	
 	

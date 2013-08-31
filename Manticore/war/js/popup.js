@@ -2,17 +2,40 @@
  * Generate a grayed out popup div.
  * 
  * Based on: http://istockphp.com/jquery/creating-popup-div-with-jquery/
+ * Modified to handle more than a single div to be popped up. 
  */
 
+var toPopup = "#toPopup";
 
 	// Event that opens popup
 	$("a.topopup").click(function() {
+			toPopup = "#toPopup";
 			loading();
 			setTimeout(function(){
 				loadPopup();
 			}, 500); // 0.5 second delay
 	return false;
 	});
+	
+	$("a.topopup1").click(function() {
+		toPopup = "#toPopup1";
+		loading();
+		setTimeout(function(){
+			loadPopup();
+		}, 500); // 0.5 second delay
+		return false;
+	});
+	
+	$("a.topopup2").click(function() {
+		toPopup = "#toPopup2";
+		loading();
+		setTimeout(function(){
+			loadPopup();
+		}, 500); // 0.5 second delay
+		return false;
+	});
+	
+	
 
 	// Event that closes the popup
 	$("div.close").hover(
@@ -55,7 +78,7 @@
 	function loadPopup() {
 		if(popupStatus == 0) {
 			closeloading();
-			$("#toPopup").fadeIn(0500);
+			$(toPopup).fadeIn(0500);
 			$("#backgroundPopup").css("opacity", "0.7"); // css opacity, supports IE7, IE8
 			$("#backgroundPopup").fadeIn(0001);
 			popupStatus = 1;
@@ -65,7 +88,7 @@
 	// Close  the popup
 	function disablePopup() {
 		if(popupStatus == 1) {
-			$("#toPopup").fadeOut("normal");
+			$(toPopup).fadeOut("normal");
 			$("#backgroundPopup").fadeOut("normal");
 			popupStatus = 0;
 		}

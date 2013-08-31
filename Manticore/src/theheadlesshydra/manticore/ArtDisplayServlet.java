@@ -6,12 +6,20 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
+/**
+ * Display servlet that will arrange any special display parameters
+ * and display the art page. 
+ * @author The Headless Hydra
+ *
+ */
 @SuppressWarnings("serial")
-public class SliderDisplayServlet extends HttpServlet {
+public class ArtDisplayServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	System.out.println("IN GET DISPLAY");
+    	//System.out.println("Display Get");
     	
+    	// Obsolete code kept for potential benefit. 
+    	/*
     	// Get data
     	String name = Gallery.types.getGalleryName();
         String description = Gallery.types.getGalleryDescription(); 
@@ -27,7 +35,8 @@ public class SliderDisplayServlet extends HttpServlet {
         // Set the gallery description
         messages.put("description", description);
         request.setAttribute("description", description);
-        
+        */
+    	
         // Forward to display
         request.getRequestDispatcher("art.jsp").forward(request, response);
     }
