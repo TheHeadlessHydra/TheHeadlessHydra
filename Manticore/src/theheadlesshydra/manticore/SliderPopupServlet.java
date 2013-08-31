@@ -22,35 +22,17 @@ public class SliderPopupServlet extends HttpServlet {
         Map<String, String> messages = new HashMap<String, String>();
         request.setAttribute("messages", messages);
 
-        String voganth = request.getParameter("gallary");
-        response.setContentType("text/plain");
-        response.getWriter().println("It is: "+voganth);
-        messages.put("gallary", voganth);
-
-        request.setAttribute("gallary", voganth);
-		
-        // Get and validate name.
-        String name = request.getParameter("name");
-        if (name == null || name.trim().isEmpty()) {
-            messages.put("name", "Please enter name");
-        } else if (!name.matches("\\p{Alnum}+")) {
-            messages.put("name", "Please enter alphanumeric characters only");
-        }
-
-        // Get and validate age.
-        String age = request.getParameter("age");
-        if (age == null || age.trim().isEmpty()) {
-            messages.put("age", "Please enter age");
-        } else if (!age.matches("\\d+")) {
-            messages.put("age", "Please enter digits only");
-        }
-
-        // No validation errors? Do the business job!
-        if (messages.isEmpty()) {
-            messages.put("success", String.format("Hello, your name is %s and your age is %s!", name, age));
-        }
+        // Set the gallery name
+        String name = request.getParameter("gallery");
+        messages.put("gallery", name);
+        request.setAttribute("gallery", name);
         
-        request.setAttribute("TEST", "TEST");
+        // Set the gallery description
+        String description = request.getParameter("description");
+        messages.put("description", description);
+        request.setAttribute("description", description);
+        
+
         request.getRequestDispatcher("art.jsp").forward(request, response);
     }
 }

@@ -8,6 +8,9 @@
 
 <title>3D Art</title>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/includes.js"></script>
+
 <!-- main style -->
 <link rel="stylesheet" type="text/css" href="css/art.css"></link>
 
@@ -40,7 +43,7 @@
 		</div>
 	</div>
 </script>
-				
+
 </head>
 
 <body>
@@ -67,38 +70,53 @@
 	</div>
 
 <a href="#" class="topopup">Click Here Trigger</a>
+<a href="#" class="test">Click Here Trigger TEST</a>
 
 
 <form name="submitForm" method="post" action="art">
-    <input type="hidden" name="gallary" value="voganth">
+    <input type="hidden" name="gallery" value="Vouganth">
+    <input type="hidden" name="description" value="Hybrid dragon">
+    <input type="hidden" name="thumbnail" value="images/popup/closebox.png">
+    <input type="hidden" name="image" value="">
+    <input type="hidden" name="alt" value="">
+    <input type="hidden" name="caption" value="">
     <a href="javascript:document.submitForm.submit()">Click Me</a>
 </form>
 
 <form name="submitForm2" method="post" action="art">
-    <input type="hidden" name="gallary" value="chess">
+    <input type="hidden" name="gallery" value="Chess Set">
+    <input type="hidden" name="description" value="Custom chess set">
+    <input type="hidden" name="list" value='<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>'>
     <a href="javascript:document.submitForm2.submit()">Click Me 2</a>
 </form>
 
+<form name="submitBlank" method="post" action="art">
+    <input type="hidden" name="gallery" value="">
+    <a href="javascript:document.submitBlank.submit()">Click Me 3</a>
+</form>
 
 <%
-String gall = (String) request.getAttribute("gallary");
-if ( gall != "" ) {
-    %>
-    <p>GALL: <%= gall %> </p>
-	<div class="topopup"></div>
-    <%
-} else {
-    %>
-    <a href="#" class="topopup">it has been triggered: ${messages.gallary}</a>
-    <%
+String gallery = (String) request.getAttribute("gallery");
+// Check if this page was loaded because a user clicked on a gallery.
+if ( gallery != null && gallery != "" ) {
+%>
+    <script>
+    //includeGallery1();
+    $(window).bind("load", function() {
+    	loading();
+    	setTimeout(function(){
+			loadPopup();
+		}, 500); // 0.5 second delay
+	});
+    </script>
+<%
 }
 %>
-
 	<div id="toPopup">  
 		<div class="close"></div>
 	    <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
 		<div class="content">
-			<h1>Image Gallery <span>Description of Image Gallery: ${messages.gallary} </span></h1>
+			<h1>${messages.gallery} <span>${messages.description}</span></h1>
 			<div id="rg-gallery" class="rg-gallery">
 				<div class="rg-thumbs">
 					<!-- Elastislide Carousel Thumbnail Viewer -->
@@ -108,14 +126,30 @@ if ( gall != "" ) {
 							<span class="es-nav-next">Next</span>
 						</div>
 						<div class="es-carousel">
-						 
 							<ul>
-								<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
-								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
-								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/popup/closebox.png" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
+<%
+if ( gallery != null && gallery.equals("Vouganth") ) {
+%>
+								<li><a href="#"><img src="images/popup/loading.gif" data-large="images/Background_Tilable.png" alt="" data-description="Vouganth" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="" data-description="Vouganth" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="" data-description="Vouganth" /></a></li>
+<%
+} else if ( gallery != null && gallery.equals("Chess Set") ) {
+%>
+								<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="" data-description="Chess" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="" data-description="Chess" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/popup/closebox.png" alt="" data-description=Chess" /></a></li>
+<%
+}
+else{
+%>
+								<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="" data-description="Default" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/Background_Tilable.png" alt="" data-description="Default" /></a></li>
+								<li><a href="#"><img src="images/popup/closebox.png" data-large="images/popup/closebox.png" alt="" data-description="Default" /></a></li>
+<%
+}
+%>
 							</ul>
-							
-							
 						</div>
 					</div>
 					<!-- End Elastislide Carousel Thumbnail Viewer -->
@@ -128,7 +162,6 @@ if ( gall != "" ) {
 <div class="loader"></div>
 <div id="backgroundPopup"></div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/slider/jquery.tmpl.min.js"></script>
 <script type="text/javascript" src="js/slider/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/slider/jquery.elastislide.js"></script>

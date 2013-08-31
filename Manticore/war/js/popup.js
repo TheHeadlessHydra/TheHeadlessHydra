@@ -1,10 +1,9 @@
 /**
- * Generate a greyed out popup div.
+ * Generate a grayed out popup div.
  * 
  * Based on: http://istockphp.com/jquery/creating-popup-div-with-jquery/
  */
 
-jQuery(function($) {
 
 	// Event that opens popup
 	$("a.topopup").click(function() {
@@ -72,4 +71,3 @@ jQuery(function($) {
 		}
 	}
 	/************** end: functions. **************/
-}); // jQuery End
