@@ -73,24 +73,19 @@
 <a href="#" class="test">Click Here Trigger TEST</a>
 
 
-<form name="submitForm" method="post" action="art">
+<form name="submitForm" method="post" action="art.do">
     <input type="hidden" name="gallery" value="Vouganth">
     <input type="hidden" name="description" value="Hybrid dragon">
-    <input type="hidden" name="thumbnail" value="images/popup/closebox.png">
-    <input type="hidden" name="image" value="">
-    <input type="hidden" name="alt" value="">
-    <input type="hidden" name="caption" value="">
     <a href="javascript:document.submitForm.submit()">Click Me</a>
 </form>
 
-<form name="submitForm2" method="post" action="art">
+<form name="submitForm2" method="post" action="art.do">
     <input type="hidden" name="gallery" value="Chess Set">
     <input type="hidden" name="description" value="Custom chess set">
-    <input type="hidden" name="list" value='<li><a href="#"><img src="images/popup/loading.gif" data-large="images/one.png" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>'>
     <a href="javascript:document.submitForm2.submit()">Click Me 2</a>
 </form>
 
-<form name="submitBlank" method="post" action="art">
+<form name="submitBlank" method="post" action="art.do">
     <input type="hidden" name="gallery" value="">
     <a href="javascript:document.submitBlank.submit()">Click Me 3</a>
 </form>
