@@ -1,2 +1,0 @@
-<li><img src="images/Background_Tilable.png" alt=""></li>
-<li><img src="images/corner_test04.png" alt=""></li>

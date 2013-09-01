@@ -4,6 +4,9 @@
  * Based on: http://istockphp.com/jquery/creating-popup-div-with-jquery/
  */
 
+/**
+ *	Defines the background that will appear with the popped up content.
+ */
 #backgroundPopup {
     z-index:1;
     position: fixed;
@@ -14,57 +17,21 @@
     top:0px;
     left:0px;
 }
-#toPopup {
-    /*
-    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 10px solid #ccc;
-    border-radius: 3px 3px 3px 3px;
-    color: #333333;
-    font-size: 14px;
-    */
-    
-    display: none;
-    left:20%;
-    top:7%;
-    position: absolute;
-    width: 800px;
-    z-index: 2;
-}
-#toPopup1 {
-    /*
-    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 10px solid #ccc;
-    border-radius: 3px 3px 3px 3px;
-    color: #333333;
-    font-size: 14px;
-    */
-    
-    display: none;
-    left:20%;
-    top:7%;
-    position: absolute;
-    width: 800px;
-    z-index: 2;
-}
+/**
+ *	Defines the style of the content that will be popped up. 
+ *  Add any new popped up element ID's here.
+ */
+#toPopup,
+#toPopup1,
 #toPopup2 {
-    /*
-    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 10px solid #ccc;
-    border-radius: 3px 3px 3px 3px;
-    color: #333333;
-    font-size: 14px;
-    */
-    
     display: none;
     left:20%;
     top:7%;
-    position: absolute;
+    position: fixed;
     width: 800px;
     z-index: 2;
 }
+
 div.loader {
     background: url("../images/popup/loading.gif") no-repeat scroll 0 0 transparent;
     height: 32px;
@@ -76,7 +43,7 @@ div.loader {
     position: absolute;
     margin-left: -10px;
 }
-/* CURRENTLY NOT FUNCTIONAL */
+
 div.close {
     background: url("../images/popup/closebox.png") no-repeat scroll 0 0 transparent;
     cursor: pointer;
@@ -87,7 +54,6 @@ div.close {
     width: 30px;
 }
 
-/* CURRENTLY NOT FUNCTIONAL */
 span.ecs_tooltip {
     background: none repeat scroll 0 0 #000000;
     border-radius: 2px 2px 2px 2px;

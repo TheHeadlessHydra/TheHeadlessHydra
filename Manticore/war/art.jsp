@@ -26,6 +26,7 @@
 <!-- Popup CSS --> 
 <link rel="stylesheet" href="css/popup.css" type="text/css" media="all" />
 
+<!-- Bind the galleries to the slider system -->
   <script>
     // You can also use "$(window).load(function() {"
     $(function () {
@@ -131,12 +132,19 @@
 		</ul>
 </div>
 
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
 <!--  Gallery thumbnails - Click to open -->
-<a href="#" class="topopup">Click Here Trigger 1</a><br>
-<a href="#" class="topopup1">Click Here Trigger 2</a><br>
-<a href="#" class="topopup2">Click Here Trigger 3</a><br>
+<a href="#" class="toPopup">Click Here Trigger 1</a><br>
+<a href="#" class="toPopup1">Click Here Trigger 2</a><br>
+<a href="#" class="toPopup2">Click Here Trigger 3</a><br>
 
-
+<img src="images/Background_Tilable.png" class="toPopup">
+<img src="images/Background_Tilable.png" class="toPopup1">
 
 <!--  Popup helpers -->
 <div class="loader"></div>
