@@ -25,7 +25,7 @@
 #toPopup1,
 #toPopup2 {
     display: none;
-    left:20%;
+    left:25%;
     top:7%;
     position: fixed;
     width: 800px;

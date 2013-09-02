@@ -91,7 +91,7 @@ function loadPopup() {
 	if (popupStatus == 0) {
 		closeloading();
 		$(toPopup).fadeIn(0500);
-		$("#backgroundPopup").css("opacity", "0.7"); // css opacity, supports IE7, IE8
+		$("#backgroundPopup").css("opacity", "0.9"); // css opacity, supports IE7, IE8
 		$("#backgroundPopup").fadeIn(0001);
 		popupStatus = 1;
 	}
