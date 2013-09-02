@@ -23,7 +23,21 @@
  */
 #toPopup,
 #toPopup1,
-#toPopup2 {
+#toPopup2,
+#toPopup3,
+#toPopup4,
+#toPopup5,
+#toPopup6,
+#toPopup7,
+#toPopup8,
+#toPopup9,
+#toPopup10,
+#toPopup11,
+#toPopup12,
+#toPopup13,
+#toPopup14,
+#toPopup15,
+#toPopup16 {
     display: none;
     left:25%;
     top:7%;

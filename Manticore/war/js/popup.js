@@ -20,12 +20,11 @@
 // Global used to declare which popup will be popped up next.
 var toPopup = "#toPopup";
 
-
 /** ************ selector functions ************* */
 $('img').click(function() {
 	// Get class description
 	var classDecl = $(this).attr('class');
-
+	
 	// if it is a toPopup, declare the proper name and popup
 	if (classDecl && classDecl.match(/^toPopup*/)) {
 		toPopup = "#" + classDecl;
@@ -100,8 +99,20 @@ function loadPopup() {
 // Fade out the popup
 function disablePopup() {
 	if (popupStatus == 1) {
+		reloadPlayers();
 		$(toPopup).fadeOut("normal");
 		$("#backgroundPopup").fadeOut("normal");
 		popupStatus = 0;
+	}
+}
+
+// Check if the thing being closed has an iframe id.
+// If so, it is a video, so reload it to stop it from playing. 
+function reloadPlayers() {   	
+	var iframeID = $(toPopup).children('iframe').attr('id');
+	
+	if (iframeID){
+		var iframe = document.getElementById(iframeID);
+	    iframe.src = iframe.src;
 	}
 }

@@ -51,8 +51,10 @@ p.sub {
 
 /* Used to produce highlight-effect on a thumbnail*/
 div.fade {
-	filter: alpha(opacity = 30);
-	opacity: 0.3;
+	/*filter: alpha(opacity = 30);
+	opacity: 0.3;*/
+	filter: alpha(opacity = 100);
+	opacity: 1.0;
 }
 
 /**   
@@ -134,40 +136,42 @@ div.fade {
 	border-color: #374140;
 	border-width: 3px;
 	width: 1060px;
-	background: #ddd;
 	text-align: center;
+	/*background: #ddd;
+	background: rgba(217,203,128,1);
+	background: rgba(220,53,34,1);*/
 }
 
 #head {
 	padding: 10px;
-	background: #fdd;
+	/*background: #fdd;*/
 }
 
 #column-1 {
 	float: left;
 	width: 300px;
 	padding: 10px;
-	background: #bfb;
+	/*background: #bfb;*/
 }
 
 #column-2 {
 	float: left;
 	width: 400px;
 	padding: 10px;
-	background: #ddf;
+	/*background: #ddf;*/
 }
 
 #column-3 {
 	float: right;
 	width: 300px;
 	padding: 10px;
-	background: #dff;
+	/*background: #dff;*/
 }
 
 #footer {
 	clear: both;
 	padding: 10px;
-	background: #ff9;
+	/*background: #ff9;*/
 }
 
 /**   
