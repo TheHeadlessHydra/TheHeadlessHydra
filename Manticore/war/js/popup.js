@@ -47,8 +47,8 @@ $('a').click(function() {
 		setTimeout(function() {
 			loadPopup();
 		}, 300); // 0.3 second delay
+		return false;
 	}
-	return false;
 });
 
 // Tooltip to show esc tooltip when hovering over close

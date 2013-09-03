@@ -9,6 +9,16 @@
  */
 body {
 	background: #2a2c2b url('../images/bg_left.png') repeat-y top left;
+	
+	background: #1e1e20; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e1e20 0%, #374140 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e1e20), color-stop(100%,#374140)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1e1e20 0%,#374140 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', endColorstr='#374140',GradientType=0 ); /* IE6-9 */
+	
 }
 
 h1 {
@@ -40,13 +50,29 @@ a {
 }
 
 a:hover {
-	color: #00c6e3;
+	color: #dc3522;
 }
 
 p.sub {
 	padding: 25px 10px 10px 10px;
 	text-align: left;
 	color: #aaa;
+}
+
+p.label{
+	display:inline;
+	font-family: 'Quattrocento', serif;
+	font-size: 30px;
+	letter-spacing: 10px;
+	color: #d9cb9e;
+}
+p.subtitle{
+	display:inline;
+	font-family: 'Fenix', serif;
+	font-size: 13px;
+	letter-spacing: 3px;
+	color: #d9cb9e;
+	margin-left:20px;
 }
 
 /* Used to produce highlight-effect on a thumbnail*/
@@ -122,29 +148,69 @@ div.fade {
 	padding-left: 50px;
 }
 
+/**
+ *	Tab, galleries, and videos
+ */
+
+#tab_container{
+	width: 1100px;
+	margin: 0 auto;
+}
+
+
 #thumbnail_outer_border {
 	padding: 3px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
 	border-style: double;
-	border-color: #374140;
+	border-color: #d9cb9e;
 	border-width: 2px;
 	width: 1067px;
 	margin: 0 auto;
+	/*background:#1e1e20;*/
 }
 
 #thumbnail_container {
 	border-style: solid;
-	border-color: #374140;
+	border-color: #d9cb9e;
 	border-width: 3px;
 	width: 1060px;
 	text-align: center;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
 	/*background: #ddd;
 	background: rgba(217,203,128,1);
 	background: rgba(220,53,34,1);*/
 }
 
+#main{
+	overflow: hidden;
+	padding:1px;
+	width: 1020px;
+	display:block;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #1e1e20;
+	border-width: 3px;
+	margin: 0 auto;
+	padding-top:0px;
+}
+
 #head {
 	padding: 10px;
 	/*background: #fdd;*/
+}
+#sub_head{
+	padding-top:40px;
+	padding-bottom:3px;
+	float:left;
+	margin-left:50px;
+}
+#sub_head p.subtitle{
+	padding-top:3px;
+	padding-bottom:3px;
+	margin-left:30px;
 }
 
 #column-1 {
@@ -156,7 +222,7 @@ div.fade {
 
 #column-2 {
 	float: left;
-	width: 400px;
+	width: 360px;
 	padding: 10px;
 	/*background: #ddf;*/
 }
@@ -200,7 +266,7 @@ div.fade {
 /**   
  *        
  *    Clearfix needed so that items that are floats inside a parent element resize
- *    the parent elemnt to properly fit the child elements
+ *    the parent element to properly fit the child elements
  */
 .clearfix:before,.clearfix:after {
 	content: " ";
@@ -214,3 +280,27 @@ div.fade {
 .clearfix {
 	*zoom: 1;
 }
+
+
+/*
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+*/

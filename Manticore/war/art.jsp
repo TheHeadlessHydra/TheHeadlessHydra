@@ -19,6 +19,9 @@
 <!-- Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lusitana">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quando">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fenix">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento">
 
 <!-- Slider CSS -->
 <link rel="stylesheet" type="text/css" href="css/slider/responsiveslides.css" />
@@ -54,21 +57,24 @@
 						<span class="char2">T</span>
 					</span> 
 			</header>
-		</div>
+		</div> <!-- content_container -->
 	</div>
 </div>
 
+<div id="tab_container">
 <ul class="tabs" data-persist="true">
-	<li><a href="#view1">Lorem</a></li>
-	<li><a href="#view2">Using other templates</a></li>
-	<li><a href="#view3">Advanced</a></li>
+	<li><a href="#view1">Image Galleries</a></li>
+	<li><a href="#view2">Videos</a></li>
 </ul>
 <div class="tabcontents">
+<!-- 
+IMAGE GALLERIES TAB
+ -->
 	<div id="view1">
 		<div id="thumbnail_outer_border">
 		<div id="thumbnail_container">
-		    <div id="head">
-		    <p>HEADER</p>
+		    <div id="sub_head">
+		    	<p class="label">Environments</p>
 		    </div>
 		    <div id="main">
 		        <div id="column-1">
@@ -76,25 +82,34 @@
 						<img src="images/thumbnails/thumb_diamandra.png" class="toPopup"><br>
 						<a href="#" class="toPopup">Diamandra</a><br>
 					</div>
-					
+		        </div>
+		        <div id="content-2">
+		            <div id="column-2">
+						<div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_kaliman.png" class="toPopup2"><br>
+							<a href="#" class="toPopup2">Kaliman</a><br>
+						</div>
+		            </div>
+		            <div id="column-3">
+				        <div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup4"><br>
+							<a href="#" class="toPopup4">Theatre of Insanity</a><br>
+						</div>
+		            </div>
+		        </div>
+		    </div> <!-- main -->
+		    <div id="sub_head">
+		    	<p class="label">Creatures, characters and props</p>
+		    </div>
+		    <div id="main">
+		        <div id="column-1">
+		        	<div id="thumbnail_item" class="fade">
+						<img src="images/thumbnails/thumb_vouganth.png" class="toPopup3"><br>
+						<a href="#" class="toPopup3">Vouganth</a><br>
+					</div>
 					<div id="thumbnail_item" class="fade">
 						<img src="images/thumbnails/thumb_first-character.png" class="toPopup5"><br>
 						<a href="#" class="toPopup5">First Character</a><br>
-					</div>
-					
-					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup6"><br>
-						<a href="#" class="toPopup6">WIP Lich Dragon</a><br>
-					</div>
-					
-					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_help-eat.png" class="toPopup9"><br>
-						<a href="#" class="toPopup9">Help Eat</a><br>
-					</div>
-					
-					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup12"><br>
-						<a href="#" class="toPopup12">College Demo Reel</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
@@ -102,164 +117,106 @@
 				        <div id="thumbnail_item" class="fade">
 							<img src="images/thumbnails/thumb_chess-set.png" class="toPopup1"><br>
 							<a href="#" class="toPopup1">Chess Set</a><br>
-						</div>
-						
-						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup4"><br>
-							<a href="#" class="toPopup4">Theatre of Insanity</a><br>
-						</div>
-						
+						</div>						
+		            </div>
+		            <div id="column-3">
 						<div id="thumbnail_item" class="fade">
 							<img src="images/thumbnails/thumb_overlord-hammer.png" class="toPopup7"><br>
 							<a href="#" class="toPopup7">Overlord Hammer</a><br>
 						</div>
-						
-						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup10"><br>
-							<a href="#" class="toPopup10">Arbie Outside</a><br>
-						</div>
-						
-						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup13"><br>
-							<a href="#" class="toPopup13">Kaliman Flythrough</a><br>
-						</div>
+		            </div>
+		        </div>
+		    </div> <!-- main -->
+		    <div id="sub_head">
+		    	<p class="label">Work in progress</p>
+		    </div>
+		    <div id="main">
+		        <div id="column-1">
+					<div id="thumbnail_item" class="fade">
+						<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup6"><br>
+						<a href="#" class="toPopup6">Lich Dragon</a><br>
+					</div>
+		        </div>
+		        <div id="content-2">
+		            <div id="column-2">					
 		            </div>
 		            <div id="column-3">
-				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman.png" class="toPopup2"><br>
-							<a href="#" class="toPopup2">Kaliman</a><br>
-						</div>
-						
-						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_vouganth.png" class="toPopup3"><br>
-							<a href="#" class="toPopup3">Vouganth</a><br>
-						</div>
-						
+		            </div>
+		        </div>
+		    </div> <!-- main -->
+		    <div id="footer"></div>
+		</div> <!-- thumbnail_container -->
+		</div> <!-- thumbnail_outer_border -->
+	</div> <!-- view1 -->
+<!-- 
+VIDEOS TAB
+ -->
+	<div id="view2">
+		<div id="thumbnail_outer_border">
+		<div id="thumbnail_container">
+		    <div id="sub_head">
+		    	<p class="label">Production</p>
+		    	<p class="subtitle">Worked on as part of the team over at <a href="http://www.topixfx.com/" target="_blank">TOPIX</a></p>
+		    </div>
+		    <div id="main">
+		        <div id="column-1">
+			        <div id="thumbnail_item" class="fade">
+						<img src="images/thumbnails/thumb_help-eat.png" class="toPopup9"><br>
+						<a href="#" class="toPopup9">Help Eat</a><br>
+					</div>
+					<div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup10"><br>
+							<a href="#" class="toPopup10">Arbie Outside</a><br>
+					</div>
+		        </div>
+		        <div id="content-2">
+		            <div id="column-2">
 						<div id="thumbnail_item" class="fade">
 							<img src="images/thumbnails/thumb_sweet-smell.png" class="toPopup8"><br>
 							<a href="#" class="toPopup8">Sweet Smell</a><br>
 						</div>
-						
-						<div id="thumbnail_item" class="fade">
+		            </div>
+		            <div id="column-3">
+				        <div id="thumbnail_item" class="fade">
 							<img src="images/thumbnails/thumb_rbc-spot.png" class="toPopup11"><br>
 							<a href="#" class="toPopup11">RBC Spot</a><br>
 						</div>
-						
+		            </div>
+		        </div>
+		    </div> <!-- main -->
+		    <div id="sub_head">
+		    	<p class="label">Personal videos</p>
+		    </div>
+		    <div id="main">
+		        <div id="column-1">
+		        	<div id="thumbnail_item" class="fade">
+						<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup12"><br>
+						<a href="#" class="toPopup12">College Demo Reel</a><br>
+					</div>
+		        </div>
+		        <div id="content-2">
+		            <div id="column-2">
+				        <div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup13"><br>
+							<a href="#" class="toPopup13">Kaliman Flythrough</a><br>
+						</div>					
+		            </div>
+		            <div id="column-3">
 						<div id="thumbnail_item" class="fade">
 							<img src="images/thumbnails/thumb_theatre-flythrough.png" class="toPopup14"><br>
 							<a href="#" class="toPopup14">Theatre of Insanity flythrough</a><br>
 						</div>
 		            </div>
 		        </div>
-		    </div>
+		    </div> <!-- main -->
 		    <div id="footer"></div>
 		</div> <!-- thumbnail_container -->
-		</div> <!-- thumbnail_outer_border -->
-	</div> <!-- view1 -->
-	<div id="view2">
-		<b>Switch to other templates</b>
-		<p>Open this page with Notepad, and update the CSS link to:</P>
-		<p>template1 ~ 6.</p>                
+		</div> <!-- thumbnail_outer_border -->           
 	</div> <!-- view2 -->
-	<div id="view3">
-		<b>Advanced</b>
-		<p>We have an advanced version, <a href="http://www.menucool.com/jquery-tabs">McTabs - jQuery Tabs</a>, that is the most feature-rich Tabs.</p>
-	</div> <!-- view3 -->
-</div>
-        
-<!--  Gallery thumbnails - Click to open -->
-<div id="thumbnail_outer_border">
-<div id="thumbnail_container">
-    <div id="head">
-    <p>HEADER</p>
-    </div>
-    <div id="main">
-        <div id="column-1">
-	        <div id="thumbnail_item" class="fade">
-				<img src="images/thumbnails/thumb_diamandra.png" class="toPopup"><br>
-				<a href="#" class="toPopup">Diamandra</a><br>
-			</div>
-			
-			<div id="thumbnail_item" class="fade">
-				<img src="images/thumbnails/thumb_first-character.png" class="toPopup5"><br>
-				<a href="#" class="toPopup5">First Character</a><br>
-			</div>
-			
-			<div id="thumbnail_item" class="fade">
-				<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup6"><br>
-				<a href="#" class="toPopup6">WIP Lich Dragon</a><br>
-			</div>
-			
-			<div id="thumbnail_item" class="fade">
-				<img src="images/thumbnails/thumb_help-eat.png" class="toPopup9"><br>
-				<a href="#" class="toPopup9">Help Eat</a><br>
-			</div>
-			
-			<div id="thumbnail_item" class="fade">
-				<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup12"><br>
-				<a href="#" class="toPopup12">College Demo Reel</a><br>
-			</div>
-        </div>
-        <div id="content-2">
-            <div id="column-2">
-		        <div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_chess-set.png" class="toPopup1"><br>
-					<a href="#" class="toPopup1">Chess Set</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup4"><br>
-					<a href="#" class="toPopup4">Theatre of Insanity</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_overlord-hammer.png" class="toPopup7"><br>
-					<a href="#" class="toPopup7">Overlord Hammer</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup10"><br>
-					<a href="#" class="toPopup10">Arbie Outside</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup13"><br>
-					<a href="#" class="toPopup13">Kaliman Flythrough</a><br>
-				</div>
-            </div>
-            <div id="column-3">
-		        <div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_kaliman.png" class="toPopup2"><br>
-					<a href="#" class="toPopup2">Kaliman</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_vouganth.png" class="toPopup3"><br>
-					<a href="#" class="toPopup3">Vouganth</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_sweet-smell.png" class="toPopup8"><br>
-					<a href="#" class="toPopup8">Sweet Smell</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_rbc-spot.png" class="toPopup11"><br>
-					<a href="#" class="toPopup11">RBC Spot</a><br>
-				</div>
-				
-				<div id="thumbnail_item" class="fade">
-					<img src="images/thumbnails/thumb_theatre-flythrough.png" class="toPopup14"><br>
-					<a href="#" class="toPopup14">Theatre of Insanity flythrough</a><br>
-				</div>
-            </div>
-        </div>
-    </div>
-    <div id="footer"></div>
-</div> <!-- thumbnail_container -->
-</div> <!-- thumbnail_outer_border -->
-
-
+</div> <!-- tabcontents -->
+</div> <!-- tab_container --> 
+		
+		
 <!--  Galleries -->
 <div id="toPopup">  
 	<div class="close"></div>
