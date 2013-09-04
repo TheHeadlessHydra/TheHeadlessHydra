@@ -95,5 +95,14 @@ $(function () {
       pager: true,
       namespace: "centered-btns"
   });
+  
+  //Slideshow 9
+  $("#slider9").responsiveSlides({
+	  maxwidth: 800,
+	  auto: false,
+      nav: true,
+      pager: true,
+      namespace: "centered-btns"
+  });
 
 });

@@ -27,13 +27,16 @@ ul.tabs li a
     outline:none;
     background: #d9cb9e; /* Non-selected colour */
     border:2px solid #d9cb9e;
-    border-right:0;
+    -moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /*Note: IE8 and earlier doesn't support li:last-child. You have to add another class to the last tab (LI) and specify its border-right as below.*/
 ul.tabs li:last-child a
 {
     border-right:2px solid #d9cb9e;
+    -moz-border-radius: 5px;
+	border-radius: 5px;
 }
   
         

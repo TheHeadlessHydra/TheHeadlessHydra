@@ -21,28 +21,29 @@
  *	Defines the style of the content that will be popped up. 
  *  Add any new popped up element ID's here.
  */
-#toPopup,
-#toPopup1,
-#toPopup2,
-#toPopup3,
-#toPopup4,
-#toPopup5,
-#toPopup6,
-#toPopup7,
-#toPopup8,
-#toPopup9,
-#toPopup10,
-#toPopup11,
-#toPopup12,
-#toPopup13,
-#toPopup14,
-#toPopup15,
-#toPopup16 {
+
+#toPopup_diamandra,
+#toPopup_kaliman,
+#toPopup_theatre,
+#toPopup_stylish-transport,
+#toPopup_overlord-hammer,
+#toPopup_vouganth,
+#toPopup_chess-set,
+#toPopup_first-character,
+#toPopup_lich-dragon,
+#toPopup_help-eat,
+#toPopup_sweet-smell,
+#toPopup_rbc-spot,
+#toPopup_arbie-outside,
+#toPopup_demo-reel,
+#toPopup_kaliman-flythrough,
+#toPopup_theatre-flythrough {
     display: none;
     left:25%;
     top:7%;
     position: fixed;
-    width: 800px;
+    width: 50%;
+    height: 50%;
     z-index: 2;
 }
 

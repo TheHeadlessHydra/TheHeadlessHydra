@@ -60,7 +60,13 @@
 		</div> <!-- content_container -->
 	</div>
 </div>
-
+<!--  
+<p style="color:#fff ">
+TO DO LIST:<br>
+- Have to create a nice bg image to display from the top down (flush with top edge)<br>
+- Need a link section to link to comp sci page.<br>
+</p>
+ -->
 <div id="tab_container">
 <ul class="tabs" data-persist="true">
 	<li><a href="#view1">Image Galleries</a></li>
@@ -79,21 +85,21 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 			        <div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_diamandra.png" class="toPopup"><br>
-						<a href="#" class="toPopup">Diamandra</a><br>
+						<img src="images/thumbnails/thumb_diamandra.png" class="toPopup_diamandra"><br>
+						<a href="#" class="toPopup_diamandra">Diamandra</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman.png" class="toPopup2"><br>
-							<a href="#" class="toPopup2">Kaliman</a><br>
+							<img src="images/thumbnails/thumb_kaliman.png" class="toPopup_kaliman"><br>
+							<a href="#" class="toPopup_kaliman">Kaliman</a><br>
 						</div>
 		            </div>
 		            <div id="column-3">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup4"><br>
-							<a href="#" class="toPopup4">Theatre of Insanity</a><br>
+							<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup_theatre"><br>
+							<a href="#" class="toPopup_theatre">Theatre of Insanity</a><br>
 						</div>
 		            </div>
 		        </div>
@@ -104,25 +110,29 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 		        	<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_vouganth.png" class="toPopup3"><br>
-						<a href="#" class="toPopup3">Vouganth</a><br>
+						<img src="images/thumbnails/thumb_stylish-transport.png" class="toPopup_stylish-transport"><br>
+						<a href="#" class="toPopup_stylish-transport">Stylish Transport</a><br>
 					</div>
 					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_first-character.png" class="toPopup5"><br>
-						<a href="#" class="toPopup5">First Character</a><br>
-					</div>
+						<img src="images/thumbnails/thumb_chess-set.png" class="toPopup_chess-set"><br>
+						<a href="#" class="toPopup_chess-set">Chess Set</a><br>
+					</div>	
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
-				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_chess-set.png" class="toPopup1"><br>
-							<a href="#" class="toPopup1">Chess Set</a><br>
-						</div>						
+		            	<div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_overlord-hammer.png" class="toPopup_overlord-hammer"><br>
+							<a href="#" class="toPopup_overlord-hammer">Overlord Hammer</a><br>
+						</div>
+						<div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_first-character.png" class="toPopup_first-character"><br>
+							<a href="#" class="toPopup_first-character">First Character</a><br>
+						</div>					
 		            </div>
 		            <div id="column-3">
-						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_overlord-hammer.png" class="toPopup7"><br>
-							<a href="#" class="toPopup7">Overlord Hammer</a><br>
+			            <div id="thumbnail_item" class="fade">
+							<img src="images/thumbnails/thumb_vouganth.png" class="toPopup_vouganth"><br>
+							<a href="#" class="toPopup_vouganth">Vouganth</a><br>
 						</div>
 		            </div>
 		        </div>
@@ -133,8 +143,8 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup6"><br>
-						<a href="#" class="toPopup6">Lich Dragon</a><br>
+						<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup_lich-dragon"><br>
+						<a href="#" class="toPopup_lich-dragon">Lich Dragon</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
@@ -147,6 +157,7 @@ IMAGE GALLERIES TAB
 		    <div id="footer"></div>
 		</div> <!-- thumbnail_container -->
 		</div> <!-- thumbnail_outer_border -->
+		<p style="margin-left:10px; color:#fff;">© 2013 Serj Kazar. All Rights Reserved.</p> 
 	</div> <!-- view1 -->
 <!-- 
 VIDEOS TAB
@@ -161,380 +172,457 @@ VIDEOS TAB
 		    <div id="main">
 		        <div id="column-1">
 			        <div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_help-eat.png" class="toPopup9"><br>
-						<a href="#" class="toPopup9">Help Eat</a><br>
+						<img src="images/thumbnails/thumb_help-eat.png" class="toPopup_help-eat"><br>
+						<a href="#" class="toPopup_help-eat">Help Eat</a><br>
 					</div>
 					<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup10"><br>
-							<a href="#" class="toPopup10">Arbie Outside</a><br>
+							<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup_arbie-outside"><br>
+							<a href="#" class="toPopup_arbie-outside">Arbie Outside</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_sweet-smell.png" class="toPopup8"><br>
-							<a href="#" class="toPopup8">Sweet Smell</a><br>
+							<img src="images/thumbnails/thumb_sweet-smell.png" class="toPopup_sweet-smell"><br>
+							<a href="#" class="toPopup_sweet-smell">Sweet Smell</a><br>
 						</div>
 		            </div>
 		            <div id="column-3">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_rbc-spot.png" class="toPopup11"><br>
-							<a href="#" class="toPopup11">RBC Spot</a><br>
+							<img src="images/thumbnails/thumb_rbc-spot.png" class="toPopup_rbc-spot"><br>
+							<a href="#" class="toPopup_rbc-spot">RBC Spot</a><br>
 						</div>
 		            </div>
 		        </div>
 		    </div> <!-- main -->
 		    <div id="sub_head">
-		    	<p class="label">Personal videos</p>
+		    	<p class="label">Personal</p>
 		    </div>
 		    <div id="main">
 		        <div id="column-1">
 		        	<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup12"><br>
-						<a href="#" class="toPopup12">College Demo Reel</a><br>
+						<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup_demo-reel"><br>
+						<a href="#" class="toPopup_demo-reel">College Demo Reel</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup13"><br>
-							<a href="#" class="toPopup13">Kaliman Flythrough</a><br>
+							<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup_kaliman-flythrough"><br>
+							<a href="#" class="toPopup_kaliman-flythrough">Kaliman Flythrough</a><br>
 						</div>					
 		            </div>
 		            <div id="column-3">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_theatre-flythrough.png" class="toPopup14"><br>
-							<a href="#" class="toPopup14">Theatre of Insanity flythrough</a><br>
+							<img src="images/thumbnails/thumb_theatre-flythrough.png" class="toPopup_theatre-flythrough"><br>
+							<a href="#" class="toPopup_theatre-flythrough">Theatre of Insanity flythrough</a><br>
 						</div>
 		            </div>
 		        </div>
 		    </div> <!-- main -->
 		    <div id="footer"></div>
 		</div> <!-- thumbnail_container -->
-		</div> <!-- thumbnail_outer_border -->           
+		</div> <!-- thumbnail_outer_border -->  
+		<p style="margin-left:10px; color:#fff;">© 2013 Serj Kazar. All Rights Reserved.</p>         
 	</div> <!-- view2 -->
 </div> <!-- tabcontents -->
 </div> <!-- tab_container --> 
 		
-		
-<!--  Galleries -->
-<div id="toPopup">  
+<!-- 
+GALLERIES
+ -->
+
+<!-- Environments -->
+<div id="toPopup_diamandra">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Diamandra</h1><br>
+		<p class="date">Created Fall 2010</p><br>
+		<p>Custom designed world built to display modularity in building design.</p>
+	</div>
 		<ul class="rslides" id="slider1">
 		  <li style="background-color:(0,0,0,0.5);">
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen01.jpg?w=AAAzph1of3zVtwwGUbXYvYXTNV1VEzO7mWKbiEZCUVr_kA" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen01.jpg" alt="">
+		  	<p class="caption">Made attempts to make the world feel more 'full' without everything looking like a copy by including many modular buildings thourghout the visible world.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen02.jpg?w=AAA3HicfJmPRtWfJG1iG1UBWB9lmjQvcRmDz2yOxNcxw1A" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen03.jpg?w=AACTcWciUljvdTmJ7owjk47zT_BbzLO5LUI7344GLaXZ-A" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen04.jpg?w=AABKsVpSBomkRla76o7tDMgsNMsUmMWnYmI9N2_IJA5u5Q" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen05.jpg?w=AADM-EnYjk5umipo8p6tv-VwBzM2xex4YUO_bVXx-JJRZw" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen05.jpg" alt="">
+		  	<p class="caption">All buildings in this building are built modularly - small pieces only.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen06.jpg?w=AACg-ho6PBzkNg2y-7s_SCP7AT00LuvMTel8SQwOvVlfhQ" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen07.jpg?w=AADYez8uS47zel1q1b31OZg4Rn0MUDPzSBxZ0bf1ebqDUQ" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen08.jpg?w=AABsWatRms6GfW-wnxcL7FcYINdWeg44f6lVjwEh_0BMyA" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen08.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen09.jpg?w=AABdP2MGcq9_tRBcl8aGRPGITVGrMwpUsOtktZ11vBEUUA" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen09.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen10.jpg?w=AADMIk0GN4Wa4RmQwKuBRTj3etU-wdQ6nm4AnU6haJjz7A" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen10.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen11.jpg?w=AAAseH3Jkb9b9fBw1XuhnkXqAe99rmuvWY6qdpo4nH1WSA" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen11.jpg" alt="">
+		  	<p class="caption">Probably the more difficult aspect of this map was getting this water to look good.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Diamandra/screen12.jpg?w=AABGG_YzshzNbneubSJxrYGfHqj5wY9AfkAf2MMWPMw1Qw" alt="">
-		  	<p class="caption">Caption 1</p>
+		  	<img src="images/galleries/Diamandra/screen12.jpg" alt="">
 		  </li>
 		</ul>
+	</div>
 </div>
-
-<div id="toPopup1">  
+<div id="toPopup_kaliman">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-		<ul class="rslides" id="slider2">
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen01.jpg?w=AAByC6ZeSQI8f6zqqDTggg0xJPfBAwqHZSrr8L-R2brDDg" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen02.jpg?w=AAB4idF7eAzlEvVIKmtJqG6Zw25C3qdW516PduvV-mC5dg" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen03.JPG?w=AAAkrg5viFyQxjQChISjfewsZat-3s9lsWJhK8ejMwZbvg" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen04.JPG?w=AACzmcA0Ihc4DbbLKaZg9DvAcIx36xPuqvBtc_lBDSXtqQ" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen05.jpg?w=AABunL2ZzuzhANHOYl0iZDth31z0oJfP1xYgZYk1TedcMA" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen06.jpg?w=AABpX4cWf8XnVMk7yEWCopY-SXvy7TRGPxUj_e38ByIfQQ" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen07.jpg?w=AAA8-Z_ewBr_JfofJ003pzAVYkRKN5A-WaRF5j7EyJ3ysA" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen08.jpg?w=AADmuusJuu9lPL5m3TVN_ouOhtlaxi3WIr7QkK5SMSgpbg" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Chess%20Piece/screen09.jpg?w=AAAqdNgMaD8UJ6PoC2AA7030wp4kGLGN-92KaTw1HTAXHQ" alt="">
-		  	<p class="caption">Caption 2</p>
-		  </li>
-		</ul>
-</div>
-
-<div id="toPopup2">  
-	<div class="close"></div>
-	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Kaliman</h1><br>
+		<p class="date">Created Summer 2010</p><br>
+		<p>College final project. Designed to have an eerie Halloween feel.</p>
+	</div>
 		<ul class="rslides" id="slider3">
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen01.jpg?w=AAAsI8MqxacEUFdhmtt-Tvs-JOscJN2Ida4kdr6_GFt8UA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen01.jpg" alt="">
+		  	<p class="caption">An homage to my inspiration for this piece - Legend of Zelda Majoras Mask.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen02.jpg?w=AACh0QWbSIj0xhBr9HQX5ohZOr35_RQe4WI1gOuW_isbAA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen03.jpg?w=AAAo1avsUjnoRC5N0k2DS_sEMtBwV0hjFHwfsRqyBb23vw" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen04.jpg?w=AABle3CjD2oO-X-yE5xHbKPINxzWko2Svd-1cmiY_MBt0A" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen05.jpg?w=AABcvPMbiLafT_UKjEERteufpgvwcAC-fiNOiSKzRMYyVA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen05.jpg" alt="">
+		  	<p class="caption">UDK's lighting engine used to display a 'Light Array' system.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen06.jpg?w=AAB8YTliceeM7s82hxQPbbTrVKIt3VWPY-YNsOXcMsbOPA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen07.jpg?w=AAAYcQbyJEA5jD3rfSgKUYf8Ppk7DFbodll9MCaPT-42PA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen08.jpg?w=AAD3VRlaUHm5CqafV7SUmq_mCsFzSlTuwgMC0WVqB15teg" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen08.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Kaliman/screen09.jpg?w=AACkS79RR9IF95sSa-WUG2dTkQCPbMdX0SJCRne3Ki4Y4A" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Kaliman/screen09.jpg" alt="">
 		  </li>
 		</ul>
 </div>
-
-<div id="toPopup3">  
+<div id="toPopup_theatre">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-		<ul class="rslides" id="slider4">
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen01.JPG?w=AABsz9iOJbF5ZYv0o0lffVHIOFBjGEJp7AFKCbET_ChDmA" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen02.JPG?w=AAAkx4BAZtjoz_uOhN8b9UGdWioRXeAAW92qVyM-lcZAWw" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen03.JPG?w=AAACfn4mYVQOL4b4DWyXPpvVsDLNPk-BH4h8BtMaWX55CA" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen04.JPG?w=AAAns5ydj81XEhcZDi0OCUct74PBJYdIWwh9-vERj82jTg" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen05.JPG?w=AABW-G6rev0VOD3YId6Bis_YCB-Gx6ObF-ruXJqJSFjH-A" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Vouganth/screen06.JPG?w=AAB3eKXVrUYvyzJRrhk7nRW8_5NZ1SMOJV5YTPsXVjP6Dw" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		</ul>
-</div>
-
-<div id="toPopup4">  
-	<div class="close"></div>
-	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Theatre of Insanity</h1><br>
+		<p class="date">Created Winter 2009</p><br>
+		<p>College project. This was my first environment I ever made that includes all custom assets.</p>
+	</div>
 		<ul class="rslides" id="slider5">
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen01.jpg?w=AADpoXpzVZOkZVXYr6YoayTlF1xwXhfjLwdU3tbCNl2C7A" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen02.jpg?w=AACqHKaQpqtVB2k2v3jFMA_L9a_EeiohABO-6x-LekuJ5g" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen03.jpg?w=AACAPFwL9UX-t-EvP57D06cYMKxIhNkIk2E9HcEblJFj0g" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen03.jpg" alt="">
+		  	<p class="caption">I had fun with the design for this guy.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen04.jpg?w=AAAqoGEJZbZsh7Pz10UNsGMZuj71yN0o_wUDCbwwxoYa4Q" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen05.jpg?w=AAAnKE3nO5EkT9p_Gt6DsD6DXvsE81G-AL7SuNwGuesHaw" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen05.jpg" alt="">
+		  	<p class="caption">Check the videos section, this piece moves. Based on the ending video in <a href="http://en.wikipedia.org/wiki/Monogatari_(series)" target="_blank">Bakemonogatari</a>.</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen06.jpg?w=AAC3rT1sN7LB9kTX6LFWEHTMp9ixLDJ3DMElz06DjJusWg" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Theatre%20of%20Insanity/screen07.jpg?w=AACAabRe3bk5MVJmTqeW9s0NDF1GIOUsx0g6qqUVvevj6w" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Theatre of Insanity/screen07.jpg" alt="">
 		  </li>
 		</ul>
 </div>
 
-<div id="toPopup5">  
+<!-- Creatures, characters and props -->
+<div id="toPopup_stylish-transport">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-		<ul class="rslides" id="slider6">
+	<div class="gallery_header">
+		<h1>Stylish Transport</h1><br>
+		<p class="date">Created Spring 2011</p><br>
+		<p>An industrial design - A futuristic way to transport yourself in style.<br><br>
+		Concept designed in weekly battles at <a href=http://www.conceptart.org target="_blank">conceptart.org</a></p>
+	</div>
+		<ul class="rslides" id="slider9">
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen01.JPG?w=AAAPMBhPHQFWqQnqdVJ4GKG6PYto0RwzK0ZN0xN8B7ljdg" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen01.jpg" alt="">
+		  	<p class="caption">I loved the design for this transport!</p>
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen02.JPG?w=AADvA_CPFWkWmm95fsV-zXaxA6_m3bs9oDKceXMH5jympQ" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen03.jpg?w=AABsezKv1bRoerZF3NYix0L57swFhAxmKF1S7aF-HYT_qg" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen04.jpg?w=AAC5urRteSkzTaz-vND7CqVy6k5VlCGigPr7b8YngJO85w" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen05.jpg?w=AABMHdyAFKp0839pjrgMwQbT01iepinHBv-m3o5wW69_4w" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen06.jpg?w=AACDWXJRkWiBfqvX-YlhhLsLp7SkJ9X5bdoJzsNjZ4-crA" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/First%20Character/screen08.JPG?w=AACELtBEl0-JIfvfG8OMl9uii4fqhrRRX69oxnoT-VY-2g" alt="">
-		  	<p class="caption">Caption 3</p>
+		  	<img src="images/galleries/Stylish Transport/screen07.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Stylish Transport/screen08.jpg" alt="">
 		  </li>
 		</ul>
 </div>
-
-<div id="toPopup6">  
+<div id="toPopup_overlord-hammer">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-		<ul class="rslides" id="slider7">
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Lich%20Dragon/screen01.jpg?w=AAAYvz1nsJ-uZOLzIBjR2ZhU9CSX-yXK28DGo_K86msH4A" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Lich%20Dragon/screen02.jpg?w=AACnHmIwiBCQBehOsK_K4d06bZAMunTv2wOeMl95UQh4Eg" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Lich%20Dragon/screen03.jpg?w=AADT4HoNJVqzefSI9OZEn_oSueiC6r0l9E1DuBwBeTXzfQ" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Lich%20Dragon/screen04.jpg?w=AABhcPxt4Rw7CIUB3CXFdkiu9Hfsy3J3jMD1o00WE580iA" alt="">
-		  	<p class="caption">Caption 3</p>
-		  </li>
-		</ul>
-</div>
-
-<div id="toPopup7">  
-	<div class="close"></div>
-	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Overlord Hammer</h1><br>
+		<p class="date">Created Spring 2011</p><br>
+		<p>A quick one-day project to make a hammer of an awesome game <a href="http://en.wikipedia.org/wiki/Overlord_(2007_video_game)" target="_blank">Overlord</a></p>
+	</div>
 		<ul class="rslides" id="slider8">
 		  <li>
-		  	<img src="https://dl-web.dropbox.com/get/TheHeadlessHydra/galleries/Overlord%20Hammer/screen01.png?w=AABQy5nrmqlF5i3oXj55mrT3Vopr2CgpMTDqm7CgOAe0kg" alt="">
+		  	<img src="images/galleries/Overlord Hammer/screen01.png" alt="">
 		  	<p class="caption">Caption 3</p>
 		  </li>
 		</ul>
 </div>
+<div id="toPopup_vouganth">  
+	<div class="close"></div>
+	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Vouganth</h1><br>
+		<p class="date">Created Fall 2010</p><br>
+		<p>An underwater, lava sea dragon.<br> 
+		A design I had to bring to life after capturing my imagination.<br><br>
+		Concept designed in weekly battles at <a href=http://www.conceptart.org target="_blank">conceptart.org</a></p>
+	</div>
+		<ul class="rslides" id="slider4">
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen01.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen02.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen03.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen04.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen05.jpg" alt="">
+		  	<p class="caption">Head and body have seperate texture maps - each 2048x2048.</p>
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Vouganth/screen06.jpg" alt="">
+		  </li>
+		</ul>
+</div>
+<div id="toPopup_chess-set">  
+	<div class="close"></div>
+	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Chess Piece</h1><br>
+		<p class="date">Created Fall 2010</p><br>
+		<p>A chess set designed to have an industrial look.<br><br>
+		Concept designed in weekly battles at <a href=http://www.conceptart.org target="_blank">conceptart.org</a></p>
+	</div>
+		<ul class="rslides" id="slider2">
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen01.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen02.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen03.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen04.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen05.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen06.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen07.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen08.jpg" alt="">
+		  	<p class="caption">Getting the Ambience to emit in an animated, crystalline like way was a hard task at the time.</p>
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Chess Piece/screen09.jpg" alt="">
+		  </li>
+		</ul>
+</div>
+<div id="toPopup_first-character">  
+	<div class="close"></div>
+	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>First Character</h1><br>
+		<p class="date">Created Fall 2009</p><br>
+		<p>College project. This was my first character - or even one of my first 3d models - ever created.<br>
+		   I debated putting it up - but it gives good contrast to how far someone can get in a year.</p>
+	</div>
+		<ul class="rslides" id="slider6">
+		  <li>
+		  	<img src="images/galleries/First Character/screen01.jpg" alt="">
+		  	<p class="caption">I don't really know why I put a glow behind her hair? Maybe I thought it was cool?</p>
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen02.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen03.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen04.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen05.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen06.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/First Character/screen08.jpg" alt="">
+		  </li>
+		</ul>
+</div>
+
+<!-- Work in progress -->
+<div id="toPopup_lich-dragon">  
+	<div class="close"></div>
+	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+	<div class="gallery_header">
+		<h1>Lich Dragon</h1><br>
+		<p class="date">Created Summer 2011</p><br>
+		<p>Another dragon I was in the process of creating. I never ended up completing it, but I think it has a lot of potential.<br><br>
+		Concept designed in weekly battles at <a href=http://www.conceptart.org target="_blank">conceptart.org</a></p>
+	</div>
+		<ul class="rslides" id="slider7">
+		  <li>
+		  	<img src="images/galleries/Lich Dragon/screen01.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Lich Dragon/screen02.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Lich Dragon/screen03.jpg" alt="">
+		  </li>
+		  <li>
+		  	<img src="images/galleries/Lich Dragon/screen04.jpg" alt="">
+		  </li>
+		</ul>
+</div>
+
+
 
 <!-- Videos -->
-<div id="toPopup8">  
+<div id="toPopup_help-eat">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="sweet-smell" width="800" height="400" src="http://player.vimeo.com/video/41574478?autoplay=1&amp;api=1&amp;player_id=vidplayer&autoplay=false"></iframe>
+	<div class="gallery_header">
+		<h1>Help Eat</h1><br>
+		<p>An awesome spot, and also the last thing I worked on while at Topix. <a href="http://stimulantonline.ca/2011/09/28/baking-day/?utm_source=newsletter&utm_medium=email&utm_campaign=baking-day" target="_blank">Credits</a>.</p><br><br>
+		<p>Worked on as part of the team over at <a href="http://www.topixfx.com/" target="_blank">Topix</a>.</p>
+	</div>
+	<iframe id="help-eat" width="100%" height="100%" frameborder="0" src="http://player.vimeo.com/video/38582156?autoplay=1&api=1&player_id=vidplayer&autoplay=false"></iframe>
 </div>
 
-<div id="toPopup9">  
+<div id="toPopup_sweet-smell">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="help-eat" width="800" height="400" src="http://player.vimeo.com/video/38582156?autoplay=1&api=1&player_id=vidplayer&autoplay=false"></iframe>
+	<div class="gallery_header">
+		<h1>Sweet Smell</h1><br>
+		<p>An overseas spot for the pes-clearing product by S. C. Johnson.</p><br><br>
+		<p>Worked on as part of the team over at <a href="http://www.topixfx.com/" target="_blank">Topix</a>.</p>
+	</div>
+	<iframe id="sweet-smell" width="100%" height="100%" frameborder="0" src="http://player.vimeo.com/video/41574478?autoplay=1&amp;api=1&amp;player_id=vidplayer&autoplay=false"></iframe>
 </div>
 
-<div id="toPopup10">  
+<div id="toPopup_rbc-spot">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="arbie-outdoors" src="//player.vimeo.com/video/73575200" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="gallery_header">
+		<h1>RBC Spot</h1><br>
+		<p>A pitch for RBC's Arbie.</p><br><br>
+		<p>Worked on as part of the team over at <a href="http://www.topixfx.com/" target="_blank">Topix</a>.</p>
+	</div>
+	<iframe id="rbc-spot" src="//player.vimeo.com/video/36252081" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="toPopup11">  
+<div id="toPopup_arbie-outside">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="rbc-spot" src="//player.vimeo.com/video/36252081" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="gallery_header">
+		<h1>Arbie Outside</h1><br>
+		<p>A second complementary pitch for RBC's Arbie.</p><br><br>
+		<p>Worked on as part of the team over at <a href="http://www.topixfx.com/" target="_blank">Topix</a>.</p>
+	</div>
+	<iframe id="arbie-outdoors" src="//player.vimeo.com/video/73575200" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="toPopup12">  
+<div id="toPopup_demo-reel">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="demo-reel" src="//player.vimeo.com/video/17719128" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="gallery_header">
+		<h1>Demo Reel</h1><br>
+		<p class="date">Created Fall 2010</p><br>
+		<p>My Demo Reel created before I did any production work. Contains mostly work I did outside of college.</p>
+	</div>
+	<iframe id="demo-reel" src="//player.vimeo.com/video/17719128" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="toPopup13">  
+<div id="toPopup_kaliman-flythrough">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="kaliman-flythrough" src="//player.vimeo.com/video/15713137" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="gallery_header">
+		<h1>Demo Reel</h1><br>
+		<p class="date">Created Summer 2010</p><br>
+		<p>A flythrough of my final project worked on while at college.</p>
+	</div>
+	<iframe id="kaliman-flythrough" src="//player.vimeo.com/video/15713137" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="toPopup14">  
+<div id="toPopup_theatre-flythrough">  
 	<div class="close"></div>
 	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-	<iframe id="theatre-flythrough" src="//player.vimeo.com/video/12143682" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="gallery_header">
+		<h1>Demo Reel</h1><br>
+		<p class="date">Created Fall 2010</p><br>
+		<p>A flythrough of my first environment made from scratch!</p>
+	</div>
+	<iframe id="theatre-flythrough" src="//player.vimeo.com/video/12143682" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 
