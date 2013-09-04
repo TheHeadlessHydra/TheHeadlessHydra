@@ -334,27 +334,27 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider5">
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen01.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen02.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen03.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen03.jpg" alt="">
 		  	<p class="caption">I had fun with the design for this guy.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen04.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen05.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen05.jpg" alt="">
 		  	<p class="caption">Check the videos section, this piece moves. Based on the ending video in <a href="http://en.wikipedia.org/wiki/Monogatari_(series)" target="_blank">Bakemonogatari</a>.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen06.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Theatre of Insanity/screen07.jpg" alt="">
+		  	<img src="images/galleries/TheatreofInsanity/screen07.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -371,29 +371,29 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider9">
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen01.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen01.jpg" alt="">
 		  	<p class="caption">I loved the design for this transport!</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen02.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen03.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen04.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen05.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen06.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen07.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Stylish Transport/screen08.jpg" alt="">
+		  	<img src="images/galleries/StylishTransport/screen08.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -407,7 +407,7 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider8">
 		  <li>
-		  	<img src="images/galleries/Overlord Hammer/screen01.png" alt="">
+		  	<img src="images/galleries/OverlordHammer/screen01.png" alt="">
 		  	<p class="caption">Caption 3</p>
 		  </li>
 		</ul>
@@ -455,32 +455,32 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider2">
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen01.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen02.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen03.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen04.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen05.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen06.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen07.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen08.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen08.jpg" alt="">
 		  	<p class="caption">Getting the Ambience to emit in an animated, crystalline like way was a hard task at the time.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Chess Piece/screen09.jpg" alt="">
+		  	<img src="images/galleries/ChessPiece/screen09.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -495,26 +495,26 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider6">
 		  <li>
-		  	<img src="images/galleries/First Character/screen01.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen01.jpg" alt="">
 		  	<p class="caption">I don't really know why I put a glow behind her hair? Maybe I thought it was cool?</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen02.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen03.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen04.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen05.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen06.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/First Character/screen08.jpg" alt="">
+		  	<img src="images/galleries/FirstCharacter/screen08.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -531,16 +531,16 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider7">
 		  <li>
-		  	<img src="images/galleries/Lich Dragon/screen01.jpg" alt="">
+		  	<img src="images/galleries/LichDragon/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Lich Dragon/screen02.jpg" alt="">
+		  	<img src="images/galleries/LichDragon/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Lich Dragon/screen03.jpg" alt="">
+		  	<img src="images/galleries/LichDragon/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Lich Dragon/screen04.jpg" alt="">
+		  	<img src="images/galleries/LichDragon/screen04.jpg" alt="">
 		  </li>
 		</ul>
 </div>
