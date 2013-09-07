@@ -11,7 +11,7 @@ import javax.servlet.http.*;
  * Controller used in the MVC POST-REDIRECT-GET system.
  * Send a form to be handled to this controller first,
  * do business here and maintain all data, then
- * it will then be passed along to the SliderDisplayServlet
+ * it will then be passed along to the ArtDisplayServlet
  * for display.
  * @author The Headless Hydra
  *

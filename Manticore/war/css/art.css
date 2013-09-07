@@ -8,15 +8,13 @@
  *
  */
 body {
-	background: #2a2c2b url('../images/bg_left.png') repeat-y top left;
-	
-	background: url('../images/bg_2.png'), #1e1e20; /* Old browsers */
-	background: url('../images/bg_2.png'), -moz-linear-gradient(top,  #1e1e20 0%, #374140 100%); /* FF3.6+ */
-	background: url('../images/bg_2.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e1e20), color-stop(100%,#374140)); /* Chrome,Safari4+ */
-	background: url('../images/bg_2.png'), -webkit-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Chrome10+,Safari5.1+ */
-	background: url('../images/bg_2.png'), -o-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Opera 11.10+ */
-	background: url('../images/bg_2.png'), -ms-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* IE10+ */
-	background: url('../images/bg_2.png'), linear-gradient(to bottom,  #1e1e20 0%,#374140 100%); /* W3C */
+	background: url('../images/art/bg_2.png'), #1e1e20; /* Old browsers */
+	background: url('../images/art/bg_2.png'), -moz-linear-gradient(top,  #1e1e20 0%, #374140 100%); /* FF3.6+ */
+	background: url('../images/art/bg_2.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e1e20), color-stop(100%,#374140)); /* Chrome,Safari4+ */
+	background: url('../images/art/bg_2.png'), -webkit-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Chrome10+,Safari5.1+ */
+	background: url('../images/art/bg_2.png'), -o-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* Opera 11.10+ */
+	background: url('../images/art/bg_2.png'), -ms-linear-gradient(top,  #1e1e20 0%,#374140 100%); /* IE10+ */
+	background: url('../images/art/bg_2.png'), linear-gradient(to bottom,  #1e1e20 0%,#374140 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e20', endColorstr='#374140',GradientType=0 ); /* IE6-9 */
 	
 	background-repeat: no-repeat;

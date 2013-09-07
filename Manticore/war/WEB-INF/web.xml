@@ -9,21 +9,34 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
         <servlet-name>ArtDisplay</servlet-name>
         <servlet-class>theheadlesshydra.manticore.ArtDisplayServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>ArtDisplay</servlet-name>
+        <url-pattern>/art</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ArtController</servlet-name>
         <servlet-class>theheadlesshydra.manticore.ArtControllerServlet</servlet-class>
     </servlet>
-	
-	
-	
-	
     <servlet-mapping>
         <servlet-name>ArtController</servlet-name>
         <url-pattern>/art.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CompSciDisplay</servlet-name>
+        <servlet-class>theheadlesshydra.manticore.CompSciDisplayServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>ArtDisplay</servlet-name>
-        <url-pattern>/art</url-pattern>
+        <servlet-name>CompSciDisplay</servlet-name>
+        <url-pattern>/compsci</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CompSciController</servlet-name>
+        <servlet-class>theheadlesshydra.manticore.CompSciControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompSciController</servlet-name>
+        <url-pattern>/compsci.do</url-pattern>
     </servlet-mapping>
     
     

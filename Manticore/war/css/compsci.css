@@ -1,0 +1,176 @@
+
+
+
+*{
+	font-family: 'Aldrich', serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body{
+	background-color: #d8caa8;
+	
+	background-image: url('../images/compsci/bg-bottom.png');
+	background-position: center bottom; 
+	background-repeat: no-repeat;
+	
+	width: 100%;
+  	margin: 0px;
+	
+}
+#body-header{
+	padding-top:50px;
+	background-color:#363942;
+	background-position: center bottom; 
+	background-repeat: no-repeat;
+}
+#main-title{
+	/* border, centre div, and pad the bottom*/
+	width:80%;
+	border: 2px solid #d8caa8;
+	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom:50px;
+  	-moz-border-radius: 10px;
+	border-radius: 10px;
+	min-width:800px;
+  	
+  	/* inner text padding and style*/
+  	/*text-align:center;*/
+  	padding:2px;
+	font-family: 'Aldrich', serif;
+	font-size:30px;
+	letter-spacing:10px;
+	text-shadow: 2px 2px #000;
+}
+#main-inner-border{
+	padding:3px;
+	border: 5px groove #d8caa8;
+  	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/**   
+ *    
+ *     Main Title
+ *
+ */
+#title_container {
+	padding: 5px;
+	width: 80%;;
+	min-width:800px;
+	
+	margin: auto;
+	margin-bottom: 50px;
+	
+	border: 2px solid #d8caa8;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#title_inner_border {
+	padding: 3px;
+	border-style: inset;
+	border-color: #d8caa8;
+	border-width: 3px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#content_container {
+	width: 80%;
+	margin: 0px auto;
+	position: relative;
+}
+
+#header-computer {
+	margin-top: 3%;
+	margin-right: 3%;
+	margin-left: 3%;
+	border-bottom: 2px groove #284907;
+}
+
+#header-science {
+	margin-bottom: 3%;
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+#text-computer {
+	padding-top:30px;
+	padding-left:15%;
+	
+	font-family: 'Aldrich', serif;
+	font-size: 50px;
+	color:#5c8325;
+	letter-spacing: 10px;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+	
+	width: 430px;
+	display: block;
+	float: left;
+	margin-right: 13px;
+	border-right: 2px groove #284907;
+	padding-left: 10px;
+}
+
+#text-science {
+	padding-left:35%;
+	
+	font-family: 'Aldrich', serif;
+	font-size: 50px;
+	color:#5c8325;
+	letter-spacing: 10px;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+	
+	width: 463px;
+	display: block;
+	float: right;
+	margin-right: 13px;
+	border-left: 2px groove #284907;
+	padding-left: 50px;
+}
+
+#text-projects{
+	width:100%;
+	color:#d8caa8;
+	padding-left:50px;
+	border-bottom: 1px solid #382513;
+}
+
+/**   
+ *    
+ *     Tabs
+ *
+ */
+ 
+#tab_container{
+	background-color:#363942;
+}
+#body-header{
+	background-color:#363942;
+}
+
+.tabcontents{
+	width:100%;
+	background-color:#d8caa8;
+}
+
+
+/**   
+ *        
+ *    Clearfix needed so that items that are floats inside a parent element resize
+ *    the parent element to properly fit the child elements
+ */
+.clearfix:before,.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}

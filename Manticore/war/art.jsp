@@ -31,14 +31,10 @@
 <link rel="stylesheet" href="css/popup.css" type="text/css" media="all" />
 
 <!-- Tab CSS --> 
-<link href="css/tab/tabcontent.css" rel="stylesheet" type="text/css" />
+<link href="css/tabcontent-art.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<!-- 
-<img src=images/bg_left.png style="background-repeat:repeat-y; position:absolute; left:0px; top:0px; z-index:-10;">
-<img src=images/bg_right.png style="background-repeat:repeat-y; position:absolute; right:0px; top:0px; z-index:-10;">
--->
 
 <!--  Main title -->
 <div id="title_container">
@@ -60,13 +56,7 @@
 		</div> <!-- content_container -->
 	</div>
 </div>
-<!--  
-<p style="color:#fff ">
-TO DO LIST:<br>
-- Have to create a nice bg image to display from the top down (flush with top edge)<br>
-- Need a link section to link to comp sci page.<br>
-</p>
- -->
+
 <div id="tab_container">
 <ul class="tabs" data-persist="true">
 	<li><a href="#view1">Image Galleries</a></li>
@@ -85,20 +75,20 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 			        <div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_diamandra.png" class="toPopup_diamandra"><br>
+						<img src="images/art/thumbnails/thumb_diamandra.png" class="toPopup_diamandra"><br>
 						<a href="#" class="toPopup_diamandra">Diamandra</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman.png" class="toPopup_kaliman"><br>
+							<img src="images/art/thumbnails/thumb_kaliman.png" class="toPopup_kaliman"><br>
 							<a href="#" class="toPopup_kaliman">Kaliman</a><br>
 						</div>
 		            </div>
 		            <div id="column-3">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_theatreofinsanity.png" class="toPopup_theatre"><br>
+							<img src="images/art/thumbnails/thumb_theatreofinsanity.png" class="toPopup_theatre"><br>
 							<a href="#" class="toPopup_theatre">Theatre of Insanity</a><br>
 						</div>
 		            </div>
@@ -110,28 +100,28 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 		        	<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_stylish-transport.png" class="toPopup_stylish-transport"><br>
+						<img src="images/art/thumbnails/thumb_stylish-transport.png" class="toPopup_stylish-transport"><br>
 						<a href="#" class="toPopup_stylish-transport">Stylish Transport</a><br>
 					</div>
 					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_chess-set.png" class="toPopup_chess-set"><br>
+						<img src="images/art/thumbnails/thumb_chess-set.png" class="toPopup_chess-set"><br>
 						<a href="#" class="toPopup_chess-set">Chess Set</a><br>
 					</div>	
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 		            	<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_overlord-hammer.png" class="toPopup_overlord-hammer"><br>
+							<img src="images/art/thumbnails/thumb_overlord-hammer.png" class="toPopup_overlord-hammer"><br>
 							<a href="#" class="toPopup_overlord-hammer">Overlord Hammer</a><br>
 						</div>
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_first-character.png" class="toPopup_first-character"><br>
+							<img src="images/art/thumbnails/thumb_first-character.png" class="toPopup_first-character"><br>
 							<a href="#" class="toPopup_first-character">First Character</a><br>
 						</div>					
 		            </div>
 		            <div id="column-3">
 			            <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_vouganth.png" class="toPopup_vouganth"><br>
+							<img src="images/art/thumbnails/thumb_vouganth.png" class="toPopup_vouganth"><br>
 							<a href="#" class="toPopup_vouganth">Vouganth</a><br>
 						</div>
 		            </div>
@@ -143,7 +133,7 @@ IMAGE GALLERIES TAB
 		    <div id="main">
 		        <div id="column-1">
 					<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_lich-dragon.png" class="toPopup_lich-dragon"><br>
+						<img src="images/art/thumbnails/thumb_lich-dragon.png" class="toPopup_lich-dragon"><br>
 						<a href="#" class="toPopup_lich-dragon">Lich Dragon</a><br>
 					</div>
 		        </div>
@@ -172,24 +162,24 @@ VIDEOS TAB
 		    <div id="main">
 		        <div id="column-1">
 			        <div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_help-eat.png" class="toPopup_help-eat"><br>
+						<img src="images/art/thumbnails/thumb_help-eat.png" class="toPopup_help-eat"><br>
 						<a href="#" class="toPopup_help-eat">Help Eat</a><br>
 					</div>
 					<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_arbie-outside.png" class="toPopup_arbie-outside"><br>
+							<img src="images/art/thumbnails/thumb_arbie-outside.png" class="toPopup_arbie-outside"><br>
 							<a href="#" class="toPopup_arbie-outside">Arbie Outside</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_sweet-smell.png" class="toPopup_sweet-smell"><br>
+							<img src="images/art/thumbnails/thumb_sweet-smell.png" class="toPopup_sweet-smell"><br>
 							<a href="#" class="toPopup_sweet-smell">Sweet Smell</a><br>
 						</div>
 		            </div>
 		            <div id="column-3">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_rbc-spot.png" class="toPopup_rbc-spot"><br>
+							<img src="images/art/thumbnails/thumb_rbc-spot.png" class="toPopup_rbc-spot"><br>
 							<a href="#" class="toPopup_rbc-spot">RBC Spot</a><br>
 						</div>
 		            </div>
@@ -201,20 +191,20 @@ VIDEOS TAB
 		    <div id="main">
 		        <div id="column-1">
 		        	<div id="thumbnail_item" class="fade">
-						<img src="images/thumbnails/thumb_demo-reel.png" class="toPopup_demo-reel"><br>
+						<img src="images/art/thumbnails/thumb_demo-reel.png" class="toPopup_demo-reel"><br>
 						<a href="#" class="toPopup_demo-reel">College Demo Reel</a><br>
 					</div>
 		        </div>
 		        <div id="content-2">
 		            <div id="column-2">
 				        <div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_kaliman-flythrough.png" class="toPopup_kaliman-flythrough"><br>
+							<img src="images/art/thumbnails/thumb_kaliman-flythrough.png" class="toPopup_kaliman-flythrough"><br>
 							<a href="#" class="toPopup_kaliman-flythrough">Kaliman Flythrough</a><br>
 						</div>					
 		            </div>
 		            <div id="column-3">
 						<div id="thumbnail_item" class="fade">
-							<img src="images/thumbnails/thumb_theatre-flythrough.png" class="toPopup_theatre-flythrough"><br>
+							<img src="images/art/thumbnails/thumb_theatre-flythrough.png" class="toPopup_theatre-flythrough"><br>
 							<a href="#" class="toPopup_theatre-flythrough">Theatre of Insanity flythrough</a><br>
 						</div>
 		            </div>
@@ -243,43 +233,43 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider1">
 		  <li style="background-color:(0,0,0,0.5);">
-		  	<img src="images/galleries/Diamandra/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen01.jpg" alt="">
 		  	<p class="caption">Made attempts to make the world feel more 'full' without everything looking like a copy by including many modular buildings thourghout the visible world.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen05.jpg" alt="">
 		  	<p class="caption">All buildings in this building are built modularly - small pieces only.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen07.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen08.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen08.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen09.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen09.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen10.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen10.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen11.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen11.jpg" alt="">
 		  	<p class="caption">Probably the more difficult aspect of this map was getting this water to look good.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Diamandra/screen12.jpg" alt="">
+		  	<img src="images/art/galleries/Diamandra/screen12.jpg" alt="">
 		  </li>
 		</ul>
 	</div>
@@ -294,33 +284,33 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider3">
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen01.jpg" alt="">
 		  	<p class="caption">An homage to my inspiration for this piece - Legend of Zelda Majoras Mask.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen05.jpg" alt="">
 		  	<p class="caption">UDK's lighting engine used to display a 'Light Array' system.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen07.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen08.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen08.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Kaliman/screen09.jpg" alt="">
+		  	<img src="images/art/galleries/Kaliman/screen09.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -334,27 +324,27 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider5">
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen03.jpg" alt="">
 		  	<p class="caption">I had fun with the design for this guy.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen05.jpg" alt="">
 		  	<p class="caption">Check the videos section, this piece moves. Based on the ending video in <a href="http://en.wikipedia.org/wiki/Monogatari_(series)" target="_blank">Bakemonogatari</a>.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/TheatreofInsanity/screen07.jpg" alt="">
+		  	<img src="images/art/galleries/TheatreofInsanity/screen07.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -371,29 +361,29 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider9">
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen01.jpg" alt="">
 		  	<p class="caption">I loved the design for this transport!</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen07.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/StylishTransport/screen08.jpg" alt="">
+		  	<img src="images/art/galleries/StylishTransport/screen08.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -407,7 +397,7 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider8">
 		  <li>
-		  	<img src="images/galleries/OverlordHammer/screen01.png" alt="">
+		  	<img src="images/art/galleries/OverlordHammer/screen01.png" alt="">
 		  	<p class="caption">Caption 3</p>
 		  </li>
 		</ul>
@@ -424,23 +414,23 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider4">
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen05.jpg" alt="">
 		  	<p class="caption">Head and body have seperate texture maps - each 2048x2048.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/Vouganth/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/Vouganth/screen06.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -455,32 +445,32 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider2">
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen07.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen07.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen08.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen08.jpg" alt="">
 		  	<p class="caption">Getting the Ambience to emit in an animated, crystalline like way was a hard task at the time.</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/ChessPiece/screen09.jpg" alt="">
+		  	<img src="images/art/galleries/ChessPiece/screen09.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -495,26 +485,26 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider6">
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen01.jpg" alt="">
 		  	<p class="caption">I don't really know why I put a glow behind her hair? Maybe I thought it was cool?</p>
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen04.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen05.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen05.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen06.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen06.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/FirstCharacter/screen08.jpg" alt="">
+		  	<img src="images/art/galleries/FirstCharacter/screen08.jpg" alt="">
 		  </li>
 		</ul>
 </div>
@@ -531,16 +521,16 @@ GALLERIES
 	</div>
 		<ul class="rslides" id="slider7">
 		  <li>
-		  	<img src="images/galleries/LichDragon/screen01.jpg" alt="">
+		  	<img src="images/art/galleries/LichDragon/screen01.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/LichDragon/screen02.jpg" alt="">
+		  	<img src="images/art/galleries/LichDragon/screen02.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/LichDragon/screen03.jpg" alt="">
+		  	<img src="images/art/galleries/LichDragon/screen03.jpg" alt="">
 		  </li>
 		  <li>
-		  	<img src="images/galleries/LichDragon/screen04.jpg" alt="">
+		  	<img src="images/art/galleries/LichDragon/screen04.jpg" alt="">
 		  </li>
 		</ul>
 </div>
