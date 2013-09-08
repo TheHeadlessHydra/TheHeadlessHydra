@@ -6,18 +6,38 @@
     padding: 0px;
     margin: 0px;
 }
-
+html{
+	height:100%;
+}
 html, body{
 	background-color: #d8caa8;
-	
-	background-image: url('../images/compsci/bg-bottom.png');
-	background-position: center bottom; 
-	background-repeat: no-repeat;
-	
+
 	width: 100%;
   	margin: 0px;
-	
+  	
+  	/*background-image: url('../images/compsci/bg-bottom.png');
+	background-position: 0 100%;
+	background-repeat: no-repeat;*/
 }
+
+a {
+	color: #ddd;
+	text-decoration: none;
+	font-family: 'Fenix', serif;
+	font-size: 13px;
+	letter-spacing: 3px;
+}
+
+a:hover {
+	color: #5c832f;
+}
+
+/**   
+ *    
+ *     Main Title
+ *
+ */
+ 
 #body-header{
 	padding-top:50px;
 	background-color:#363942;
@@ -50,11 +70,6 @@ html, body{
 	border-radius: 10px;
 }
 
-/**   
- *    
- *     Main Title
- *
- */
 #title_container {
 	padding: 5px;
 	width: 80%;;
@@ -87,7 +102,7 @@ html, body{
 	margin-top: 3%;
 	margin-right: 3%;
 	margin-left: 3%;
-	border-bottom: 2px groove #284907;
+	border-bottom: 2px groove #5c8325;
 }
 
 #header-science {
@@ -102,7 +117,7 @@ html, body{
 	
 	font-family: 'Aldrich', serif;
 	font-size: 50px;
-	color:#5c8325;
+	color:#2b2922;
 	letter-spacing: 10px;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 	
@@ -110,7 +125,7 @@ html, body{
 	display: block;
 	float: left;
 	margin-right: 13px;
-	border-right: 2px groove #284907;
+	border-right: 2px groove #5c8325;
 	padding-left: 10px;
 }
 
@@ -119,7 +134,7 @@ html, body{
 	
 	font-family: 'Aldrich', serif;
 	font-size: 50px;
-	color:#5c8325;
+	color:#2b2922;
 	letter-spacing: 10px;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 	
@@ -127,20 +142,25 @@ html, body{
 	display: block;
 	float: right;
 	margin-right: 13px;
-	border-left: 2px groove #284907;
+	border-left: 2px groove #5c8325;
 	padding-left: 50px;
 }
 
 #text-projects{
-	width:100%;
 	color:#d8caa8;
 	padding-left:50px;
-	border-bottom: 1px solid #382513;
+	border-bottom: 1px solid #5c8325;
+}
+
+#text-projects p{
+	padding-left:50px;
+	font-family: 'Quattrocento';
+	padding-bottom:10px;
 }
 
 /**   
  *    
- *     Tabs
+ *     Horizontal Tabs
  *
  */
  
@@ -155,7 +175,41 @@ html, body{
 	width:100%;
 	background-color:#d8caa8;
 }
+.project_header{
+	color:#363942;
+	color:#284907;
+	display:inline;
+}
+.project_github{
+	color:#2b2922;
+	font-size:15px;
+	margin-left:50px;
+}
+.project_github:hover{
+	
+}
+.sub-heading{
+	font-size:30px;
+	border-bottom: 1px solid #284907;
+}
+.project_details{
+	font-family: 'Gudea', serif;
+	font-size: 20px;
+	color:#2b2922;
+}
 
+/**
+ * Page footer and footer iamge
+ */
+#page_footer{
+	height:300px;
+	width:100%;
+	
+	background-image: url('../images/compsci/bg-bottom.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+ 
 
 /**   
  *        

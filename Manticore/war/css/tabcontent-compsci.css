@@ -1,7 +1,9 @@
-/* Tab Content - menucool.com */
+/*
+ * Horizontal Tab
+ */
 ul.tabs
 {
-	background-color:#382513;
+	background-color:#2b2922;
     padding: 6px 0;
     font-size: 0;
     margin:0;
@@ -23,15 +25,10 @@ ul.tabs li a
     text-decoration: none;
     position: relative;
     padding: 6px 14px;
-    border: 1px solid #382513;
+    border: 1px solid #5c8325;
     background: #284907;
     border-radius: 3px 3px 0 0;
     outline:none;
-}
-        
-ul.tabs li a:visited
-{
-    color: #000;
 }
         
 ul.tabs li a:hover
@@ -46,9 +43,7 @@ ul.tabs li.selected a, ul.tabs li.selected a:hover
     color:#284907;
     position: relative;
     background:#d8caa8;
-    border-bottom-color: #d8caa8;
-    
-    
+    border-bottom-color: #d8caa8;  
 }
         
         
@@ -60,6 +55,96 @@ ul.tabs li.selected a:hover
 
 div.tabcontents
 {
-    border-top: 1px solid #382513; 
+    border-top: 1px solid #2b2922; 
     /*padding:30px 16px;*/
+}
+
+/******************
+ * Vertical Tab
+ ******************/
+ 
+#v-tab_container,
+#v-tab_container-2{
+	width:100%;
+	overflow: hidden;
+}
+/**********************************************************/
+ /* Initial tab */
+.ui-tabs-vertical { 
+	width: 55em; 
+}
+ /* Tabs sidebar */
+.ui-tabs-vertical .ui-tabs-nav { 
+	padding: .2em .1em .2em .2em; 
+	float: left; 
+	width: 12em; 
+}
+/**********************************************************/
+/*General text styling*/
+.ui-tabs-vertical .ui-tabs-nav a { 
+	font: normal 12px 'Aldrich' san-serif;
+}
+
+/**********************************************************/
+/*Non-active tab*/
+.ui-tabs-vertical .ui-tabs-nav li { 
+    border: 1px solid #5c8325;
+    background: #284907;
+    border-radius: 3px 3px 0 0;
+	
+	clear: left; 
+	width: 100%; 
+	border-bottom-width: 1px !important; 
+	margin: 0 -1px .2em 0; 
+}
+.ui-tabs-vertical .ui-tabs-nav li a { 
+	padding-left:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	display:block; 
+	color:#d8caa8;
+}
+/**********************************************************/
+/*Active tab styling*/
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
+	padding-bottom: 0; 
+	padding-right: .1em; 
+	border-right-width: 1px; 
+	border-color: #d8caa8;  
+	background: #d8caa8;
+	
+}
+/*Active tab colors*/
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a{
+	border-color: #d8caa8;  
+	color:#284907;
+	background:#d8caa8;
+}
+/**********************************************************/
+/*Hover over non-active tab*/
+.ui-tabs-vertical .ui-tabs-nav li a:hover
+{
+	color:#284907;
+    background:#5c8325;
+}
+/*Hover over active tab - keep the same*/
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a:hover{
+	color:#284907;
+    background:#d8caa8;
+}
+/**********************************************************/
+/* Main content container*/
+.v-tabcontents{
+	width:100%;
+	padding-left:230px;
+	padding-top:20px;
+}
+/**********************************************************/
+/*Content panel*/
+.ui-tabs-vertical .ui-tabs-panel { 
+	width: 80%;
+}
+ul.v-tabs{
+	height:500px;
+	background-color:#2b2922;
 }
