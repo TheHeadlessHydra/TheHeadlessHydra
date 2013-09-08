@@ -10,14 +10,13 @@ html{
 	height:100%;
 }
 html, body{
-	background-color: #d8caa8;
-
 	width: 100%;
   	margin: 0px;
   	
-  	/*background-image: url('../images/compsci/bg-bottom.png');
-	background-position: 0 100%;
-	background-repeat: no-repeat;*/
+	
+	background-image: url('../images/compsci/bg.png');
+	background-position: top left;
+	background-repeat: repeat-y;
 }
 
 a {
@@ -37,7 +36,6 @@ a:hover {
  *     Main Title
  *
  */
- 
 #body-header{
 	padding-top:50px;
 	background-color:#363942;
@@ -160,21 +158,9 @@ a:hover {
 
 /**   
  *    
- *     Horizontal Tabs
+ *     Vertical Tab content styles
  *
  */
- 
-#tab_container{
-	background-color:#363942;
-}
-#body-header{
-	background-color:#363942;
-}
-
-.tabcontents{
-	width:100%;
-	background-color:#d8caa8;
-}
 .project_header{
 	color:#363942;
 	color:#284907;
@@ -197,9 +183,41 @@ a:hover {
 	font-size: 20px;
 	color:#2b2922;
 }
+/* List elements inside details*/
+.project_details_list{
+	color:#2b2922;
+	list-style-type:decimal;
+	padding-left:50px;
+}
+.project_details_list li{
+	font-family: 'Gudea', serif;
+	font-size: 20px;
+	color:#2b2922;
+}
+.project_details_subheading{
+	font-family: 'Aldrich', serif;
+	font-size: 20px;
+	color:#2b2922;
+	padding-top:15px;
+	font-style:italic;
+}
+.project_details a {
+	color: #284907;
+	text-decoration: none;
+	font-family: 'Fenix', serif;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
 
+.project_details a:hover {
+	color: #5c832f;
+}
+
+.textWrapRight{
+	float:right;
+}
 /**
- * Page footer and footer iamge
+ * Page footer and footer image
  */
 #page_footer{
 	height:300px;
