@@ -303,8 +303,6 @@
 							
 							This is exactly what they did not long ago. Re-engineering their whole website caused this app to no longer function. I don't actually
 							mind though, since this was always meant to be a throwaway project.
-							
-						
 							</p>
 						</div> <!-- v-view3 -->
 					</div> <!-- v-tabcontents -->
@@ -323,10 +321,137 @@
 						<div id="v2-view1">
 							<h1 class="project_header">WLPP Compiler</h1>
 							<a class="project_github" href="https://github.com/TheHeadlessHydra/WLPPCompiler" target="_blank">-> Find on Github</a>
+							<br><br><br>
+							<p class="sub-heading">Project</p>
+							<p class="project_details">
+							The course I was taking that resulted in this project was labeled CS241 - Foundations of Sequential Programs.
+							It's basically a course on learning assembly, compilers and how they work. The whole course builds up to it, 
+							but the end result they ask for is a compiler for a watered-down version of C++, called WLPP.
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Execution</p>
+							<p class="project_details">
+							There are multiple stages in the development of a compiler. We went through a very rigid and specific sequence
+							in order to generate our compiler. This sequence was as such:
+							</p>
+							<ul class="project_details_list">
+								<li>Develop Grammer</li>
+								<li>Lexical Analysis</li>
+								<li>Top-down LL(1) parsing</li>
+								<li>Semantic Analysis</li>
+								<li>Code Generation</li>
+								<li>Optimization</li>
+							</ul>
+							<p class="project_details_subheading">Develop Grammer</p>
+							<p class="project_details">
+							The first thing to do when writing a compiler is to write out the actual grammer for it. Two of them need to be written:
+							Context-Free grammer and Context-Sensitive grammer. It's complicated but in essence, context-free tells you where you're allowed
+							to put certain tokens, while context-sensitive tells you what type of tokens are allowed where. Flimsy explanation, but I'm not going
+							into detail on that here. These two are important stages in the compiler generation process. 
+							In the interests of marking, we had this grammer given to us, and it was up to us to make a compiler for it. 
+							</p>
+							<p class="project_details_subheading">Lexical Analysis</p>
+							<p class="project_details">
+							Now, there must be a system created that will take an input stream and convert it into <b>tokens</b> that can then be parsed.
+							This was one of the early sections of the course. An interesting and also somewhat simple stage in the process. It is sometimes
+							called tokenizing. I was able to develop a simple solution to this - it is not that hard. A simple recursive function can do it
+							for a language as simple as WLPP.
+							</p>
+							<p class="project_details_subheading">Top-down LL(1) parsing</p>
+							<p class="project_details">
+							Once the stream of input has been tokenized, it can then be parsed into an optionally decorated parse tree. We had many
+							choices for how we wished to go about the creation of this parser. I chose to use a tree and stack based algortihm to
+							design my parser that involved pushing/poping nodes on each step of the parse. 
+							</p>
+							<p class="project_details_subheading">Semantic Analysis</p>
+							<p class="project_details">
+							Once the input has been turned into a parse tree, it must then be carefully inspected to make sure it follows the
+							context-sensitive rules of the grammer. This involved a lot of recursive calls (since we are dealing with a parse tree)
+							but wasn't too bad once you got the hang of it. The difficulty really depended on wether or not you decorated your parse tree
+							on the parsing stage. It was much easier if you had a decorated parse tree. 
+							</p>
+							<p class="project_details_subheading">Code Generation</p>
+							<p class="project_details">
+							Now here was the bulk of the work and also the distinguishing factor among parsers. You take the input that has been parsed,
+							recurse through it and begin generating assembly code for it. There were a million ways to go about this, all leading to different
+							optimization routes. I began, however, with the naiive approach. I went by-the-book and generated the code as cleanly as I could.
+							</p>
+							<p class="project_details_subheading">Optimization</p>
+							<p class="project_details">
+							Optimization. The last stage. Once you have the entire compiler working, you go back and optimize it for specifically what
+							you want to optimize. Code length, speed, etc. Personally I never did this stage. It was bonus marks and wasn't very important.
+							I spent my time instead creating LeagueView.
+							</p>
+							<br><br>
+							<p class="project_details">
+							From there, the assembly code goes into an assembler, which will handle the rest. 
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Results</p>
+							<p class="project_details">
+							It was an eye-opening course and I loved taking it. Learned a lot about how programming languages work - It makes it easier
+							to understand why certain bugs and errors occur when coding. You can even identify which stage of the compiler it hit the error in: 
+							parsing, context-sensitive analysis, or even linking! 
+							</p>
 						</div> <!-- v2-view1 -->
 						<div id="v2-view2">
 							<h1 class="project_header">Hearts</h1>
 							<a class="project_github" href="https://github.com/TheHeadlessHydra/Hearts" target="_blank">-> Find on Github</a>
+							<br><br><br>
+							<p class="sub-heading">Project</p>
+							<p class="project_details">
+							The course I was taking that resulted in this project was labeled CS246 - Object-Oriented Software Development.
+							This was a fun and very easy course. For people who have worked with c++ before, this course comes easily and
+							you can sit back and have fun with the assignments. The final assignment for it was to create a game of hearts
+							(the card game) with a classmate. I had fun with it!
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Execution</p>
+							<p class="project_details">
+							It was a class on object-oriented design, and I'll be damned if I wasn't going to make this game in an object-oriented
+							way. So I did. I made this game incredibly well organized into sections:
+							<ul class="project_details_list">
+								<li>Card, card pile, and Deck</li>
+								<li>Player, smart player, random player, and human player</li>
+								<li>Trick, options and hearts</li>
+							</ul>
+							<p class="project_details">
+							I made this project from scratch. I didn't like the direction they were going with it, so I built it myself.
+							</p>
+							<p class="project_details_subheading">Card, card pile, and Deck</p>
+							<p class="project_details">
+							First, we developed a class that describes a card, that can build a card from input, can compare cards, and can do
+							any other card manipulation required. <br><br>
+							
+							Next we built a data structure to store cards in an array like manner that could be used by others.<br><br>
+							
+							Then build a class to handle a card deck. It can only have one card of each type per deck. 
+							It can have a discard pile, and can allow for cards to be removed from the front of the deck.
+							</p>
+							<p class="project_details_subheading">Player, smart player, random player, and human player</p>
+							<p class="project_details">
+							Next, develop the players. Begin with an abstact class player that handles all the basic actions a player can do.<br><br>
+							
+							Next, derive three types (according to what the assignment we were doing wanted): A human, smart and random player.<br><br>
+							
+							The human player gives a text-based interface to play manually.<br>
+							The random player is a dumb AI that will randomly choose the next card to play (if it cant be played on that hand, it keeps choosing
+							random cards until it can).<br>
+							The smart player is the smart AI that used interesting forsight and tactics to choose the next card in an attempt to win the game. 
+							</p>
+							<p class="project_details_subheading">Trick, options, and hearts</p>
+							<p class="project_details">
+							Lastly three things left. Create an options class that can allow for customization of how the game will be played. It holds constants
+							and other such values that are used throughout the code to setup the game. Then create a trick class that will handle a single round
+							of the game. It can take 4 cards, figure out who won, and pass along the discard pile to whoever gets it. The last thing needed is
+							the main interface of the game that will initalize a game; that was hearts.
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Results</p>
+							<p class="project_details">
+							It was not a particulairy hard project, but it was fun. Object-oriented design projects like this have an air of attrctiveness to 
+							them because they do not involve particularly hard and abstact ideas. They simply need smart design.
+							</p>
 						</div> <!-- v2-view2 -->
 					</div> <!-- v-tabcontents -->
 				</div> <!-- v-tab_container-2 -->
