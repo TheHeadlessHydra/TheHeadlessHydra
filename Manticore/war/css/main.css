@@ -68,3 +68,31 @@ img{
 	left:50%;
   	margin-left: -400px;
 }
+#name{
+	width:600px;
+	height:300px;
+	
+	font: normal 60px 'Lusitana';
+	color:#fff0a5;
+	text-align:center;
+	
+	/*Centre image to top*/
+	position:fixed;
+	top:100px;
+	left:50%;
+	margin-left:-300px;
+}
+#name-shadow{
+	width:600px;
+	height:300px;
+	
+	font: normal 62px 'Lusitana';
+	color:#8e2800;
+	text-align:center;
+	
+	/*Centre image to top*/
+	position:fixed;
+	top:100px;
+	left:50%;
+	margin-left:-300px;
+}
