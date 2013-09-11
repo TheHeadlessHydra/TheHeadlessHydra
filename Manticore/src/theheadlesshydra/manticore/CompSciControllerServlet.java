@@ -23,7 +23,6 @@ public class CompSciControllerServlet extends HttpServlet {
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-   	
     	// Forward to view
     	request.getRequestDispatcher("compsci.jsp").forward(request, response);
     }

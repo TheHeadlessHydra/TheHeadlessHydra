@@ -14,8 +14,6 @@ import javax.servlet.http.*;
 public class CompSciDisplayServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    	
         // Forward to display
         request.getRequestDispatcher("compsci.jsp").forward(request, response);
     }

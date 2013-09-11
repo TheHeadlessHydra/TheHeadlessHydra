@@ -74,9 +74,9 @@ function init() {
 	// Bottom left texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	
 	// Texture that has all pixels at u=0 and v set to white, all else set to black.
-	var transitionTexture = new THREE.ImageUtils.loadTexture('images/main/ShiftToWhite_Soft_512.png');
+	var transitionTexture = new THREE.ImageUtils.loadTexture('images/main/shift-to-white_512.png');
 	// Texture to transition in.
-	var growthTexture01 = new THREE.ImageUtils.loadTexture('images/main/corner_test01.png');
+	var growthTexture01 = new THREE.ImageUtils.loadTexture('images/main/bottom_left01.png');
 	// Uniforms used to call the fragment shader
 	this.growthUniform01 = {
 			baseTexture: 		{ type: "t", value: growthTexture01 },
@@ -105,7 +105,7 @@ function init() {
 	surface_corner1.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-1.0);
 	
 	// Bottom left texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	var growthTexture02 = new THREE.ImageUtils.loadTexture('images/main/corner_test02.png');
+	var growthTexture02 = new THREE.ImageUtils.loadTexture('images/main/bottom_left02.png');
 	this.growthUniform02 = {
 			baseTexture: 		{ type: "t", value: growthTexture02 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
@@ -129,7 +129,7 @@ function init() {
 	surface_corner2.position.set(-SCREEN_WIDTH_HALF+120,-SCREEN_HEIGHT_HALF+120,-2.0);
 	
 	// Bottom right texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	var botRightTex1 = new THREE.ImageUtils.loadTexture('images/main/corner_test03.png');
+	var botRightTex1 = new THREE.ImageUtils.loadTexture('images/main/bottom_right01.png');
 	this.botRightUniform1 = {
 			baseTexture: 		{ type: "t", value: botRightTex1 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
@@ -154,7 +154,7 @@ function init() {
 	botRightGeo1.position.set(SCREEN_WIDTH_HALF-400,-SCREEN_HEIGHT_HALF+100,-4.0);
 	
 	// Bottom right texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	var botRightTex2 = new THREE.ImageUtils.loadTexture('images/main/corner_test04.png');
+	var botRightTex2 = new THREE.ImageUtils.loadTexture('images/main/bottom_right02.png');
 	this.botRightUniform2 = {
 			baseTexture: 		{ type: "t", value: botRightTex2 },
 			transitionTexture: 	{ type: "t", value: transitionTexture },	
@@ -181,8 +181,8 @@ function init() {
 	
 	
 	// Cracked texture 01 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	var crackTexture01 = new THREE.ImageUtils.loadTexture('images/main/SideCracks.png');
-	var transitionTexture02 = new THREE.ImageUtils.loadTexture('images/main/ShiftToWhite_Softer_512.png');
+	var crackTexture01 = new THREE.ImageUtils.loadTexture('images/main/side-cracks.png');
+	var transitionTexture02 = new THREE.ImageUtils.loadTexture('images/main/shift-to-white-soft_512.png');
 	this.crackUniform01 = {
 			baseTexture: 		{ type: "t", value: crackTexture01 },
 			transitionTexture: 	{ type: "t", value: transitionTexture02 },	
@@ -206,7 +206,7 @@ function init() {
 	resize4PointPlane(surface_cracks1,false,-SCREEN_WIDTH_HALF,-SCREEN_HEIGHT_HALF,SCREEN_HEIGHT,SCREEN_HEIGHT_HALF,-5.0);
 	
 	// Cracked texture 02 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	var crackTexture02 = new THREE.ImageUtils.loadTexture('images/main/SideCracks2.png');
+	var crackTexture02 = new THREE.ImageUtils.loadTexture('images/main/side-cracks2.png');
 	this.crackUniform02 = {
 			baseTexture: 		{ type: "t", value: crackTexture02 },
 			transitionTexture: 	{ type: "t", value: transitionTexture02 },	
