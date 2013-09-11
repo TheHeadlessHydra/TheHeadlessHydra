@@ -1,6 +1,12 @@
+/**   
+ *    CSS styles for the compsci page
+ */
 
-
-
+/**   
+ *    
+ *     Overwrites
+ *
+ */
 *{
 	font-family: 'Aldrich', serif;
     padding: 0px;
@@ -29,6 +35,15 @@ a {
 
 a:hover {
 	color: #5c832f;
+}
+
+/**   
+ *     Connection to art page
+ */
+#switch-pages{
+	position:fixed;
+	left: 0; 
+	bottom: 0;
 }
 
 /**   

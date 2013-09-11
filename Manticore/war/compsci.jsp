@@ -31,6 +31,10 @@
   
 <body>
 
+<div id="switch-pages">
+<img id="switch" src="images/compsci/transition-artpage.png">
+</div>
+
 <div id="body-page">
 
 	<div id="body-header">
@@ -50,7 +54,7 @@
 		
 		<div id="text-projects">
 			<h1>PROJECTS</h1>
-			<p>Can be viewed in more detail on my personal <a href="https://github.com/TheHeadlessHydra" target="_blank">Github</a>.</p>
+			<p>All my code can be found on my personal <a href="https://github.com/TheHeadlessHydra" target="_blank">Github</a>.</p>
 		</div> <!-- text-projects -->
 	</div> <!-- body-header -->
 	

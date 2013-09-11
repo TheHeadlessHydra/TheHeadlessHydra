@@ -36,6 +36,11 @@
 
 <body>
 
+<!-- Switch pages -->
+<div id="switch-pages">
+<img id="switch" src="images/art/transition-compsci.png">
+</div>
+
 <!--  Main title -->
 <div id="title_container">
 	<div id="title_inner_border">

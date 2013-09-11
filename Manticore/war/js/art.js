@@ -3,10 +3,12 @@
  * 
  */
 
+
+$(document).ready(function(){
+	
 /**
  * Used to fade the galleries in/out on hover.
  */
-$(document).ready(function(){
   $("div.fade").hover(
   function() {
   $(this).stop().animate({"opacity": "0.3"}, "slow");
@@ -14,6 +16,19 @@ $(document).ready(function(){
   function() {
   $(this).stop().animate({"opacity": "1"}, "slow");
   });
+/**
+ * Used to glow the switch button
+ */ 
+  $( "#switch" ).click(function() {
+		var redirectLocation = "/compsci";
+		window.location = redirectLocation;
+	});
+	
+	$("#switch").hover(function() {
+		$(this).attr("src","images/art/transition-compsci-hover.png");
+			}, function() {
+		$(this).attr("src","images/art/transition-compsci.png");
+	});
 });
 
 

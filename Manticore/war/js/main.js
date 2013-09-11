@@ -1,10 +1,12 @@
+
+
 /**
  * The main JS that runs the core functionality of the website.
  * 
- * It creates the scene, camera, renderer, birds, and border transitions.
+ * It creates the scene, camera, renderer, birds, and border transitions.
+
+
  */
-
-
 var 
 SCREEN_WIDTH = window.innerWidth, 
 SCREEN_HEIGHT = window.innerHeight, 

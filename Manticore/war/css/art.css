@@ -1,5 +1,5 @@
 /**   
- *    CSS styles for the art.html page
+ *    CSS styles for the art page
  */
 
 /**   
@@ -85,6 +85,11 @@ div.fade {
 	opacity: 0.3;*/
 	filter: alpha(opacity = 100);
 	opacity: 1.0;
+}
+#switch-pages{
+	position:fixed;
+	right: 0; 
+	bottom: 0;
 }
 
 /**   
