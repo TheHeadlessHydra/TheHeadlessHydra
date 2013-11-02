@@ -10,12 +10,13 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Aldrich">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Gudea">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
 
-<!-- main style -->
+<!-- styles -->
 <link rel="stylesheet" type="text/css" href="css/compsci.css"></link>
-
-<!-- Tab CSS --> 
+<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 <link href="css/tabcontent-compsci.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 
@@ -35,28 +36,38 @@
 <img id="switch" src="images/compsci/transition-artpage.png">
 </div>
 
-<div id="body-page">
+<!-- Navigation Bar -->
+<div id="nav_bar">
+	<ul id="nav_ul">
+	<li class="nav_li"><a href="index.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
+	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="index.html">Home</a></div></li>
+	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="art">Art</a></div></li>
+	<li class="nav_li"><div class="nav_selectedelement"><a class="nav_selected" href="compsci">Compsci</a></div></li>
+	</ul>
+</div>
 
+<div id="body-page">
+	<div id="outer-border">
 	<div id="body-header">
-	
-		<div id="title_container">
-			<div id="title_inner_border">
-				<div id="content_container">
-					<header id="header-computer" class="clearfix">
-							<span id="text-computer">COMPUTER</span>
-					</header>
-					<header id="header-science" class="clearfix">
-							<span id="text-science">SCIENCE</span>
-					</header>
-				</div> <!-- content_container -->
+			<div id="title_container">
+				<div id="title_inner_border">
+					<div id="content_container">
+						<header id="header-computer" class="clearfix">
+								<span id="text-computer">COMPUTER</span>
+						</header>
+						<header id="header-science" class="clearfix">
+								<span id="text-science">SCIENCE</span>
+						</header>
+					</div> <!-- content_container -->
+				</div>
 			</div>
-		</div>
 		
 		<div id="text-projects">
 			<h1>PROJECTS</h1>
 			<p>All my code can be found on my personal <a href="https://github.com/TheHeadlessHydra" target="_blank">Github</a>.</p>
 		</div> <!-- text-projects -->
 	</div> <!-- body-header -->
+	</div><!-- outer-border -->
 	
 	<div id="tab_container">
 		<ul class="tabs" data-persist="true">
@@ -324,7 +335,6 @@
 					<div class="v-tabcontents">
 						<div id="v2-view1">
 							<h1 class="project_header">WLPP Compiler</h1>
-							<a class="project_github" href="https://github.com/TheHeadlessHydra/WLPPCompiler" target="_blank">-> Find on Github</a>
 							<br><br><br>
 							<p class="sub-heading">Project</p>
 							<p class="project_details">

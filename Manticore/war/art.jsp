@@ -13,8 +13,9 @@
 <script src="js/art.js"></script>
 <script src="lib/tabcontent.js" type="text/javascript"></script>
 
-<!-- main style -->
+<!-- styles -->
 <link rel="stylesheet" type="text/css" href="css/art.css"></link>
+<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 
 <!-- Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
@@ -39,6 +40,16 @@
 <!-- Switch pages -->
 <div id="switch-pages">
 <img id="switch" src="images/art/transition-compsci.png">
+</div>
+
+<!-- Navigation Bar -->
+<div id="nav_bar">
+	<ul id="nav_ul">
+	<li class="nav_li"><a href="index.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
+	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="index.html">Home</a></div></li>
+	<li class="nav_li"><div class="nav_selectedelement"><a class="nav_selected" href="art">Art</a></div></li>
+	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="compsci">Compsci</a></div></li>
+	</ul>
 </div>
 
 <!--  Main title -->

@@ -51,9 +51,24 @@ a:hover {
  *     Main Title
  *
  */
-#body-header{
+#outer-border{
+	/* Border */
+	border-top: 3px solid #284907;
+	border-bottom: 3px solid #284907;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	/* Reposition */
+	width:100%;
+	left:0px;
+	
+	display: block;
+	clear: both;
+	position: relative;
+	margin: auto;
+ }
+#body-header{	
 	padding-top:50px;
-	background-color:#363942;
+	background-color:#5c832f;
 	background-position: center bottom; 
 	background-repeat: no-repeat;
 }
@@ -91,18 +106,29 @@ a:hover {
 	margin: auto;
 	margin-bottom: 50px;
 	
-	border: 2px solid #d8caa8;
+	/*border: 2px solid #284907;
 	-moz-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 10px;*/
+}
+#text-projects{
+	color:#d8caa8;
+	padding-left:50px;
+	border-bottom: 1px solid #5c8325;
+}
+
+#text-projects p{
+	padding-left:50px;
+	font-family: 'Quattrocento';
+	padding-bottom:10px;
 }
 
 #title_inner_border {
 	padding: 3px;
-	border-style: inset;
-	border-color: #d8caa8;
+	/*border-style: inset;
+	border-color: #284907;
 	border-width: 3px;
 	-moz-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 10px;*/
 }
 
 #content_container {
@@ -128,9 +154,9 @@ a:hover {
 	padding-top:30px;
 	padding-left:15%;
 	
-	font-family: 'Aldrich', serif;
+	font-family: 'Gudea', serif;
 	font-size: 50px;
-	color:#2b2922;
+	color:#284907;
 	letter-spacing: 10px;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 	
@@ -143,32 +169,19 @@ a:hover {
 }
 
 #text-science {
-	padding-left:35%;
-	
-	font-family: 'Aldrich', serif;
+	/* Text style for science */
+	font-family: 'Gudea', serif;
 	font-size: 50px;
-	color:#2b2922;
+	color:#284907;
 	letter-spacing: 10px;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 	
-	width: 463px;
+	width: 260px;
 	display: block;
 	float: right;
-	margin-right: 13px;
+	/* Bottom border */
 	border-left: 2px groove #5c8325;
-	padding-left: 50px;
-}
-
-#text-projects{
-	color:#d8caa8;
-	padding-left:50px;
-	border-bottom: 1px solid #5c8325;
-}
-
-#text-projects p{
-	padding-left:50px;
-	font-family: 'Quattrocento';
-	padding-bottom:10px;
+	padding-left: 250px;
 }
 
 /**   
