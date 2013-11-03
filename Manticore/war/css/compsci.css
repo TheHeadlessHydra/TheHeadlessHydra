@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-	color: #5c832f;
+	color: #8e2800;
 }
 
 /**   
@@ -55,8 +55,6 @@ a:hover {
 	/* Border */
 	border-top: 3px solid #284907;
 	border-bottom: 3px solid #284907;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
 	/* Reposition */
 	width:100%;
 	left:0px;
@@ -111,8 +109,8 @@ a:hover {
 	border-radius: 10px;*/
 }
 #text-projects{
-	color:#d8caa8;
-	padding-left:50px;
+	color:#284907;
+	padding-left:200px;
 	border-bottom: 1px solid #5c8325;
 }
 
@@ -245,7 +243,7 @@ a:hover {
 	float:right;
 }
 /**
- * Page footer and footer image
+ * Page footer and footer image - CURRENTLY NOT USED
  */
 #page_footer{
 	height:300px;

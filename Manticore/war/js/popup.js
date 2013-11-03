@@ -32,8 +32,9 @@ $('img').click(function() {
 		setTimeout(function() {
 			loadPopup();
 		}, 300); // 0.3 second delay
+		return false;
 	}
-	return false;
+	
 });
 
 $('a').click(function() {

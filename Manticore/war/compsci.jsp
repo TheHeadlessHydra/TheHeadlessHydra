@@ -15,7 +15,9 @@
 <!-- styles -->
 <link rel="stylesheet" type="text/css" href="css/compsci.css"></link>
 <link rel="stylesheet" type="text/css" href="css/nav.css"></link>
+<link rel="stylesheet" type="text/css" href="css/footer.css"></link>
 <link href="css/tabcontent-compsci.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -32,10 +34,6 @@
   
 <body>
 
-<div id="switch-pages">
-<img id="switch" src="images/compsci/transition-artpage.png">
-</div>
-
 <!-- Navigation Bar -->
 <div id="nav_bar">
 	<ul id="nav_ul">
@@ -47,6 +45,7 @@
 </div>
 
 <div id="body-page">
+
 	<div id="outer-border">
 	<div id="body-header">
 			<div id="title_container">
@@ -475,10 +474,22 @@
 		</div> <!-- tabcontents -->
 	</div> <!-- tab_container -->
 
-	
+<div id="main_footer">
+	<div id="main_footer_innerborder">
+		<h1 class="footer_h1">Contact</h1>
+		<p class="footer_p" style="font-size: 30px;">serjkazar@gmail.com</p>
+		<ul id="footer_ul">
+		<li class="footer_li"><a href="index.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
+		<li class="footer_li"><a href="https://github.com/TheHeadlessHydra" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/github-logo-small.png"></div></a></li>
+		<li class="footer_li"><a href="http://www.linkedin.com/pub/serj-kazar/25/192/231" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/linkedin-logo-small.png"></div></a></li>
+		</ul>
+		<p class="footer_p">&#169 2013 Serj Kazar. All Rights Reserved.</p>
+	</div>
+</div>
+
 </div> <!-- body_page -->
 
-<div id="page_footer"></div>
+<!-- <div id="page_footer"></div> -->
 
 </body>
 

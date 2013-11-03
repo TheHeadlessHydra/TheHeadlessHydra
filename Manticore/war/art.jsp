@@ -16,6 +16,7 @@
 <!-- styles -->
 <link rel="stylesheet" type="text/css" href="css/art.css"></link>
 <link rel="stylesheet" type="text/css" href="css/nav.css"></link>
+<link rel="stylesheet" type="text/css" href="css/footer.css"></link>
 
 <!-- Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
@@ -37,10 +38,7 @@
 
 <body>
 
-<!-- Switch pages -->
-<div id="switch-pages">
-<img id="switch" src="images/art/transition-compsci.png">
-</div>
+
 
 <!-- Navigation Bar -->
 <div id="nav_bar">
@@ -163,7 +161,6 @@ IMAGE GALLERIES TAB
 		    <div id="footer"></div>
 		</div> <!-- thumbnail_container -->
 		</div> <!-- thumbnail_outer_border -->
-		<p style="margin-left:10px; color:#fff;">© 2013 Serj Kazar. All Rights Reserved.</p> 
 	</div> <!-- view1 -->
 <!-- 
 VIDEOS TAB
@@ -228,11 +225,23 @@ VIDEOS TAB
 		    </div> <!-- main -->
 		    <div id="footer"></div>
 		</div> <!-- thumbnail_container -->
-		</div> <!-- thumbnail_outer_border -->  
-		<p style="margin-left:10px; color:#fff;">© 2013 Serj Kazar. All Rights Reserved.</p>         
+		</div> <!-- thumbnail_outer_border -->      
 	</div> <!-- view2 -->
 </div> <!-- tabcontents -->
 </div> <!-- tab_container --> 
+
+<div id="main_footer">
+	<div id="main_footer_innerborder">
+		<h1 class="footer_h1" style="margin-top:10px;">Contact</h1>
+		<p class="footer_p" style="font-size: 30px;">serjkazar@gmail.com</p>
+		<ul id="footer_ul">
+		<li class="footer_li"><a href="index.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
+		<li class="footer_li"><a href="https://github.com/TheHeadlessHydra" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/github-logo-small.png"></div></a></li>
+		<li class="footer_li"><a href="http://www.linkedin.com/pub/serj-kazar/25/192/231" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/linkedin-logo-small.png"></div></a></li>
+		</ul>
+		<p class="footer_p" style="padding-top:15px;">&#169 2013 Serj Kazar. All Rights Reserved.</p>
+	</div>
+</div>
 		
 <!-- 
 GALLERIES

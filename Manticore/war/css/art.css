@@ -105,14 +105,13 @@ div.fade {
  */
 #title_container {
 	/* Border */
-	border: 3px solid #d9cb9e;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	border-top: 3px solid #d9cb9e;
+	border-bottom: 3px solid #d9cb9e;
 	/* Increase width of border beyond screen to extend */
-	width: 120%;
-	left:-50px; /* Reposition */	
+	width: 100%;	
 	
-	padding: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	display: block;
 	clear: both;
 	position: relative;
@@ -125,15 +124,11 @@ div.fade {
 #title_inner_border {
 	
 	padding: 3px;
-	border-style: double;
-	border-color: #d9cb9e;
-	border-width: 1px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	border-top:1px double #d9cb9e;
+	border-bottom:1px double #d9cb9e;
 }
 
 #content_container {
-	left:-50px; /* Reposition to centre */
 	width: 800px;
 	margin: 0px auto;
 	position: relative;
@@ -229,7 +224,6 @@ div.fade {
 #main{
 	/* Dimensions */
 	width: 1020px;
-	height:180px;
 	/* Inner Positioning */
 	overflow: hidden;
 	display:block;
