@@ -11,11 +11,10 @@ import javax.servlet.http.*;
  *
  */
 @SuppressWarnings("serial")
-public class CompSciDisplayServlet extends HttpServlet {
-    @Override
+public class HomeDisplayServlet extends HttpServlet {
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Forward to display
-        request.getRequestDispatcher("compsci.jsp").forward(request, response);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
     }
-
 }

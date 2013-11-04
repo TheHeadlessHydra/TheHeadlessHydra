@@ -1,8 +1,6 @@
 package theheadlesshydra.manticore;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
@@ -13,7 +11,7 @@ import javax.servlet.http.*;
  * do business here and maintain all data, then
  * it will then be passed along to the ArtDisplayServlet
  * for display.
- * @author The Headless Hydra
+ * @author Serj Kazar
  *
  */
 @SuppressWarnings("serial")

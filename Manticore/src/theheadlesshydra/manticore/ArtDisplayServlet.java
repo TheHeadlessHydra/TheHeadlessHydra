@@ -1,7 +1,5 @@
 package theheadlesshydra.manticore;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -9,7 +7,7 @@ import javax.servlet.http.*;
 /**
  * Display servlet that will arrange any special display parameters
  * and display the art page. 
- * @author The Headless Hydra
+ * @author Serj Kazar
  *
  */
 @SuppressWarnings("serial")

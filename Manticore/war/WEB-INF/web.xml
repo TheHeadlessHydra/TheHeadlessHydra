@@ -39,11 +39,25 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
         <url-pattern>/compsci.do</url-pattern>
     </servlet-mapping>
     
-    
+    <servlet>
+        <servlet-name>HomeDisplay</servlet-name>
+        <servlet-class>theheadlesshydra.manticore.HomeDisplayServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeDisplay</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>theheadlesshydra.manticore.HomeControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home.do</url-pattern>
+    </servlet-mapping>
     
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
-	
 	
 </web-app>

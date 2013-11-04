@@ -4,7 +4,6 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-
 /**
  * Controller used in the MVC POST-REDIRECT-GET system.
  * Send a form to be handled to this controller first,
@@ -14,22 +13,19 @@ import javax.servlet.http.*;
  * @author Serj Kazar
  *
  */
-@SuppressWarnings("serial")
-public class CompSciControllerServlet extends HttpServlet {
+public class HomeControllerServlet {
 	
-	public CompSciControllerServlet(){
+	public HomeControllerServlet(){
 		super();
 	}
 	
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	// Forward to view
-    	request.getRequestDispatcher("compsci.jsp").forward(request, response);
+    	request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Redirect to display 
-        response.sendRedirect("compsci");
+        response.sendRedirect("home");
     }
 }

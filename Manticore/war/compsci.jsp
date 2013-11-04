@@ -38,7 +38,7 @@
 <div id="nav_bar">
 	<ul id="nav_ul">
 	<li class="nav_li"><a href="index.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
-	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="index.html">Home</a></div></li>
+	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="home">Home</a></div></li>
 	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="art">Art</a></div></li>
 	<li class="nav_li"><div class="nav_selectedelement"><a class="nav_selected" href="compsci">Compsci</a></div></li>
 	</ul>
