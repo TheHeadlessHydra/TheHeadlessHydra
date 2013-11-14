@@ -4,7 +4,7 @@ body{
 	margin:0px;
 	padding:0px;
 	
-	background-color:#65658c;
+	background-color:#413659;
 }
 a {
 	color: #ddd;
@@ -120,10 +120,11 @@ a {
 	display:inline-block;
 }
 #paragraph{
+	
 	margin:0;
 	padding:0;
 	padding-left:150px;
-	padding-bottom:50px;
+	padding-bottom:30px;
 	height:200px;
 
 	display: inline-block;
@@ -135,6 +136,8 @@ div.paragraph_img{
 	display: inline-block;
 }
 div.paragraph_pdiv{
+	background-color:#65658C;
+	
 	border-right: 3px dashed #9BBFAB;
 	border-left: 3px dashed #9BBFAB;
 	
@@ -142,6 +145,7 @@ div.paragraph_pdiv{
 	padding-left:5%;
 	padding-right:5%;
 	width:60%;
+	min-width:800px;
 }
 p.paragraph-date{
 	padding-top:0px;
@@ -174,6 +178,12 @@ p.subtitle{
 	padding-left:100px;
 }
 p.details{
+	font-family: 'Gudea', serif;
+	font-size: 20px;
+	color:#211426;
+}
+ul.list-details{
+	list-style:disk;
 	font-family: 'Gudea', serif;
 	font-size: 20px;
 	color:#211426;
