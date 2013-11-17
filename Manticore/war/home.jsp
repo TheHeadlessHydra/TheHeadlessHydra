@@ -27,7 +27,7 @@
 <!-- Navigation Bar -->
 <div id="nav_bar">
 	<ul id="nav_ul">
-	<li class="nav_li"><a href="index.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
+	<li class="nav_li"><a href="webgl.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
 	<li class="nav_li"><div class="nav_selectedelement"><a class="nav_selected" href="home">Home</a></div></li>
 	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="art">Art</a></div></li>
 	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="compsci">Compsci</a></div></li>
@@ -102,7 +102,7 @@
     </div><!-- paragraph_pdiv -->
 </div><!-- paragraph -->
 
-<div id="titlebar" style="margin-top:30px;">
+<div id="titlebar">
 	<p class="subtitle"><b>EDUCATION</b></p>
 </div>
 
@@ -131,37 +131,94 @@
     </div><!-- paragraph_pdiv -->
 </div><!-- paragraph -->
 
-<div id="titlebar" style="margin-top:30px;">
+<div id="titlebar">
 	<p class="subtitle"><b>TECHNICAl SKILLS</b></p>
 </div>
-
 <div id="paragraph">
 	<div class="paragraph_pdiv">
-	
-		<!-- Waterloo -->
-		<h1 class="work-title"><span style="padding-right:5px;font-size:35px;border-right:2px dotted #211426;border-top:2px dotted #211426;text-shadow: 1px 1px 1px #000;">University of Waterloo</span>
-							   <span style=" color:#dc3522;text-shadow: 1px 1px 1px #000;">Computer Science</span></h1>
-		<p class="paragraph-date" style="padding-left:400px;">September 2011 - Present</p>
-
-		<ul class="list-details" style="padding-bottom:10px; border-bottom:2px dotted #9BBFAB;">
-		<li>Designed and implemented new 3d map painting system for use when creating expressions to render primitives on objects.</li>
-		<li>Fully localized and partially internationalized flagship plug-in for next release of Maya.</li>
-		<li>Debugged, found, and fixed over 80 issues and bugs in the span of 4 months - stabilizing product right before ship date.</li>
-		</ul>
-		
-	    <!-- Centennial -->
-	    <h1 class="work-title"><span style="padding-right:5px;font-size:35px;border-right:2px dotted #211426;border-top:2px dotted #211426;text-shadow: 1px 1px 1px #000;">Centennial College</span>
-							   <span style="font-size:25px; color:#dc3522;text-shadow: 1px 1px 1px #000;">Game Design & Development</span></h1>
-		<p class="paragraph-date" style="padding-left:330px;"> September 2009 - August 2010</p>
-		
-		<ul class="list-details" style="padding-bottom:10px; border-bottom:2px dotted #9BBFAB;">
-		<li>Implemented multi-touch mapping algorithms to map tablet touch and click to 3d object space.</li>
-		<li>Utilized customers, mainly Disney and Pixar, to create various features that would improve and quicken artist workflow.</li>
-		</ul>
-
+		<table id="technicals" border="1">
+			<tbody>
+				<tr>
+					<td class="top" style="background:#211426;">&nbsp;</td>
+		            <td class="top">Expert</td>
+		            <td class="top">Very Proficient</td>
+		            <td class="top">Proficient</td>
+		            <td class="top">Prior Experience</td>
+		        </tr>
+		        <tr>
+		          <td class="top">C/C++</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">Bash</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">CSS</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">HTML</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">Java</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">Javascript</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		          <td>&nbsp;</td>
+		        </tr>
+		        <tr>
+		          <td class="top">JQuery</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		        </tr>
+		        <tr>
+		          <td class="top">JAM</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		        </tr>
+		        <tr>
+		          <td class="top">Assembly</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		        </tr>
+		        <tr>
+		          <td class="top">Python</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td>&nbsp;</td>
+		          <td class="selected">-X-</td>
+		        </tr>
+			</tbody>
+		</table>
     </div><!-- paragraph_pdiv -->
 </div><!-- paragraph -->
-
 
 
 <div id="main_footer">
@@ -169,7 +226,7 @@
 		<h1 class="footer_h1">Contact</h1>
 		<p class="footer_p" style="font-size: 30px;">serjkazar@gmail.com</p>
 		<ul id="footer_ul">
-		<li class="footer_li"><a href="index.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
+		<li class="footer_li"><a href="webgl.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
 		<li class="footer_li"><a href="https://github.com/TheHeadlessHydra" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/github-logo-small.png"></div></a></li>
 		<li class="footer_li"><a href="http://www.linkedin.com/pub/serj-kazar/25/192/231" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/linkedin-logo-small.png"></div></a></li>
 		</ul>

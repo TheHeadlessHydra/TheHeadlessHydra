@@ -37,7 +37,7 @@
 <!-- Navigation Bar -->
 <div id="nav_bar">
 	<ul id="nav_ul">
-	<li class="nav_li"><a href="index.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
+	<li class="nav_li"><a href="webgl.html"><img class="nav_img" src="images/nav/headlesshydra_logo.png"></a></li>
 	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="home">Home</a></div></li>
 	<li class="nav_li"><div class="nav_element"><a class="nav_link" href="art">Art</a></div></li>
 	<li class="nav_li"><div class="nav_selectedelement"><a class="nav_selected" href="compsci">Compsci</a></div></li>
@@ -479,7 +479,7 @@
 		<h1 class="footer_h1">Contact</h1>
 		<p class="footer_p" style="font-size: 30px;">serjkazar@gmail.com</p>
 		<ul id="footer_ul">
-		<li class="footer_li"><a href="index.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
+		<li class="footer_li"><a href="webgl.html" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/headlesshydra_logo.png"></div></a></li>
 		<li class="footer_li"><a href="https://github.com/TheHeadlessHydra" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/github-logo-small.png"></div></a></li>
 		<li class="footer_li"><a href="http://www.linkedin.com/pub/serj-kazar/25/192/231" target="_blank"><div class="footer_element"><img class="footer_img" src="images/footer/linkedin-logo-small.png"></div></a></li>
 		</ul>
