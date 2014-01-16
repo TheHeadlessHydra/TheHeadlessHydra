@@ -78,6 +78,7 @@
 			
 				<div id="v-tab_container">
 					<ul class="v-tabs">
+						<li><a href="#v-view4">Zanthus</a></li>
 						<li><a href="#v-view1">The Headless Hydra</a></li>
 						<li><a href="#v-view2">Lolpaper</a></li>
 						<li><a href="#v-view3">LeagueView</a></li>
@@ -319,6 +320,90 @@
 							mind though, since this was always meant to be a throwaway project.
 							</p>
 						</div> <!-- v-view3 -->
+						<div id="v-view4">
+							<h1 class="project_header">Zanthus</h1>
+							<a class="project_github" href="https://github.com/TheHeadlessHydra/Zanthus" target="_blank">-> Find on Github</a>
+							<img src="images/compsci/banners/zanthus.png">
+							<p class="sub-heading">Idea</p>
+							<p class="project_details">
+							Create a tower defence game! After building this website and learning the various tricks needed to get three.js
+							and webGL working, I decided to take on the creation of a game. I wouldn't be able to build anything crazy or
+							extremely big, so I wanted to go for a simpler approach that offers the ability to do cool looking things 
+							using my 3D modeling/texturing skills. I went for a 2.5D tower defense game with some unique ideas. Build a 
+							tower that raises into the sky, and all the way into space! Different parts of the tower will have different 
+							forms of defense against invading enemies who are trying to climb to the top of your tower. 
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Initialization and drivers</p>
+							<p class="project_details">
+							After building this website, I learned how much of a hassle it is to hold all the jscirpt code in
+							a single file, so I decided to split it all. I did this by including a driver that acts as the kick off point
+							of the code. It initializes all the various pieces and modules that need to be initailzed and allows globals to be
+							shared through the modules in the same way. 
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Workflow from Maya to Three.js</p>
+							<p class="project_details">
+							The most difficult part of the process was understanding the worflow of getting custom, animated, 
+							textured meshes into three.js. It is a difficult and arduous process.
+							<br><br>
+							The main point is to use the JSON loader that comes with three.js to do the majority of this work. 
+							The JSON format offers a simple and heavily modifiable system to bring meshes into three.js and is, 
+							in my opinion, currently the strongest way to bring meshes into a scene in three.js.
+							<br><br>
+							Firstly, the native Maya exporter for three.js that ships with the product is useless. 
+							The workflow needed to get this working is to create things in Maya, and then shift over to 
+							Blender for the exporting. 
+							<br><br>
+							The process begins by modelling, animating, and UV'ing the scene in Maya. 
+							They have to be exported from Maya without textures since Blender cannot handle Maya textures.
+							Once modelling is done, it must be exported to a special format called COLLADA (listed as DAE_FBX in Maya). 
+							Exporting with animations requires that you blend the animations, thus creating morph targets which can
+							then be used to animate in three.js. Once exported, that's the Maya part taken care of.
+							<br><br>
+							Now it's the Blender part. I import the exported DAE from Maya.
+						    Sometimes this import will fail if the DAE was exported with textures in Maya. In this case, I completely remove 
+						    textures in the exported DAE file by opening it up in a text editor and locating any XML tag for 'texture'. 
+						    Getting rid of all those references fixes the issue. 
+
+							Once done, it can be exported from Blender in the three.js format (which is a JSON file). The JSON file can be modified
+							afterwards to include custom materials such as normals, displacements and whatnot. The entire material for each texture
+							can be manually written in the JSON file and makes the process much simpler. 
+							</p>
+							<br><br><br>
+							<p class="sub-heading">Loading and animating the meshes</p>
+							<p class="project_details">
+							loader.js was a heavy file and is responsible for loading all the meshes into the scene. A mesh only
+							needs to be loaded a single time into the scene using the JSONloader class that comes with three.js.
+							From then on, I can instantiate a copy of it and save on processing time. This forces a single
+							large loading time at the beginning of the game but allows for arbitrarily large amount of
+							meshes to be added to the scene at any given time afterwords, which is useful for a large amount
+							of enemies.  
+							<br><br>
+							Animating the meshes was tough. There is no automated way to animate morph targets in three.js, it
+							has to be handled manually. So I created an animation system to handle the process through morph targets.
+							A global array exists that holds all meshes currently aniamting, and calls their aniamte() functions on each
+							frame render. To animate a mesh, its as simple as adding it to the array. It will remove itself once
+							its animation finishes (or for animations that are meant to loop, it will not remove itself). The logistics
+							of this are layed out in animation.js. 
+							</p>
+							<br><br><br>
+							<p class="sub-heading">The game logic</p>
+							<p class="project_details">
+							tower.js is the biggest file in the codebase and handles the logic of building and removing tower pieces
+							from the tower. It's not rocket science and involves fairly simple mecahnics such as a global to keep track
+							of the current height of the tower. 
+							<br><br>
+							The enemies posed a bit of a performance problem. Heavy optimizations needed to be performed to 
+							allow for an arbitrariy large amount of enemies to be on the scene at a time. 
+							<br><br>
+							The enemy spawning system is a process that involves setTimeout. Each wave of enemies that spawns
+							will set off another setTimeout event to spawn more enemies. On each call, the length of time the wave
+							lasts is longer and it also spawns more people on each wave. There is a hard max-cap set on the time
+							and the amount of enemies right now since plans are in place to add more types of enemies and it would
+							be meaningless to flood the player with a basic type of enemy. 
+							</p>
+						</div> <!-- v-view4 -->
 					</div> <!-- v-tabcontents -->
 				</div> <!-- v-tab_container -->
 			

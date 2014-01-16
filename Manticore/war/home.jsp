@@ -136,6 +136,9 @@
 </div>
 <div id="paragraph">
 	<div class="paragraph_pdiv">
+	
+
+
 		<table id="technicals" border="1">
 			<tbody>
 				<tr>
